@@ -20,31 +20,38 @@
   font-size: 1.5em;
 }
 
-
 nav {
   font-family: "Grandstander", sans-serif;
   font-size: 1em;
   font-weight: 700;
 }
 
-
 .light .fa {
-    position: absolute;
-    float: right;
-    right : 2%;
-    top: 30px
+  position: absolute;
+  float: right;
+  right: 2%;
+  top: 30px;
 }
 
 .grey-bg {
-    background-color: lightgray;
-    border: 1px solid #b9bcd4;
-
+  background-color: lightgray;
+  border: 1px solid rgb(175, 175, 175);
 }
 
 .dark-bg {
-    background-color: black;
-    border: 1px solid darkslategrey;
-
+  background-color: darkslategrey;
+  border: 1px solid rgb(95, 99, 104);
 }
 
-
+#play {
+  font-family: "Grandstander", sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 20px;
+  padding: 5px 20px;
+  border-radius: 30px;
+}
