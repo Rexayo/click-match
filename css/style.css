@@ -32,12 +32,19 @@ nav {
     position: absolute;
     float: right;
     right : 2%;
-    top: 40%
+    top: 30px
 }
 
 .grey-bg {
     background-color: lightgray;
-    border: 1px solid gray;
+    border: 1px solid #b9bcd4;
 
 }
+
+.dark-bg {
+    background-color: black;
+    border: 1px solid darkslategrey;
+
+}
+
 
