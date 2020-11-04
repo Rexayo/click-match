@@ -35,12 +35,10 @@ nav {
 
 .grey-bg {
   background-color: lightgray;
-  border: 1px solid rgb(175, 175, 175);
 }
 
 .dark-bg {
   background-color: darkslategrey;
-  border: 1px solid rgb(95, 99, 104);
 }
 
 #play {
@@ -54,4 +52,14 @@ nav {
   margin-top: 20px;
   padding: 5px 20px;
   border-radius: 30px;
+  
 }
+
+#play:hover,
+#play:active,
+#play:focus,
+button:focus{
+    border: none;
+    outline: none
+}
+]
