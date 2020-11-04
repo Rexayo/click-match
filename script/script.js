@@ -1,6 +1,3 @@
-
-
-
 /*------------------NAV------------------*/
 
 //LIGHT AND DARK MODE TOGGLE FOR NAV
@@ -11,39 +8,38 @@ $(".light").click(function () {
   $(".navbar").toggleClass("bg-light bg-dark");
   $(".navbar-brand").toggleClass("text-dark text-white");
   $(".menu-icon").toggleClass("text-dark text-light");
-   $("#level-text").toggleClass("text-dark text-light");
-
+  $("#level-text").toggleClass("text-dark text-light");
 });
 
 // DIFFICULTY SELECTOR
 document.getElementById("level-text").innerHTML = "Level One";
 
-$(".difficultySetting01").click(function () { 
-   document.getElementById("level-text").innerHTML = "Level One";
+$(".difficultySetting01").click(function () {
+  document.getElementById("level-text").innerHTML = "Level One";
 });
 
-
-$(".difficultySetting02").click(function () { 
-   document.getElementById("level-text").innerHTML = "Level Two";
+$(".difficultySetting02").click(function () {
+  document.getElementById("level-text").innerHTML = "Level Two";
 });
 
-$(".difficultySetting03").click(function () { 
-     document.getElementById("level-text").innerHTML = "Level Three";
+$(".difficultySetting03").click(function () {
+  document.getElementById("level-text").innerHTML = "Level Three";
 });
 
+$(".difficultySetting04").click(function () {
+  document.getElementById("level-text").innerHTML = "Level Four";
+});
 
+$(".difficultySetting05").click(function () {
+  document.getElementById("level-text").innerHTML = "Level Five";
+});
 
-
-
-
-            
 //SWITCH MENU ICON
 $(".menu-icon").click(function () {
   $("i", this).toggleClass("fa-hand-o-down fa-hand-o-up");
 });
 
-
-/*----------------------DEFAULT GRID--------------------------*/ 
+/*----------------------DEFAULT GRID--------------------------*/
 for (let i = 0; i < 120; i++) {
   $(".level-one").append('<div class="col-1 grey-bg"><img></div>');
   function switchToDark() {
@@ -53,86 +49,82 @@ for (let i = 0; i < 120; i++) {
 
 var defaultGrid = document.getElementsByClassName("col-1");
 
-
-
-
 /*----------------------LEVEL ONE GRID-----------------------*/
 
 /*---------LEVEL ONE FUNCTIONS START HERE------------*/
 //isolate first box in level one
-function levelOneGridBoxA(j){
-    let boxA = 13;
-    let across = 5;
-    let nextLine = 12;
-  if( (j > boxA && j < boxA + across) ||
-      (j > boxA + nextLine && j < boxA + nextLine + across) ||
-      (j > boxA + 2 * nextLine && j < boxA + 2 * nextLine + across) ||
-      (j > boxA + 3 * nextLine && j < boxA + 3 * nextLine + across)
-  ){
-      return true;
-  }else{
-      return false
+function levelOneGridBoxA(j) {
+  let boxA = 13;
+  let across = 5;
+  let nextLine = 12;
+  if (
+    (j > boxA && j < boxA + across) ||
+    (j > boxA + nextLine && j < boxA + nextLine + across) ||
+    (j > boxA + 2 * nextLine && j < boxA + 2 * nextLine + across) ||
+    (j > boxA + 3 * nextLine && j < boxA + 3 * nextLine + across)
+  ) {
+    return true;
+  } else {
+    return false;
   }
 }
 
-
 //isolate second box in level one
-function levelOneGridBoxB(j){
-    let boxB = 17;
-    let across = 5;
-    let nextLine = 12;
-    if(
-        (j > boxB && j < boxB + across) ||
-      (j > boxB + nextLine && j < boxB + nextLine + across) ||
-      (j > boxB + 2 * nextLine && j < boxB + 2 * nextLine + across) ||
-      (j > boxB + 3 * nextLine && j < boxB + 3 * nextLine + across)
-    ){
-        return true;
-    }else{
-        return false;
-    };
-};
-
+function levelOneGridBoxB(j) {
+  let boxB = 17;
+  let across = 5;
+  let nextLine = 12;
+  if (
+    (j > boxB && j < boxB + across) ||
+    (j > boxB + nextLine && j < boxB + nextLine + across) ||
+    (j > boxB + 2 * nextLine && j < boxB + 2 * nextLine + across) ||
+    (j > boxB + 3 * nextLine && j < boxB + 3 * nextLine + across)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 //isolate third box in level one
-function levelOneGridBoxC(j){
-    let boxC = 61;
-    let across = 5;
-    let nextLine = 12;
-    if((j > boxC && j < boxC + across) ||
-      (j > boxC + nextLine && j < boxC + nextLine + across) ||
-      (j > boxC + 2 * nextLine && j < boxC + 2 * nextLine + across) ||
-      (j > boxC + 3 * nextLine && j < boxC + 3 * nextLine + across)
-    ){
-        return true;
-    }else{
-        return false;
-    };
-};
-
+function levelOneGridBoxC(j) {
+  let boxC = 61;
+  let across = 5;
+  let nextLine = 12;
+  if (
+    (j > boxC && j < boxC + across) ||
+    (j > boxC + nextLine && j < boxC + nextLine + across) ||
+    (j > boxC + 2 * nextLine && j < boxC + 2 * nextLine + across) ||
+    (j > boxC + 3 * nextLine && j < boxC + 3 * nextLine + across)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 //isolate fourth box in level one
-function levelOneGridBoxD(j){
-    let boxD = 65;
-    let across = 5;
-    let nextLine = 12;
-    if( (j > boxD && j < boxD + across) ||
-      (j > boxD + nextLine && j < boxD + nextLine + across) ||
-      (j > boxD + 2 * nextLine && j < boxD + 2 * nextLine + across) ||
-      (j > boxD + 3 * nextLine && j < boxD + 3 * nextLine + across)
-    ){
-        return true;
-    }else{
-        return false;
-    };
-};
+function levelOneGridBoxD(j) {
+  let boxD = 65;
+  let across = 5;
+  let nextLine = 12;
+  if (
+    (j > boxD && j < boxD + across) ||
+    (j > boxD + nextLine && j < boxD + nextLine + across) ||
+    (j > boxD + 2 * nextLine && j < boxD + 2 * nextLine + across) ||
+    (j > boxD + 3 * nextLine && j < boxD + 3 * nextLine + across)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 //random number generator - https://codepen.io/meowwwls/pen/jbEJRp
 // generates a value while allowing the customization of the minimum and maximum values
 function randomVal(min, max) {
   return Math.floor(Math.random() * (max - min) + 1) + min;
 }
-
 
 // https://mika-s.github.io/javascript/colors/hsl/2017/12/05/generating-random-colors-in-javascript.html
 function generateHslaColours(saturation, lightness, alpha, amount) {
@@ -146,7 +138,6 @@ function generateHslaColours(saturation, lightness, alpha, amount) {
 
   return colours;
 }
-
 
 //Fisher-Yates (aka Knuth) Shuffle - https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function shuffle(array) {
@@ -169,7 +160,6 @@ function shuffle(array) {
   return array;
 }
 
-
 function levelOneGridColours() {
   let saturation = randomVal(40, 100);
   let lightness = randomVal(20, 90);
@@ -181,157 +171,477 @@ function levelOneGridColours() {
 
 /*---------LEVEL ONE FUNCTIONS END HERE------------*/
 
+/*--------------------------------LEVEL ONE---------------------------------*/
+// $(document).ready(function () {
+//   //LEVEL ONE GRID STRUCTURE - BEFORE PLAY BUTTON IS CLICKED
+//   var gridBackColour = "rgba(128, 128, 128, 0.7)";
+
+//   for (let j = 0; j < defaultGrid.length; j++) {
+//     let boxA = 13;
+//     let boxB = 17;
+//     let boxC = 61;
+//     let boxD = 65;
+//     let across = 5;
+//     let nextLine = 12;
+
+//     //LEVEL ONE - Borders
+//     if (
+//       // LEVEL ONE - Top border
+//       j > boxA - nextLine &&
+//       j < boxB + across - nextLine
+//     ) {
+//       defaultGrid[j].style.borderBottom = "1px solid black";
+//     } else if (
+//       //LEVEL ONE - left border
+//       j == boxA ||
+//       j == boxA + nextLine ||
+//       j == boxA + 2 * nextLine ||
+//       j == boxA + 3 * nextLine ||
+//       j == boxA + 4 * nextLine ||
+//       j == boxA + 5 * nextLine ||
+//       j == boxA + 6 * nextLine ||
+//       j == boxA + 7 * nextLine
+//     ) {
+//       defaultGrid[j].style.borderRight = "1px solid black";
+//     } else if (
+//       //LEVEL ONE - middle vertical border
+//       j == boxB ||
+//       j == boxB + nextLine ||
+//       j == boxB + 2 * nextLine ||
+//       j == boxB + 3 * nextLine ||
+//       j == boxB + 4 * nextLine ||
+//       j == boxB + 5 * nextLine ||
+//       j == boxB + 6 * nextLine ||
+//       j == boxB + 7 * nextLine
+//     ) {
+//       if (j == boxB + 3 * nextLine) {
+//         defaultGrid[j].style.borderRight = "1px solid black";
+//         defaultGrid[j].style.borderBottom = "1px solid black";
+//         defaultGrid[j].style.backgroundColor = gridBackColour;
+//       } else defaultGrid[j].style.borderRight = "1px solid black";
+//       defaultGrid[j].style.backgroundColor = gridBackColour;
+//     } else if (
+//       //LEVEL ONE - middle horizontal border
+//       j > boxA + 3 * nextLine &&
+//       j < boxB + across + 3 * nextLine
+//     ) {
+//       defaultGrid[j].style.borderBottom = "1px solid black";
+//       defaultGrid[j].style.backgroundColor = gridBackColour;
+//     } else if (
+//       //LEVEL ONE - right border
+//       j == boxB + across ||
+//       j == boxB + across + nextLine ||
+//       j == boxB + across + 2 * nextLine ||
+//       j == boxB + across + 3 * nextLine ||
+//       j == boxB + across + 4 * nextLine ||
+//       j == boxB + across + 5 * nextLine ||
+//       j == boxB + across + 6 * nextLine ||
+//       j == boxB + across + 7 * nextLine
+//     ) {
+//       defaultGrid[j].style.borderLeft = "1px solid black";
+//     } else if (
+//       //LEVEL ONE - bottom border
+//       j > boxC + 4 * nextLine &&
+//       j < boxD + across + 4 * nextLine
+//     ) {
+//       defaultGrid[j].style.borderTop = "1px solid black";
+//     } else if (
+//       //LEVEL ONE - back colour A A
+//       levelOneGridBoxA(j) == true
+//     ) {
+//       defaultGrid[j].style.backgroundColor = gridBackColour;
+//     } else if (
+//       //LEVEL ONE - back colour B
+//       levelOneGridBoxB(j) == true
+//     ) {
+//       defaultGrid[j].style.backgroundColor = gridBackColour;
+//     } else if (
+//       //LEVEL ONE - back colour C
+//       levelOneGridBoxC(j) == true
+//     ) {
+//       defaultGrid[j].style.backgroundColor = gridBackColour;
+//     } else if (
+//       //LEVEL ONE - back colour D
+//       levelOneGridBoxD(j) == true
+//     ) {
+//       defaultGrid[j].style.backgroundColor = gridBackColour;
+//     } else {
+//       document
+//         .getElementById("darkMode")
+//         .addEventListener("click", switchToDark);
+//     }
+//   }
+
+//   //LEVEL ONE GRID STRUCTURE - AFTER PLAY BUTTON IS CLICKED
+//   var levelOneGridColourArray = levelOneGridColours();
+
+//   $("#play").click(function () {
+//     shuffle(levelOneGridColourArray);
+//     let colourA = levelOneGridColourArray[0];
+
+//     let colourB = levelOneGridColourArray[1];
+
+//     var colourArrayShuffle = shuffle([colourA, colourB, colourA, colourB]);
+//     for (let j = 0; j < defaultGrid.length; j++) {
+//       let boxA = 13;
+//       let boxB = 17;
+//       let boxC = 61;
+//       let boxD = 65;
+//       let across = 5;
+//       let nextLine = 12;
+
+//       //SELECTION OF COLOURS
+
+//       //LEVEL ONE GRID - colours
+//       if (
+//         //LEVEL ONE GRID - colour A
+//         levelOneGridBoxA(j) == true
+//       ) {
+//         defaultGrid[j].style.backgroundColor = defaultGrid[
+//           j
+//         ].style.backgroundColor = colourArrayShuffle[0];
+//       } else if (
+//         //LEVEL ONE GRID - colour B
+//         levelOneGridBoxB(j) == true
+//       ) {
+//         defaultGrid[j].style.backgroundColor = colourArrayShuffle[1];
+//       } else if (
+//         //LEVEL ONE - colour C
+//         levelOneGridBoxC(j) == true
+//       ) {
+//         defaultGrid[j].style.backgroundColor = colourArrayShuffle[2];
+//       } else if (
+//         //LEVEL ONE - colour D
+//         levelOneGridBoxD(j) == true
+//       ) {
+//         defaultGrid[j].style.backgroundColor = colourArrayShuffle[3];
+//       }
+//     }
+//   });
+// });
+
+// $(".difficultySetting01").click(function () {
+//   //LEVEL ONE GRID STRUCTURE - BEFORE PLAY BUTTON IS CLICKED
+//   var gridBackColour = "rgba(128, 128, 128, 0.7)";
+
+//   for (let j = 0; j < defaultGrid.length; j++) {
+//     let boxA = 13;
+//     let boxB = 17;
+//     let boxC = 61;
+//     let boxD = 65;
+//     let across = 5;
+//     let nextLine = 12;
+
+//     //LEVEL ONE - Borders
+//     if (
+//       // LEVEL ONE - Top border
+//       j > boxA - nextLine &&
+//       j < boxB + across - nextLine
+//     ) {
+//       defaultGrid[j].style.borderBottom = "1px solid black";
+//     } else if (
+//       //LEVEL ONE - left border
+//       j == boxA ||
+//       j == boxA + nextLine ||
+//       j == boxA + 2 * nextLine ||
+//       j == boxA + 3 * nextLine ||
+//       j == boxA + 4 * nextLine ||
+//       j == boxA + 5 * nextLine ||
+//       j == boxA + 6 * nextLine ||
+//       j == boxA + 7 * nextLine
+//     ) {
+//       defaultGrid[j].style.borderRight = "1px solid black";
+//     } else if (
+//       //LEVEL ONE - middle vertical border
+//       j == boxB ||
+//       j == boxB + nextLine ||
+//       j == boxB + 2 * nextLine ||
+//       j == boxB + 3 * nextLine ||
+//       j == boxB + 4 * nextLine ||
+//       j == boxB + 5 * nextLine ||
+//       j == boxB + 6 * nextLine ||
+//       j == boxB + 7 * nextLine
+//     ) {
+//       if (j == boxB + 3 * nextLine) {
+//         defaultGrid[j].style.borderRight = "1px solid black";
+//         defaultGrid[j].style.borderBottom = "1px solid black";
+//         defaultGrid[j].style.backgroundColor = gridBackColour;
+//       } else defaultGrid[j].style.borderRight = "1px solid black";
+//       defaultGrid[j].style.backgroundColor = gridBackColour;
+//     } else if (
+//       //LEVEL ONE - middle horizontal border
+//       j > boxA + 3 * nextLine &&
+//       j < boxB + across + 3 * nextLine
+//     ) {
+//       defaultGrid[j].style.borderBottom = "1px solid black";
+//       defaultGrid[j].style.backgroundColor = gridBackColour;
+//     } else if (
+//       //LEVEL ONE - right border
+//       j == boxB + across ||
+//       j == boxB + across + nextLine ||
+//       j == boxB + across + 2 * nextLine ||
+//       j == boxB + across + 3 * nextLine ||
+//       j == boxB + across + 4 * nextLine ||
+//       j == boxB + across + 5 * nextLine ||
+//       j == boxB + across + 6 * nextLine ||
+//       j == boxB + across + 7 * nextLine
+//     ) {
+//       defaultGrid[j].style.borderLeft = "1px solid black";
+//     } else if (
+//       //LEVEL ONE - bottom border
+//       j > boxC + 4 * nextLine &&
+//       j < boxD + across + 4 * nextLine
+//     ) {
+//       defaultGrid[j].style.borderTop = "1px solid black";
+//     } else if (
+//       //LEVEL ONE - back colour A A
+//       levelOneGridBoxA(j) == true
+//     ) {
+//       defaultGrid[j].style.backgroundColor = gridBackColour;
+//     } else if (
+//       //LEVEL ONE - back colour B
+//       levelOneGridBoxB(j) == true
+//     ) {
+//       defaultGrid[j].style.backgroundColor = gridBackColour;
+//     } else if (
+//       //LEVEL ONE - back colour C
+//       levelOneGridBoxC(j) == true
+//     ) {
+//       defaultGrid[j].style.backgroundColor = gridBackColour;
+//     } else if (
+//       //LEVEL ONE - back colour D
+//       levelOneGridBoxD(j) == true
+//     ) {
+//       defaultGrid[j].style.backgroundColor = gridBackColour;
+//     } else {
+//       document
+//         .getElementById("darkMode")
+//         .addEventListener("click", switchToDark);
+//     }
+//   }
+
+//   //LEVEL ONE GRID STRUCTURE - AFTER PLAY BUTTON IS CLICKED
+//   var levelOneGridColourArray = levelOneGridColours();
+
+//   $("#play").click(function () {
+//     shuffle(levelOneGridColourArray);
+//     let colourA = levelOneGridColourArray[0];
+
+//     let colourB = levelOneGridColourArray[1];
+
+//     var colourArrayShuffle = shuffle([colourA, colourB, colourA, colourB]);
+//     for (let j = 0; j < defaultGrid.length; j++) {
+//       let boxA = 13;
+//       let boxB = 17;
+//       let boxC = 61;
+//       let boxD = 65;
+//       let across = 5;
+//       let nextLine = 12;
+
+//       //SELECTION OF COLOURS
+
+//       //LEVEL ONE GRID - colours
+//       if (
+//         //LEVEL ONE GRID - colour A
+//         levelOneGridBoxA(j) == true
+//       ) {
+//         defaultGrid[j].style.backgroundColor = defaultGrid[
+//           j
+//         ].style.backgroundColor = colourArrayShuffle[0];
+//       } else if (
+//         //LEVEL ONE - colour B
+//         levelOneGridBoxB(j) == true
+//       ) {
+//         defaultGrid[j].style.backgroundColor = colourArrayShuffle[1];
+//       } else if (
+//         //LEVEL ONE - colour C
+//         levelOneGridBoxC(j) == true
+//       ) {
+//         defaultGrid[j].style.backgroundColor = colourArrayShuffle[2];
+//       } else if (
+//         //LEVEL ONE - colour D
+//         levelOneGridBoxD(j) == true
+//       ) {
+//         defaultGrid[j].style.backgroundColor = colourArrayShuffle[3];
+//       }
+//     }
+//   });
+// });
 
 
 
-//LEVEL ONE GRID STRUCTURE - BEFORE PLAY BUTTON IS CLICKED
-if(document.getElementById("level-text").innerHTML == "Level One"){
-var gridBackColour = "rgba(128, 128, 128, 0.7)";
-for (let j = 0; j < defaultGrid.length; j++) {
-  let boxA = 13;
-  let boxB = 17;
-  let boxC = 61;
-  let boxD = 65;
-  let across = 5;
-  let nextLine = 12;
 
-  //LEVEL ONE - Borders
-  if (
-    // LEVEL ONE - Top border
-    j > boxA - nextLine &&
-    j < boxB + across - nextLine
-  ) {
-    defaultGrid[j].style.borderBottom = "1px solid black";
-  } else if (
-    //LEVEL ONE - left border
-    j == boxA ||
-    j == boxA + nextLine ||
-    j == boxA + 2 * nextLine ||
-    j == boxA + 3 * nextLine ||
-    j == boxA + 4 * nextLine ||
-    j == boxA + 5 * nextLine ||
-    j == boxA + 6 * nextLine ||
-    j == boxA + 7 * nextLine
-  ) {
-    defaultGrid[j].style.borderRight = "1px solid black";
-  } else if (
-    //LEVEL ONE - middle vertical border
-    j == boxB ||
-    j == boxB + nextLine ||
-    j == boxB + 2 * nextLine ||
-    j == boxB + 3 * nextLine ||
-    j == boxB + 4 * nextLine ||
-    j == boxB + 5 * nextLine ||
-    j == boxB + 6 * nextLine ||
-    j == boxB + 7 * nextLine
-  ) {
-    if (j == boxB + 3 * nextLine) {
+/*--------------------------------LEVEL TWO---------------------------------*/
+$(document).ready(function () {
+  //LEVEL TWO GRID STRUCTURE - BEFORE PLAY BUTTON IS CLICKED
+  var gridBackColour = "rgba(128, 128, 128, 0.7)";
+
+  for (let j = 0; j < defaultGrid.length; j++) {
+    let boxA = 13;
+    let boxB = 15;
+    let boxC = 17;
+    let boxD = 19;
+    let boxE = 73;
+    let boxF = 75;
+    let boxG = 77;
+    let boxH = 79;
+    let across = 3;
+    let nextLine = 12;
+
+    //LEVEL TWO - Borders
+    if (
+      // LEVEL TWO - Top border
+      j > boxA - nextLine &&
+      j < boxD + across - nextLine
+    ) {
+      defaultGrid[j].style.borderBottom = "1px solid black";
+    } else if (
+      //LEVEL TWO - left border
+      j == boxA ||
+      j == boxA + nextLine ||
+      j == boxA + 2 * nextLine ||
+      j == boxA + 3 * nextLine ||
+      j == boxA + 4 * nextLine ||
+      j == boxA + 5 * nextLine ||
+      j == boxA + 6 * nextLine ||
+      j == boxA + 7 * nextLine
+    ) {
       defaultGrid[j].style.borderRight = "1px solid black";
+    } else if (
+      //LEVEL TWO - first vertical border
+      j == boxB ||
+      j == boxB + nextLine ||
+      j == boxB + 2 * nextLine ||
+      j == boxB + 3 * nextLine ||
+      j == boxB + 4 * nextLine ||
+      j == boxB + 5 * nextLine ||
+      j == boxB + 6 * nextLine ||
+      j == boxB + 7 * nextLine
+    ) {
+      if (j == boxB + 3 * nextLine) {
+        defaultGrid[j].style.borderRight = "1px solid black";
+        defaultGrid[j].style.borderBottom = "1px solid black";
+        defaultGrid[j].style.backgroundColor = gridBackColour;
+      } else defaultGrid[j].style.borderRight = "1px solid black";
+      defaultGrid[j].style.backgroundColor = gridBackColour;
+    } 
+    else if (
+      //LEVEL TWO - second vertical border
+      j == boxC ||
+      j == boxC + nextLine ||
+      j == boxC + 2 * nextLine ||
+      j == boxC + 3 * nextLine ||
+      j == boxC + 4 * nextLine ||
+      j == boxC + 5 * nextLine ||
+      j == boxC + 6 * nextLine ||
+      j == boxC + 7 * nextLine
+    ) {
+      if (j == boxD + 3 * nextLine) {
+            defaultGrid[j].style.borderLeft = "1px solid black";
+        
+  
+        defaultGrid[j].style.borderBottom = "1px solid black";
+        defaultGrid[j].style.backgroundColor = "blue";
+      } else defaultGrid[j].style.borderRight = "1px solid black";
+      defaultGrid[j].style.backgroundColor = gridBackColour;
+    } 
+    else if (
+      //LEVEL TWO - middle horizontal border
+      j > boxA + 3 * nextLine &&
+      j < boxD + across + 3 * nextLine
+    ) {
       defaultGrid[j].style.borderBottom = "1px solid black";
       defaultGrid[j].style.backgroundColor = gridBackColour;
-    } else defaultGrid[j].style.borderRight = "1px solid black";
-    defaultGrid[j].style.backgroundColor = gridBackColour;
-  } else if (
-    //LEVEL ONE - middle horizontal border
-    j > boxA + 3 * nextLine &&
-    j < boxB + across + 3 * nextLine
-  ) {
-    defaultGrid[j].style.borderBottom = "1px solid black";
-    defaultGrid[j].style.backgroundColor = gridBackColour;
-  } else if (
-    //LEVEL ONE - right border
-    j == boxB + across ||
-    j == boxB + across + nextLine ||
-    j == boxB + across + 2 * nextLine ||
-    j == boxB + across + 3 * nextLine ||
-    j == boxB + across + 4 * nextLine ||
-    j == boxB + across + 5 * nextLine ||
-    j == boxB + across + 6 * nextLine ||
-    j == boxB + across + 7 * nextLine
-  ) {
-    defaultGrid[j].style.borderLeft = "1px solid black";
-  } else if (
-    //LEVEL ONE - bottom border
-    j > boxC + 4 * nextLine &&
-    j < boxD + across + 4 * nextLine
-  ) {
-    defaultGrid[j].style.borderTop = "1px solid black";
-  } else if (
-    //LEVEL ONE - back colour A A
-    levelOneGridBoxA(j)==true
-  ) {
-    defaultGrid[j].style.backgroundColor = gridBackColour;
-  } else if (
-    //LEVEL ONE - back colour B
-    levelOneGridBoxB(j)==true
-  ) {
-    defaultGrid[j].style.backgroundColor = gridBackColour;
-  } else if (
-    //LEVEL ONE - back colour C
-    levelOneGridBoxC(j)==true
-  ) {
-    defaultGrid[j].style.backgroundColor = gridBackColour;
-  } else if (
-    //DEFAULT GRID - back colour D
-    levelOneGridBoxD(j)==true
-  ) {
-    defaultGrid[j].style.backgroundColor = gridBackColour;
-  } else {
-    document.getElementById("darkMode").addEventListener("click", switchToDark);
+    } else if (
+      //LEVEL TWO - right border
+      j == boxD + across ||
+      j == boxD + across + nextLine ||
+      j == boxD + across + 2 * nextLine ||
+      j == boxD + across + 3 * nextLine ||
+      j == boxD + across + 4 * nextLine ||
+      j == boxD + across + 5 * nextLine ||
+      j == boxD + across + 6 * nextLine ||
+      j == boxD + across + 7 * nextLine
+    ) {
+      defaultGrid[j].style.borderLeft = "1px solid black";
+    } else if (
+      //LEVEL TWO - bottom border
+      j > boxC + 4 * nextLine &&
+      j < boxD + across + 4 * nextLine
+    ) {
+      defaultGrid[j].style.borderTop = "1px solid black";
+    } else if (
+      //LEVEL TWO - back colour A
+      levelOneGridBoxA(j) == true
+    ) {
+      defaultGrid[j].style.backgroundColor = gridBackColour;
+    } else if (
+      //LEVEL TWO - back colour B
+      levelOneGridBoxB(j) == true
+    ) {
+      defaultGrid[j].style.backgroundColor = gridBackColour;
+    } else if (
+      //LEVEL TWO - back colour C
+      levelOneGridBoxC(j) == true
+    ) {
+      defaultGrid[j].style.backgroundColor = gridBackColour;
+    } else if (
+      //LEVEL TWO - back colour D
+      levelOneGridBoxD(j) == true
+    ) {
+      defaultGrid[j].style.backgroundColor = gridBackColour;
+    } else {
+      document
+        .getElementById("darkMode")
+        .addEventListener("click", switchToDark);
+    }
   }
-}
 
+  //LEVEL TWO GRID STRUCTURE - AFTER PLAY BUTTON IS CLICKED
+  var levelOneGridColourArray = levelOneGridColours();
 
- //LEVEL ONE GRID STRUCTURE - AFTER PLAY BUTTON IS CLICKED
- var levelOneGridColourArray = levelOneGridColours();
- 
-$("#play").click(function () {
-
-  shuffle(levelOneGridColourArray);
+  $("#play").click(function () {
+    shuffle(levelOneGridColourArray);
     let colourA = levelOneGridColourArray[0];
 
     let colourB = levelOneGridColourArray[1];
 
     var colourArrayShuffle = shuffle([colourA, colourB, colourA, colourB]);
-  for (let j = 0; j < defaultGrid.length; j++) {
-    let boxA = 13;
-    let boxB = 17;
-    let boxC = 61;
-    let boxD = 65;
-    let across = 5;
-    let nextLine = 12;
+    for (let j = 0; j < defaultGrid.length; j++) {
+      let boxA = 13;
+      let boxB = 17;
+      let boxC = 61;
+      let boxD = 65;
+      let across = 5;
+      let nextLine = 12;
 
+      //SELECTION OF COLOURS
 
-    //SELECTION OF COLOURS
-
-    //LEVEL ONE GRID - colours
-    if (
-      //LEVEL ONE GRID - colour A
-      levelOneGridBoxA(j) == true
-    ) {
-      defaultGrid[j].style.backgroundColor = defaultGrid[
-        j
-      ].style.backgroundColor = colourArrayShuffle[0];
-    } else if (
-      //DEFAULT GRID - colour B
-      levelOneGridBoxB(j) ==  true
-    ) {
-      defaultGrid[j].style.backgroundColor = colourArrayShuffle[1];
-     
-    } else if (
-      //LEVEL ONE - colour C
-      levelOneGridBoxC(j) ==  true
-    ) {
-      defaultGrid[j].style.backgroundColor  = colourArrayShuffle[2];
-     
-    } else if (
-      //LEVEL ONE - colour D
-      levelOneGridBoxD(j) == true
-    ) {
-      defaultGrid[j].style.backgroundColor  = colourArrayShuffle[3];
-     
+      //LEVEL TWO GRID - colours
+      if (
+        //LEVEL TWO GRID - colour A
+        levelOneGridBoxA(j) == true
+      ) {
+        defaultGrid[j].style.backgroundColor = defaultGrid[
+          j
+        ].style.backgroundColor = colourArrayShuffle[0];
+      } else if (
+        //LEVEL TWO - colour B
+        levelOneGridBoxB(j) == true
+      ) {
+        defaultGrid[j].style.backgroundColor = colourArrayShuffle[1];
+      } else if (
+        //LEVEL TWO - colour C
+        levelOneGridBoxC(j) == true
+      ) {
+        defaultGrid[j].style.backgroundColor = colourArrayShuffle[2];
+      } else if (
+        //LEVEL TWO - colour D
+        levelOneGridBoxD(j) == true
+      ) {
+        defaultGrid[j].style.backgroundColor = colourArrayShuffle[3];
+      }
     }
-  }
-});
-  };   
+  });
+})
 

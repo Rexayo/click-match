@@ -73,11 +73,13 @@ button:focus{
     top:50px;
 }
 
-.dropdown-item{
-    margin:1% 2%;
-}
+
 
 .dropdown-toggle{
     padding: 2px 8px;
     margin:5px 0px;
 }
+
+/* .col-1{
+    border: 0.1px solid rgba(255, 255, 224, 0.116) !important;
+} */
