@@ -62,4 +62,22 @@ button:focus{
     border: none;
     outline: none
 }
-]
+
+#level-text
+{
+    font-weight: 900;
+    font-family: "Grandstander", sans-serif;
+    font-size: 0.8em;
+    position: absolute;
+    right: 2%;
+    top:50px;
+}
+
+.dropdown-item{
+    margin:1% 2%;
+}
+
+.dropdown-toggle{
+    padding: 2px 8px;
+    margin:5px 0px;
+}
