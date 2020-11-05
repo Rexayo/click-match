@@ -30,9 +30,7 @@ $(".difficultySetting04").click(function () {
   document.getElementById("level-text").innerHTML = "Level Four";
 });
 
-$(".difficultySetting05").click(function () {
-  document.getElementById("level-text").innerHTML = "Level Five";
-});
+
 
 //SWITCH MENU ICON
 $(".menu-icon").click(function () {

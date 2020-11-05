@@ -110,7 +110,7 @@ function shuffle(array) {
 }
 
 function levelOneGridColours() {
-  let saturation = randomVal(80, 100);
+  let saturation = randomVal(80, 90);
   let lightness = randomVal(50, 60);
   let alpha = 1.0;
   let amount = 6;

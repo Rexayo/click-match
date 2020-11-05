@@ -8,9 +8,7 @@ function levelFourGridBox1(j) {
   let nextLine = 12;
   if (
     (j > box1 && j < box1 + across) ||
-    (j > box1 + nextLine && j < box1 + nextLine + across) ||
-    (j > box1 + 2 * nextLine && j < box1 + 2 * nextLine + across) ||
-    (j > box1 + 3 * nextLine && j < box1 + 3 * nextLine + across)
+    (j > box1 + nextLine && j < box1 + nextLine + across)
   ) {
     return true;
   } else {
@@ -25,9 +23,7 @@ function levelFourGridBox2(j) {
   let nextLine = 12;
   if (
     (j > box2 && j < box2 + across) ||
-    (j > box2 + nextLine && j < box2 + nextLine + across) ||
-    (j > box2 + 2 * nextLine && j < box2 + 2 * nextLine + across) ||
-    (j > box2 + 3 * nextLine && j < box2 + 3 * nextLine + across)
+    (j > box2 + nextLine && j < box2 + nextLine + across)
   ) {
     return true;
   } else {
@@ -42,9 +38,7 @@ function levelFourGridBox3(j) {
   let nextLine = 12;
   if (
     (j > box3 && j < box3 + across) ||
-    (j > box3 + nextLine && j < box3 + nextLine + across) ||
-    (j > box3 + 2 * nextLine && j < box3 + 2 * nextLine + across) ||
-    (j > box3 + 3 * nextLine && j < box3 + 3 * nextLine + across)
+    (j > box3 + nextLine && j < box3 + nextLine + across)
   ) {
     return true;
   } else {
@@ -59,9 +53,7 @@ function levelFourGridBox4(j) {
   let nextLine = 12;
   if (
     (j > box4 && j < box4 + across) ||
-    (j > box4 + nextLine && j < box4 + nextLine + across) ||
-    (j > box4 + 2 * nextLine && j < box4 + 2 * nextLine + across) ||
-    (j > box4 + 3 * nextLine && j < box4 + 3 * nextLine + across)
+    (j > box4 + nextLine && j < box4 + nextLine + across)
   ) {
     return true;
   } else {
@@ -76,9 +68,7 @@ function levelFourGridBox5(j) {
   let nextLine = 12;
   if (
     (j > box5 && j < box5 + across) ||
-    (j > box5 + nextLine && j < box5 + nextLine + across) ||
-    (j > box5 + 2 * nextLine && j < box5 + 2 * nextLine + across) ||
-    (j > box5 + 3 * nextLine && j < box5 + 3 * nextLine + across)
+    (j > box5 + nextLine && j < box5 + nextLine + across)
   ) {
     return true;
   } else {
@@ -93,9 +83,7 @@ function levelFourGridBox6(j) {
   let nextLine = 12;
   if (
     (j > box6 && j < box6 + across) ||
-    (j > box6 + nextLine && j < box6 + nextLine + across) ||
-    (j > box6 + 2 * nextLine && j < box6 + 2 * nextLine + across) ||
-    (j > box6 + 3 * nextLine && j < box6 + 3 * nextLine + across)
+    (j > box6 + nextLine && j < box6 + nextLine + across)
   ) {
     return true;
   } else {
@@ -110,9 +98,7 @@ function levelFourGridBox7(j) {
   let nextLine = 12;
   if (
     (j > box7 && j < box7 + across) ||
-    (j > box7 + nextLine && j < box7 + nextLine + across) ||
-    (j > box7 + 2 * nextLine && j < box7 + 2 * nextLine + across) ||
-    (j > box7 + 3 * nextLine && j < box7 + 3 * nextLine + across)
+    (j > box7 + nextLine && j < box7 + nextLine + across)
   ) {
     return true;
   } else {
@@ -127,9 +113,7 @@ function levelFourGridBox8(j) {
   let nextLine = 12;
   if (
     (j > box8 && j < box8 + across) ||
-    (j > box8 + nextLine && j < box8 + nextLine + across) ||
-    (j > box8 + 2 * nextLine && j < box8 + 2 * nextLine + across) ||
-    (j > box8 + 3 * nextLine && j < box8 + 3 * nextLine + across)
+    (j > box8 + nextLine && j < box8 + nextLine + across)
   ) {
     return true;
   } else {
@@ -139,14 +123,12 @@ function levelFourGridBox8(j) {
 
 //isolate ninth box in LEVEL FOUR
 function levelFourGridBox9(j) {
-  let box9 = 61;
+  let box9 = 37;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box9 && j < box9 + across) ||
-    (j > box9 + nextLine && j < box9 + nextLine + across) ||
-    (j > box9 + 2 * nextLine && j < box9 + 2 * nextLine + across) ||
-    (j > box9 + 3 * nextLine && j < box9 + 3 * nextLine + across)
+    (j > box9 + nextLine && j < box9 + nextLine + across)
   ) {
     return true;
   } else {
@@ -156,14 +138,12 @@ function levelFourGridBox9(j) {
 
 //isolate tenth box in LEVEL FOUR
 function levelFourGridBox10(j) {
-  let box10 = 62;
+  let box10 = 38;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box10 && j < box10 + across) ||
-    (j > box10 + nextLine && j < box10 + nextLine + across) ||
-    (j > box10 + 2 * nextLine && j < box10 + 2 * nextLine + across) ||
-    (j > box10 + 3 * nextLine && j < box10 + 3 * nextLine + across)
+    (j > box10 + nextLine && j < box10 + nextLine + across)
   ) {
     return true;
   } else {
@@ -173,14 +153,12 @@ function levelFourGridBox10(j) {
 
 //isolate eleventh box in LEVEL FOUR
 function levelFourGridBox11(j) {
-  let box11 = 63;
+  let box11 = 39;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box11 && j < box11 + across) ||
-    (j > box11 + nextLine && j < box11 + nextLine + across) ||
-    (j > box11 + 2 * nextLine && j < box11 + 2 * nextLine + across) ||
-    (j > box11 + 3 * nextLine && j < box11 + 3 * nextLine + across)
+    (j > box11 + nextLine && j < box11 + nextLine + across)
   ) {
     return true;
   } else {
@@ -190,14 +168,12 @@ function levelFourGridBox11(j) {
 
 //isolate twelvth box in LEVEL FOUR
 function levelFourGridBox12(j) {
-  let box12 = 64;
+  let box12 = 40;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box12 && j < box12 + across) ||
-    (j > box12 + nextLine && j < box12 + nextLine + across) ||
-    (j > box12 + 2 * nextLine && j < box12 + 2 * nextLine + across) ||
-    (j > box12 + 3 * nextLine && j < box12 + 3 * nextLine + across)
+    (j > box12 + nextLine && j < box12 + nextLine + across)
   ) {
     return true;
   } else {
@@ -207,14 +183,12 @@ function levelFourGridBox12(j) {
 
 //isolate thirteenth box in LEVEL FOUR
 function levelFourGridBox13(j) {
-  let box13 = 65;
+  let box13 = 41;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box13 && j < box13 + across) ||
-    (j > box13 + nextLine && j < box13 + nextLine + across) ||
-    (j > box13 + 2 * nextLine && j < box13 + 2 * nextLine + across) ||
-    (j > box13 + 3 * nextLine && j < box13 + 3 * nextLine + across)
+    (j > box13 + nextLine && j < box13 + nextLine + across)
   ) {
     return true;
   } else {
@@ -224,14 +198,12 @@ function levelFourGridBox13(j) {
 
 //isolate fourteenth box in LEVEL FOUR
 function levelFourGridBox14(j) {
-  let box14 = 66;
+  let box14 = 42;
   let across = 2;
   let nextLine = 12;
   if (
-    (j > box14  && j < box14 + across) ||
-    (j > box14  + nextLine && j < box14 + nextLine + across) ||
-    (j > box14+ 2 * nextLine && j < box14 + 2 * nextLine + across) ||
-    (j > box14 + 3 * nextLine && j < box14 + 3 * nextLine + across)
+    (j > box14 && j < box14 + across) ||
+    (j > box14 + nextLine && j < box14 + nextLine + across)
   ) {
     return true;
   } else {
@@ -241,14 +213,12 @@ function levelFourGridBox14(j) {
 
 //isolate fifteenth box in LEVEL FOUR
 function levelFourGridBox15(j) {
-  let box15 = 67;
+  let box15 = 43;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box15 && j < box15 + across) ||
-    (j > box15 + nextLine && j < box15 + nextLine + across) ||
-    (j > box15 + 2 * nextLine && j < box15 + 2 * nextLine + across) ||
-    (j > box15 + 3 * nextLine && j < box15 + 3 * nextLine + across)
+    (j > box15 + nextLine && j < box15 + nextLine + across)
   ) {
     return true;
   } else {
@@ -258,14 +228,12 @@ function levelFourGridBox15(j) {
 
 //isolate sixteenth box in LEVEL FOUR
 function levelFourGridBox16(j) {
-  let box16 = 68;
+  let box16 = 44;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box16 && j < box16 + across) ||
-    (j > box16 + nextLine && j < box16 + nextLine + across) ||
-    (j > box16 + 2 * nextLine && j < box16 + 2 * nextLine + across) ||
-    (j > box16 + 3 * nextLine && j < box16 + 3 * nextLine + across)
+    (j > box16 + nextLine && j < box16 + nextLine + across)
   ) {
     return true;
   } else {
@@ -275,14 +243,12 @@ function levelFourGridBox16(j) {
 
 //isolate seventeenth box in LEVEL FOUR
 function levelFourGridBox17(j) {
-  let box17 = 13;
+  let box17 = 61;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box17 && j < box17 + across) ||
-    (j > box17 + nextLine && j < box17 + nextLine + across) ||
-    (j > box17 + 2 * nextLine && j < box17 + 2 * nextLine + across) ||
-    (j > box17 + 3 * nextLine && j < box17 + 3 * nextLine + across)
+    (j > box17 + nextLine && j < box17 + nextLine + across)
   ) {
     return true;
   } else {
@@ -290,16 +256,14 @@ function levelFourGridBox17(j) {
   }
 }
 
-//isolate second box in LEVEL FOUR
+//isolate eighteenth box in LEVEL FOUR
 function levelFourGridBox18(j) {
-  let box18 = 14;
+  let box18 = 62;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box18 && j < box18 + across) ||
-    (j > box18 + nextLine && j < box18 + nextLine + across) ||
-    (j > box18 + 2 * nextLine && j < box18 + 2 * nextLine + across) ||
-    (j > box18 + 3 * nextLine && j < box18 + 3 * nextLine + across)
+    (j > box18 + nextLine && j < box18 + nextLine + across)
   ) {
     return true;
   } else {
@@ -307,16 +271,14 @@ function levelFourGridBox18(j) {
   }
 }
 
-//isolate third box in LEVEL FOUR
+//isolate nineteenth box in LEVEL FOUR
 function levelFourGridBox19(j) {
-  let box19 = 15;
+  let box19 = 63;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box19 && j < box19 + across) ||
-    (j > box19 + nextLine && j < box19 + nextLine + across) ||
-    (j > box19 + 2 * nextLine && j < box19 + 2 * nextLine + across) ||
-    (j > box19 + 3 * nextLine && j < box19 + 3 * nextLine + across)
+    (j > box19 + nextLine && j < box19 + nextLine + across)
   ) {
     return true;
   } else {
@@ -324,16 +286,14 @@ function levelFourGridBox19(j) {
   }
 }
 
-//isolate fourth box in LEVEL FOUR
+//isolate twentieth box in LEVEL FOUR
 function levelFourGridBox20(j) {
-  let box20 = 16;
+  let box20 = 64;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box20 && j < box20 + across) ||
-    (j > box20 + nextLine && j < box20 + nextLine + across) ||
-    (j > box20 + 2 * nextLine && j < box20 + 2 * nextLine + across) ||
-    (j > box20 + 3 * nextLine && j < box20 + 3 * nextLine + across)
+    (j > box20 + nextLine && j < box20 + nextLine + across)
   ) {
     return true;
   } else {
@@ -341,16 +301,14 @@ function levelFourGridBox20(j) {
   }
 }
 
-//isolate fifth box in LEVEL FOUR
+//isolate twenty-first box in LEVEL FOUR
 function levelFourGridBox21(j) {
-  let box21 = 17;
+  let box21 = 65;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box21 && j < box21 + across) ||
-    (j > box21 + nextLine && j < box21 + nextLine + across) ||
-    (j > box21 + 2 * nextLine && j < box21 + 2 * nextLine + across) ||
-    (j > box21 + 3 * nextLine && j < box21 + 3 * nextLine + across)
+    (j > box21 + nextLine && j < box21 + nextLine + across)
   ) {
     return true;
   } else {
@@ -358,16 +316,14 @@ function levelFourGridBox21(j) {
   }
 }
 
-//isolate sixth box in LEVEL FOUR
+//isolate twenty-second box in LEVEL FOUR
 function levelFourGridBox22(j) {
-  let box22 = 18;
+  let box22 = 66;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box22 && j < box22 + across) ||
-    (j > box22 + nextLine && j < box22 + nextLine + across) ||
-    (j > box22 + 2 * nextLine && j < box22 + 2 * nextLine + across) ||
-    (j > box22 + 3 * nextLine && j < box22 + 3 * nextLine + across)
+    (j > box22 + nextLine && j < box22 + nextLine + across)
   ) {
     return true;
   } else {
@@ -375,16 +331,14 @@ function levelFourGridBox22(j) {
   }
 }
 
-//isolate seventh box in LEVEL FOUR
+//isolate twenty-third box in LEVEL FOUR
 function levelFourGridBox23(j) {
-  let box23 = 19;
+  let box23 = 67;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box23 && j < box23 + across) ||
-    (j > box23 + nextLine && j < box23 + nextLine + across) ||
-    (j > box23 + 2 * nextLine && j < box23 + 2 * nextLine + across) ||
-    (j > box23 + 3 * nextLine && j < box23 + 3 * nextLine + across)
+    (j > box23 + nextLine && j < box23 + nextLine + across)
   ) {
     return true;
   } else {
@@ -392,16 +346,14 @@ function levelFourGridBox23(j) {
   }
 }
 
-//isolate eight box in LEVEL FOUR
+//isolate twenty-fourth box in LEVEL FOUR
 function levelFourGridBox24(j) {
-  let box24 = 20;
+  let box24 = 68;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box24 && j < box24 + across) ||
-    (j > box24 + nextLine && j < box24 + nextLine + across) ||
-    (j > box24 + 2 * nextLine && j < box24 + 2 * nextLine + across) ||
-    (j > box24 + 3 * nextLine && j < box24 + 3 * nextLine + across)
+    (j > box24 + nextLine && j < box24 + nextLine + across)
   ) {
     return true;
   } else {
@@ -409,18 +361,14 @@ function levelFourGridBox24(j) {
   }
 }
 
-
-
-//isolate tenth box in LEVEL FOUR
+//isolate twenty-fifth box in LEVEL FOUR
 function levelFourGridBox25(j) {
-  let box25 = 62;
+  let box25 = 85;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box25 && j < box25 + across) ||
-    (j > box25 + nextLine && j < box25 + nextLine + across) ||
-    (j > box25 + 2 * nextLine && j < box25 + 2 * nextLine + across) ||
-    (j > box25 + 3 * nextLine && j < box25 + 3 * nextLine + across)
+    (j > box25 + nextLine && j < box25 + nextLine + across)
   ) {
     return true;
   } else {
@@ -428,16 +376,14 @@ function levelFourGridBox25(j) {
   }
 }
 
-//isolate eleventh box in LEVEL FOUR
+//isolate twenty-sixth box in LEVEL FOUR
 function levelFourGridBox26(j) {
-  let box26 = 63;
+  let box26 = 86;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box26 && j < box26 + across) ||
-    (j > box26 + nextLine && j < box26 + nextLine + across) ||
-    (j > box26 + 2 * nextLine && j < box26 + 2 * nextLine + across) ||
-    (j > box26 + 3 * nextLine && j < box26 + 3 * nextLine + across)
+    (j > box26 + nextLine && j < box26 + nextLine + across)
   ) {
     return true;
   } else {
@@ -445,16 +391,14 @@ function levelFourGridBox26(j) {
   }
 }
 
-//isolate twelvth box in LEVEL FOUR
+//isolate twenty-seventh box in LEVEL FOUR
 function levelFourGridBox27(j) {
-  let box27 = 64;
+  let box27 = 87;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box27 && j < box27 + across) ||
-    (j > box27 + nextLine && j < box27 + nextLine + across) ||
-    (j > box27 + 2 * nextLine && j < box27 + 2 * nextLine + across) ||
-    (j > box27 + 3 * nextLine && j < box27 + 3 * nextLine + across)
+    (j > box27 + nextLine && j < box27 + nextLine + across)
   ) {
     return true;
   } else {
@@ -462,16 +406,14 @@ function levelFourGridBox27(j) {
   }
 }
 
-//isolate thirteenth box in LEVEL FOUR
+//isolate twenty-eighth box in LEVEL FOUR
 function levelFourGridBox28(j) {
-  let box28 = 65;
+  let box28 = 88;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box28 && j < box28 + across) ||
-    (j > box28 + nextLine && j < box28 + nextLine + across) ||
-    (j > box28 + 2 * nextLine && j < box28 + 2 * nextLine + across) ||
-    (j > box28 + 3 * nextLine && j < box13 + 3 * nextLine + across)
+    (j > box28 + nextLine && j < box28 + nextLine + across)
   ) {
     return true;
   } else {
@@ -479,16 +421,14 @@ function levelFourGridBox28(j) {
   }
 }
 
-//isolate twenty ninth box in LEVEL FOUR
+//isolate twenty-ninth box in LEVEL FOUR
 function levelFourGridBox29(j) {
-  let box29 = 61;
+  let box29 = 89;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box29 && j < box29 + across) ||
-    (j > box29 + nextLine && j < box29 + nextLine + across) ||
-    (j > box29 + 2 * nextLine && j < box29 + 2 * nextLine + across) ||
-    (j > box29 + 3 * nextLine && j < box29 + 3 * nextLine + across)
+    (j > box29 + nextLine && j < box29 + nextLine + across)
   ) {
     return true;
   } else {
@@ -496,16 +436,14 @@ function levelFourGridBox29(j) {
   }
 }
 
-//isolate fourteenth box in LEVEL FOUR
+//isolate thirtieth box in LEVEL FOUR
 function levelFourGridBox30(j) {
-  let box30 = 66;
+  let box30 = 90;
   let across = 2;
   let nextLine = 12;
   if (
-    (j > box30  && j < box30 + across) ||
-    (j > box30  + nextLine && j < box30 + nextLine + across) ||
-    (j > box30+ 2 * nextLine && j < box30 + 2 * nextLine + across) ||
-    (j > box30 + 3 * nextLine && j < box30 + 3 * nextLine + across)
+    (j > box30 && j < box30 + across) ||
+    (j > box30 + nextLine && j < box30 + nextLine + across)
   ) {
     return true;
   } else {
@@ -513,16 +451,14 @@ function levelFourGridBox30(j) {
   }
 }
 
-//isolate fifteenth box in LEVEL FOUR
+//isolate thirty-first box in LEVEL FOUR
 function levelFourGridBox31(j) {
-  let box31 = 67;
+  let box31 = 91;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box31 && j < box31 + across) ||
-    (j > box31 + nextLine && j < box31 + nextLine + across) ||
-    (j > box31 + 2 * nextLine && j < box31 + 2 * nextLine + across) ||
-    (j > box31 + 3 * nextLine && j < box31 + 3 * nextLine + across)
+    (j > box31 + nextLine && j < box31 + nextLine + across)
   ) {
     return true;
   } else {
@@ -530,16 +466,14 @@ function levelFourGridBox31(j) {
   }
 }
 
-//isolate sixteenth box in LEVEL FOUR
+//isolate thirty-second box in LEVEL FOUR
 function levelFourGridBox32(j) {
-  let box32 = 68;
+  let box32 = 92;
   let across = 2;
   let nextLine = 12;
   if (
     (j > box32 && j < box32 + across) ||
-    (j > box32 + nextLine && j < box32 + nextLine + across) ||
-    (j > box32 + 2 * nextLine && j < box32 + 2 * nextLine + across) ||
-    (j > box32 + 3 * nextLine && j < box32 + 3 * nextLine + across)
+    (j > box32 + nextLine && j < box32 + nextLine + across)
   ) {
     return true;
   } else {
@@ -548,8 +482,8 @@ function levelFourGridBox32(j) {
 }
 
 function levelFourGridColours() {
-  let saturation = randomVal(80, 100);
-  let lightness = randomVal(50, 60);
+  let saturation = randomVal(80, 90);
+  let lightness =randomVal(50, 60);
   let alpha = 1.0;
   let amount = 32;
 
@@ -560,7 +494,7 @@ function levelFourGridColours() {
 
 /*--------------------------------LEVEL FOUR---------------------------------*/
 
-$(document).ready(function () {
+$(".difficultySetting04").click(function () {
   //LEVEL FOUR GRID STRUCTURE - BEFORE PLAY BUTTON IS CLICKED
   var gridBackColour = "rgba(128, 128, 128, 0.7)";
 
@@ -571,8 +505,8 @@ $(document).ready(function () {
     let box4 = 18;
     let box5 = 61;
     let box6 = 63;
-    let box23 = 65;
-    let box24 = 67;
+    let box7 = 65;
+    let box8 = 67;
     let across = 2;
     let nextLine = 12;
 
@@ -582,23 +516,7 @@ $(document).ready(function () {
       j > box1 - nextLine &&
       j < box4 + across - nextLine
     ) {
-      if (j == box1 + 3 * nextLine) {
-        defaultGrid[j].style.borderBottom = "1px solid black";
-        defaultGrid[j].style.borderLeft = "1px solid black";
-      }
       defaultGrid[j].style.borderBottom = "1px solid black";
-    } else if (
-      //LEVEL FOUR - left border
-      j == box1 ||
-      j == box1 + nextLine ||
-      j == box1 + 2 * nextLine ||
-      j == box1 + 3 * nextLine ||
-      j == box1 + 4 * nextLine ||
-      j == box1 + 5 * nextLine ||
-      j == box1 + 6 * nextLine ||
-      j == box1 + 7 * nextLine
-    ) {
-      defaultGrid[j].style.borderRight = "1px solid black";
     } else if (
       //LEVEL FOUR - first vertical border
       j == box2 ||
@@ -610,62 +528,94 @@ $(document).ready(function () {
       j == box2 + 6 * nextLine ||
       j == box2 + 7 * nextLine
     ) {
-      if (j == box2 + 3 * nextLine) {
-        defaultGrid[j].style.borderRight = "1px solid black";
+      if (j == box2 + nextLine || j == box2 + 5 * nextLine) {
         defaultGrid[j].style.borderBottom = "1px solid black";
-        defaultGrid[j].style.backgroundColor = gridBackColour;
+        defaultGrid[j].style.borderRight = "1px solid black";
       } else {
         defaultGrid[j].style.borderRight = "1px solid black";
-
-        defaultGrid[j].style.backgroundColor = gridBackColour;
       }
     } else if (
       //LEVEL FOUR - second vertical border
-      j == box3 ||
-      j == box3 + nextLine ||
-      j == box3 + 2 * nextLine ||
-      j == box3 + 3 * nextLine ||
-      j == box3 + 4 * nextLine ||
-      j == box3 + 5 * nextLine ||
-      j == box3 + 6 * nextLine ||
-      j == box3 + 7 * nextLine
+      j == box2 + 2 ||
+      j == box2 + nextLine + 2 ||
+      j == box2 + 2 * nextLine + 2 ||
+      j == box2 + 3 * nextLine + 2 ||
+      j == box2 + 4 * nextLine + 2 ||
+      j == box2 + 5 * nextLine + 2 ||
+      j == box2 + 6 * nextLine + 2 ||
+      j == box2 + 7 * nextLine + 2
     ) {
-      if (j == box3 + 3 * nextLine) {
-        defaultGrid[j].style.borderRight = "1px solid black";
+      if (j == box2 + 3 * nextLine + 2) {
         defaultGrid[j].style.borderLeft = "1px solid black";
+        defaultGrid[j].style.borderRight = "1px solid black";
+        defaultGrid[j].style.borderBottom = "1px solid black";
+      } else if (j == box2 + nextLine + 2 || j == box2 + 5 * nextLine + 2) {
+        defaultGrid[j].style.borderLeft = "1px solid black";
+        defaultGrid[j].style.borderRight = "1px solid black";
         defaultGrid[j].style.borderBottom = "1px solid black";
       } else {
-        defaultGrid[j].style.borderRight = "1px solid black";
         defaultGrid[j].style.borderLeft = "1px solid black";
+        defaultGrid[j].style.borderRight = "1px solid black";
         defaultGrid[j].style.backgroundColor = gridBackColour;
       }
     } else if (
-      //LEVEL FOUR - third vertical border
-      j == box3 + 2 ||
-      j == box3 + nextLine + 2 ||
-      j == box3 + 2 * nextLine + 2 ||
-      j == box3 + 3 * nextLine + 2 ||
-      j == box3 + 4 * nextLine + 2 ||
-      j == box3 + 5 * nextLine + 2 ||
-      j == box3 + 6 * nextLine + 2 ||
-      j == box3 + 7 * nextLine + 2
+      //LEVEL FOUR - first horizontal border
+      j > box1 + nextLine &&
+      j < box4 + across + nextLine + 2
     ) {
-      if (j == box3 + 3 * nextLine + 2) {
+      if (j == box4 + across + nextLine) {
+        defaultGrid[j].style.borderLeft = "1px solid black";
         defaultGrid[j].style.borderRight = "1px solid black";
-
         defaultGrid[j].style.borderBottom = "1px solid black";
-
+      } else if (j == box4 + across + nextLine - 1) {
+        defaultGrid[j].style.borderLeft = "1px solid black";
         defaultGrid[j].style.borderBottom = "1px solid black";
-        defaultGrid[j].style.backgroundColor = "blue";
-      } else defaultGrid[j].style.borderRight = "1px solid black";
-      defaultGrid[j].style.backgroundColor = gridBackColour;
+      } else {
+        defaultGrid[j].style.borderBottom = "1px solid black";
+        defaultGrid[j].style.backgroundColor = gridBackColour;
+      }
     } else if (
       //LEVEL FOUR - middle horizontal border
       j > box1 + 3 * nextLine &&
       j < box4 + across + 3 * nextLine
     ) {
-      defaultGrid[j].style.borderBottom = "1px solid black";
-      defaultGrid[j].style.backgroundColor = gridBackColour;
+      if (j == box4 + across + 3 * nextLine - 1) {
+        defaultGrid[j].style.borderLeft = "1px solid black";
+        defaultGrid[j].style.borderBottom = "1px solid black";
+      } else {
+        defaultGrid[j].style.borderBottom = "1px solid black";
+        defaultGrid[j].style.backgroundColor = gridBackColour;
+      }
+    } else if (
+      //LEVEL FOUR - third horizontal border
+      j > box1 + 5 * nextLine &&
+      j < box4 + across + 5 * nextLine + 2
+    ) {
+      if (j == box4 + across + 5 * nextLine) {
+        defaultGrid[j].style.borderLeft = "1px solid black";
+        defaultGrid[j].style.borderRight = "1px solid black";
+        defaultGrid[j].style.borderBottom = "1px solid black";
+      } else if (j == box4 + across + 5 * nextLine - 1) {
+        defaultGrid[j].style.borderLeft = "1px solid black";
+        // defaultGrid[j].style.borderRight = "1px solid black";
+        defaultGrid[j].style.borderBottom = "1px solid black";
+      } else {
+        defaultGrid[j].style.borderBottom = "1px solid black";
+
+        defaultGrid[j].style.backgroundColor = gridBackColour;
+      }
+    } else if (
+      //LEVEL FOUR - fifth vertical border
+      j == box3 + across + 1 ||
+      j == box3 + across + nextLine + 1 ||
+      j == box3 + across + 2 * nextLine + 1 ||
+      j == box3 + across + 3 * nextLine + 1 ||
+      j == box3 + across + 4 * nextLine + 1 ||
+      j == box3 + across + 5 * nextLine + 1 ||
+      j == box3 + across + 6 * nextLine + 1 ||
+      j == box3 + across + 7 * nextLine + 1
+    ) {
+      defaultGrid[j].style.borderLeft = "1px solid black";
     } else if (
       //LEVEL FOUR - last vertical border
       j == box4 + across ||
@@ -677,14 +627,14 @@ $(document).ready(function () {
       j == box4 + across + 6 * nextLine ||
       j == box4 + across + 7 * nextLine
     ) {
+      if (j == box4 + across + nextLine) {
+        defaultGrid[j].style.borderLeft = "1px solid black";
+        defaultGrid[j].style.borderRight = "1px solid black";
+        defaultGrid[j].style.borderBottom = "1px solid black";
+      }
       defaultGrid[j].style.borderLeft = "1px solid black";
       defaultGrid[j].style.borderRight = "1px solid black";
-    } else if (
-      //LEVEL FOUR - bottom border
-      j > box5 + 4 * nextLine &&
-      j < box8 + across + 4 * nextLine
-    ) {
-      defaultGrid[j].style.borderTop = "1px solid black";
+      defaultGrid[j].style.backgroundColor = gridBackColour;
     } else if (
       //LEVEL FOUR - back colour 1
       levelOneGridBox1(j) == true
@@ -781,7 +731,7 @@ $(document).ready(function () {
       colour13,
       colour14,
       colour15,
-      colour16
+      colour16,
     ]);
     for (let j = 0; j < defaultGrid.length; j++) {
       //SELECTION OF COLOURS
@@ -792,22 +742,17 @@ $(document).ready(function () {
         levelFourGridBox1(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[0];
-       
       } else if (
         //LEVEL FOUR - colour 2
         levelFourGridBox2(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[1];
-        
-      } 
-    else if (
+      } else if (
         //LEVEL FOUR - colour 3
         levelFourGridBox3(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[2];
-       
-      }
-      else if (
+      } else if (
         //LEVEL FOUR - colour 4
         levelFourGridBox4(j) == true
       ) {
@@ -817,8 +762,7 @@ $(document).ready(function () {
         levelFourGridBox5(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[4];
-      } 
-      else if (
+      } else if (
         //LEVEL FOUR - colour 6
         levelFourGridBox6(j) == true
       ) {
@@ -833,82 +777,62 @@ $(document).ready(function () {
         levelFourGridBox8(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[7];
-      } 
-      else if (
+      } else if (
         //LEVEL FOUR - colour 9
         levelFourGridBox9(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[8];
-      } 
-      else if (
+      } else if (
         //LEVEL FOUR - colour 10
         levelFourGridBox10(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[9];
-       
-      } 
-      else if (
+      } else if (
         //LEVEL FOUR - colour 11
         levelFourGridBox11(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[10];
-        
-      } 
-      else if (
+      } else if (
         //LEVEL FOUR - colour 12
         levelFourGridBox12(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[11];
-       
-      } 
-      else if (
+      } else if (
         //LEVEL FOUR - colour 13
         levelFourGridBox13(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[12];
-        
-      }
-       else if (
+      } else if (
         //LEVEL FOUR - colour 14
         levelFourGridBox14(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[13];
-         
-      } 
-      else if (
+      } else if (
         //LEVEL FOUR - colour 15
         levelFourGridBox15(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[14];
-        
-      } 
-      else if (
+      } else if (
         //LEVEL FOUR - colour 16
         levelFourGridBox16(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[15];
-       
-      }else  if (
+      } else if (
         //LEVEL FOUR GRID - colour 17
         levelFourGridBox17(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[16];
-       
       } else if (
         //LEVEL FOUR - colour 18
         levelFourGridBox18(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[17];
-        
-      } 
-    else if (
+      } else if (
         //LEVEL FOUR - colour 19
         levelFourGridBox19(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[18];
-       
-      }
-      else if (
+      } else if (
         //LEVEL FOUR - colour 20
         levelFourGridBox20(j) == true
       ) {
@@ -918,8 +842,7 @@ $(document).ready(function () {
         levelFourGridBox21(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[20];
-      } 
-      else if (
+      } else if (
         //LEVEL FOUR - colour 22
         levelFourGridBox22(j) == true
       ) {
@@ -934,61 +857,46 @@ $(document).ready(function () {
         levelFourGridBox24(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[23];
-      } 
-      else if (
+      } else if (
         //LEVEL FOUR - colour 25
         levelFourGridBox25(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[24];
-      } 
-      else if (
+      } else if (
         //LEVEL FOUR - colour 26
         levelFourGridBox26(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[25];
-       
-      } 
-      else if (
+      } else if (
         //LEVEL FOUR - colour 27
         levelFourGridBox27(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[26];
-        
-      } 
-      else if (
+      } else if (
         //LEVEL FOUR - colour 28
         levelFourGridBox28(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[27];
-       
-      } 
-      else if (
+      } else if (
         //LEVEL FOUR - colour 29
         levelFourGridBox29(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[28];
-        
-      }
-       else if (
+      } else if (
         //LEVEL FOUR - colour 30
         levelFourGridBox30(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[29];
-         
-      } 
-      else if (
+      } else if (
         //LEVEL FOUR - colour 31
         levelFourGridBox31(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[30];
-        
-      } 
-      else if (
+      } else if (
         //LEVEL FOUR - colour 32
         levelFourGridBox32(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[31];
-       
       }
     }
   });
