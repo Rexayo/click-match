@@ -483,7 +483,7 @@ function levelFourGridBox32(j) {
 
 function levelFourGridColours() {
   let saturation = randomVal(80, 90);
-  let lightness =randomVal(50, 60);
+  let lightness = randomVal(50, 60);
   let alpha = 1.0;
   let amount = 32;
 
@@ -495,6 +495,7 @@ function levelFourGridColours() {
 /*--------------------------------LEVEL FOUR---------------------------------*/
 
 $(".difficultySetting04").click(function () {
+    reset();
   //LEVEL FOUR GRID STRUCTURE - BEFORE PLAY BUTTON IS CLICKED
   var gridBackColour = "rgba(128, 128, 128, 0.7)";
 
@@ -509,6 +510,7 @@ $(".difficultySetting04").click(function () {
     let box8 = 67;
     let across = 2;
     let nextLine = 12;
+
 
     //LEVEL FOUR - Borders
     if (

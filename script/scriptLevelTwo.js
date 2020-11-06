@@ -152,6 +152,10 @@ function levelTwoGridColours() {
 
 $(".difficultySetting02").click(function () {
 
+   reset();
+
+
+
   //LEVEL TWO GRID STRUCTURE - BEFORE PLAY BUTTON IS CLICKED
   var gridBackColour = "rgba(128, 128, 128, 0.7)";
 

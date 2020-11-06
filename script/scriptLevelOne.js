@@ -121,7 +121,7 @@ function levelOneGridColours() {
 /*---------LEVEL ONE FUNCTIONS END HERE------------*/
 
 /*--------------------------------LEVEL ONE---------------------------------*/
-$(document).ready(function () {
+
   //LEVEL ONE GRID STRUCTURE - BEFORE PLAY BUTTON IS CLICKED
   var gridBackColour = "rgba(128, 128, 128, 0.7)";
 
@@ -267,14 +267,12 @@ $(document).ready(function () {
       }
     }
   });
-});
+
 
 $(".difficultySetting01").click(function () {
-  location.reload();
-  document.getElementsByClassName(
-    "col-1"
-  ).style.backgroundColor = gridBackColour;
-  document.getElementsByClassName("col-1").style.border = "none";
+  
+ reset();
+ 
   //LEVEL ONE GRID STRUCTURE - BEFORE PLAY BUTTON IS CLICKED
   var gridBackColour = "rgba(128, 128, 128, 0.7)";
 

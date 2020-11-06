@@ -228,9 +228,9 @@ function levelThreeGridBox14(j) {
   let across = 2;
   let nextLine = 12;
   if (
-    (j > box14  && j < box14 + across) ||
-    (j > box14  + nextLine && j < box14 + nextLine + across) ||
-    (j > box14+ 2 * nextLine && j < box14 + 2 * nextLine + across) ||
+    (j > box14 && j < box14 + across) ||
+    (j > box14 + nextLine && j < box14 + nextLine + across) ||
+    (j > box14 + 2 * nextLine && j < box14 + 2 * nextLine + across) ||
     (j > box14 + 3 * nextLine && j < box14 + 3 * nextLine + across)
   ) {
     return true;
@@ -287,6 +287,9 @@ function levelThreeGridColours() {
 /*--------------------------------LEVEL THREE---------------------------------*/
 
 $(".difficultySetting03").click(function () {
+
+    reset();
+    
   //LEVEL THREE GRID STRUCTURE - BEFORE PLAY BUTTON IS CLICKED
   var gridBackColour = "rgba(128, 128, 128, 0.7)";
 
@@ -475,7 +478,7 @@ $(".difficultySetting03").click(function () {
       colour5,
       colour6,
       colour7,
-      colour8
+      colour8,
     ]);
     for (let j = 0; j < defaultGrid.length; j++) {
       //SELECTION OF COLOURS
@@ -486,22 +489,17 @@ $(".difficultySetting03").click(function () {
         levelThreeGridBox1(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[0];
-       
       } else if (
         //LEVEL THREE - colour 2
         levelThreeGridBox2(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[1];
-        
-      } 
-    else if (
+      } else if (
         //LEVEL THREE - colour 3
         levelThreeGridBox3(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[2];
-       
-      }
-      else if (
+      } else if (
         //LEVEL THREE - colour 4
         levelThreeGridBox4(j) == true
       ) {
@@ -511,8 +509,7 @@ $(".difficultySetting03").click(function () {
         levelThreeGridBox5(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[4];
-      } 
-      else if (
+      } else if (
         //LEVEL THREE - colour 6
         levelThreeGridBox6(j) == true
       ) {
@@ -527,61 +524,46 @@ $(".difficultySetting03").click(function () {
         levelThreeGridBox8(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[7];
-      } 
-      else if (
+      } else if (
         //LEVEL THREE - colour 9
         levelThreeGridBox9(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[8];
-      } 
-      else if (
+      } else if (
         //LEVEL THREE - colour 10
         levelThreeGridBox10(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[9];
-       
-      } 
-      else if (
+      } else if (
         //LEVEL THREE - colour 11
         levelThreeGridBox11(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[10];
-        
-      } 
-      else if (
+      } else if (
         //LEVEL THREE - colour 12
         levelThreeGridBox12(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[11];
-       
-      } 
-      else if (
+      } else if (
         //LEVEL THREE - colour 13
         levelThreeGridBox13(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[12];
-        
-      }
-       else if (
+      } else if (
         //LEVEL THREE - colour 14
         levelThreeGridBox14(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[13];
-         
-      } 
-      else if (
+      } else if (
         //LEVEL THREE - colour 15
         levelThreeGridBox15(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[14];
-        
-      } 
-      else if (
+      } else if (
         //LEVEL THREE - colour 16
         levelThreeGridBox16(j) == true
       ) {
         defaultGrid[j].style.backgroundColor = colourArrayShuffle[15];
-       
       }
     }
   });
