@@ -30,8 +30,6 @@ $(".difficultySetting04").click(function () {
   document.getElementById("level-text").innerHTML = "Level Four";
 });
 
-
-
 //SWITCH MENU ICON
 $(".menu-icon").click(function () {
   $("i", this).toggleClass("fa-hand-o-down fa-hand-o-up");
@@ -47,17 +45,17 @@ for (let i = 0; i < 120; i++) {
 
 var defaultGrid = document.getElementsByClassName("col-1");
 
-function reset(){
-     //RESET STARTS HERE
+function reset() {
+  //RESET STARTS HERE
 
-    for (let j = 0; j < defaultGrid.length; j++) {
+  for (let j = 0; j < defaultGrid.length; j++) {
     let box1 = 13;
     let box2 = 17;
     let box3 = 61;
     let box4 = 65;
     let across = 5;
     let nextLine = 12;
-defaultGrid[j].style.border = "none";
+    defaultGrid[j].style.border = "none";
     //LEVEL ONE - Borders
     if (
       // LEVEL ONE - Top border
@@ -65,6 +63,7 @@ defaultGrid[j].style.border = "none";
       j < box2 + across - nextLine
     ) {
       defaultGrid[j].style.borderBottom = "1px solid black";
+      
     } else if (
       //LEVEL ONE - left border
       j == box1 ||
@@ -146,7 +145,13 @@ defaultGrid[j].style.border = "none";
     }
   }
 
-    //RESET ENDS HERE
+  //RESET ENDS HERE
+}
 
-
+function flipToBack(j) {
+  let boxes = document.getElementsByClassName("boxes");
+  for (j = 0; j < boxes.length; j++) {
+      boxes[j].style.backgroundColor = gridBackColour;
+    
+  }
 }
