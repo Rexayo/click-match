@@ -260,6 +260,7 @@ var playCounter = 0;
 var clickCounter = 0;
 var flippedCards = 0;
 
+
 $("#play").click(function () {
   clickCounter = 0;
   flippedCards = 0;
@@ -297,10 +298,12 @@ $("#play").click(function () {
     setTimeout(flipToBack, 100);
   }
   playCounter++;
+ 
   $("#play").fadeOut();
 });
 
 $(".levelOneBox1").click(function () {
+    
   let levelOneBox1 = $(".levelOneBox1");
   let levelOneBox2 = $(".levelOneBox2");
   let levelOneBox3 = $(".levelOneBox3");
@@ -330,7 +333,11 @@ $(".levelOneBox1").click(function () {
         ) {
           levelOneBox1[i].style.backgroundColor = colourArrayShuffleOne[0];
           flippedCards++;
-        } else {
+        } else if (
+            levelOneBox1[i].style.backgroundColor == colourArrayShuffleOne[0]
+          ) {
+            levelOneBox1[i].style.backgroundColor = colourArrayShuffleOne[0];
+          }else {
           setTimeout(function () {
             levelOneBox1[i].style.backgroundColor = gridBackColour;
           }, 500);
@@ -339,9 +346,11 @@ $(".levelOneBox1").click(function () {
     }
   }
   clickCounter++;
+
 });
 
 $(".levelOneBox2").click(function () {
+  
   let levelOneBox1 = $(".levelOneBox1");
   let levelOneBox2 = $(".levelOneBox2");
   let levelOneBox3 = $(".levelOneBox3");
@@ -384,9 +393,11 @@ $(".levelOneBox2").click(function () {
     }
   }
   clickCounter++;
+
 });
 
 $(".levelOneBox3").click(function () {
+  
   let levelOneBox1 = $(".levelOneBox1");
   let levelOneBox2 = $(".levelOneBox2");
   let levelOneBox3 = $(".levelOneBox3");
@@ -429,9 +440,11 @@ $(".levelOneBox3").click(function () {
     }
   }
   clickCounter++;
+
 });
 
 $(".levelOneBox4").click(function () {
+    
   let levelOneBox1 = $(".levelOneBox1");
   let levelOneBox2 = $(".levelOneBox2");
   let levelOneBox3 = $(".levelOneBox3");
@@ -474,11 +487,14 @@ $(".levelOneBox4").click(function () {
     }
   }
   clickCounter++;
+
 });
 
 //ON-CLICK FOR DIFFICULTY SELECTOR STARTS HERE
 $(".difficultySetting01").click(function () {
-  reset();
+
+    reset();
+  
   levelOneGridColourArray = [];
   levelOneGridColourArray = levelOneGridColours();
   shuffle(levelOneGridColourArray);
