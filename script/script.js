@@ -148,6 +148,47 @@ function reset() {
   //RESET ENDS HERE
 }
 
+function resetClasses(defaultGrid) {
+
+    for(let i = 0; i< defaultGrid.length; i++){
+  defaultGrid[i].classList.remove("levelOneBox1");
+  defaultGrid[i].classList.remove("levelOneBox2");
+  defaultGrid[i].classList.remove("levelOneBox3");
+  defaultGrid[i].classList.remove("levelOneBox4");
+  defaultGrid[i].classList.remove("levelOneBox5");
+  defaultGrid[i].classList.remove("levelOneBox6");
+  defaultGrid[i].classList.remove("levelOneBox7");
+  defaultGrid[i].classList.remove("levelOneBox8");
+  defaultGrid[i].classList.remove("levelOneBox9");
+  defaultGrid[i].classList.remove("levelOneBox10");
+  defaultGrid[i].classList.remove("levelOneBox11");
+  defaultGrid[i].classList.remove("levelOneBox12");
+  defaultGrid[i].classList.remove("levelOneBox13");
+  defaultGrid[i].classList.remove("levelOneBox14");
+  defaultGrid[i].classList.remove("levelOneBox15");
+  defaultGrid[i].classList.remove("levelOneBox16");
+  defaultGrid[i].classList.remove("levelOneBox16");
+  defaultGrid[i].classList.remove("levelOneBox17");
+  defaultGrid[i].classList.remove("levelOneBox18");
+  defaultGrid[i].classList.remove("levelOneBox19");
+  defaultGrid[i].classList.remove("levelOneBox20");
+  defaultGrid[i].classList.remove("levelOneBox21");
+  defaultGrid[i].classList.remove("levelOneBox22");
+  defaultGrid[i].classList.remove("levelOneBox23");
+  defaultGrid[i].classList.remove("levelOneBox24");
+  defaultGrid[i].classList.remove("levelOneBox25");
+  defaultGrid[i].classList.remove("levelOneBox26");
+  defaultGrid[i].classList.remove("levelOneBox27");
+  defaultGrid[i].classList.remove("levelOneBox28");
+  defaultGrid[i].classList.remove("levelOneBox29");
+  defaultGrid[i].classList.remove("levelOneBox30");
+  defaultGrid[i].classList.remove("levelOneBox31");
+  defaultGrid[i].classList.remove("levelOneBox32");
+}
+  return defaultGrid;
+}
+
+
 function flipToBack(j) {
   let boxes = document.getElementsByClassName("boxes");
   for (j = 0; j < boxes.length; j++) {

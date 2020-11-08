@@ -149,16 +149,60 @@ function levelTwoGridColours() {
 /*---------LEVEL TWO FUNCTIONS END HERE------------*/
 
 /*--------------------------------LEVEL TWO---------------------------------*/
-
+var levelTwo = 0;
 $(".difficultySetting02").click(function () {
+  resetClasses(defaultGrid);
+  reset();
 
-   reset();
+  //assign classes to each box
+  for (let j = 0; j < defaultGrid.length; j++) {
+    //SELECTION OF COLOURS
 
+    //LEVEL TWO GRID - colours
+    if (
+      //LEVEL TWO GRID - colour A
+      levelTwoGridBox1(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelTwoBox1");
+    } else if (
+      //LEVEL TWO GRID - colour B
+      levelTwoGridBox2(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelTwoBox2");
+    } else if (
+      //LEVEL TWO - colour C
+      levelTwoGridBox3(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelTwoBox3");
+    } else if (
+      //LEVEL TWO - colour D
+      levelTwoGridBox4(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelTwoBox4");
+    } else if (
+      //LEVEL TWO - colour D
+      levelTwoGridBox5(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelTwoBox5");
+    } else if (
+      //LEVEL TWO - colour D
+      levelTwoGridBox6(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelTwoBox6");
+    } else if (
+      //LEVEL TWO - colour D
+      levelTwoGridBox7(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelTwoBox7");
+    } else if (
+      //LEVEL TWO - colour D
+      levelTwoGridBox8(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelTwoBox8");
+    }
+  }
 
-
-  //LEVEL TWO GRID STRUCTURE - BEFORE PLAY BUTTON IS CLICKED
-  var gridBackColour = "rgba(128, 128, 128, 0.7)";
-
+  //ADDITIONAL STYLING FOR LEVEL TWO
   for (let j = 0; j < defaultGrid.length; j++) {
     let box1 = 13;
     let box2 = 15;
@@ -246,7 +290,6 @@ $(".difficultySetting02").click(function () {
         defaultGrid[j].style.borderBottom = "1px solid black";
 
         defaultGrid[j].style.borderBottom = "1px solid black";
-        defaultGrid[j].style.backgroundColor = "blue";
       } else defaultGrid[j].style.borderRight = "1px solid black";
       defaultGrid[j].style.backgroundColor = gridBackColour;
     } else if (
@@ -276,22 +319,22 @@ $(".difficultySetting02").click(function () {
       defaultGrid[j].style.borderTop = "1px solid black";
     } else if (
       //LEVEL TWO - back colour 1
-      levelOneGridBox1(j) == true
+      levelTwoGridBox1(j) == true
     ) {
       defaultGrid[j].style.backgroundColor = gridBackColour;
     } else if (
       //LEVEL TWO - back colour 2
-      levelOneGridBox2(j) == true
+      levelTwoGridBox2(j) == true
     ) {
       defaultGrid[j].style.backgroundColor = gridBackColour;
     } else if (
       //LEVEL TWO - back colour 3
-      levelOneGridBox3(j) == true
+      levelTwoGridBox3(j) == true
     ) {
       defaultGrid[j].style.backgroundColor = gridBackColour;
     } else if (
       //LEVEL TWO - back colour 4
-      levelOneGridBox4(j) == true
+      levelTwoGridBox4(j) == true
     ) {
       defaultGrid[j].style.backgroundColor = gridBackColour;
     } else {
@@ -302,9 +345,23 @@ $(".difficultySetting02").click(function () {
   }
 
   //LEVEL TWO GRID STRUCTURE - AFTER PLAY BUTTON IS CLICKED
-  var levelTwoGridColourArray = levelTwoGridColours();
+  levelTwoGridColourArray = [];
+  levelTwoGridColourArray = levelTwoGridColours();
+  shuffle(levelTwoGridColourArray);
+  $("#play").fadeIn();
 
-  $("#play").click(function () {
+  playCounter = 0;
+  clickCounter = 0;
+  flippedCards = 0;
+levelTwo++;
+  
+});
+
+
+$("#play").click(function () {
+    if(levelTwo>0){
+    clickCounter = 0;
+    flippedCards = 0;
     shuffle(levelTwoGridColourArray);
     let colour1 = levelTwoGridColourArray[0];
 
@@ -314,7 +371,7 @@ $(".difficultySetting02").click(function () {
 
     let colour4 = levelTwoGridColourArray[3];
 
-    var colourArrayShuffle = shuffle([
+    var colourArrayShuffleTwo = shuffle([
       colour1,
       colour2,
       colour3,
@@ -332,45 +389,509 @@ $(".difficultySetting02").click(function () {
         //LEVEL TWO GRID - colour 1
         levelTwoGridBox1(j) == true
       ) {
-        defaultGrid[j].style.backgroundColor = defaultGrid[
-          j
-        ].style.backgroundColor = colourArrayShuffle[0];
+        defaultGrid[j].style.backgroundColor = colourArrayShuffleTwo[0];
+        defaultGrid[j].classList.add("boxes");
       } else if (
         //LEVEL TWO - colour 2
         levelTwoGridBox2(j) == true
       ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[1];
+        defaultGrid[j].style.backgroundColor = colourArrayShuffleTwo[1];
+        defaultGrid[j].classList.add("boxes");
       } else if (
         //LEVEL TWO - colour 3
         levelTwoGridBox3(j) == true
       ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[2];
+        defaultGrid[j].style.backgroundColor = colourArrayShuffleTwo[2];
+        defaultGrid[j].classList.add("boxes");
       } else if (
         //LEVEL TWO - colour 4
         levelTwoGridBox4(j) == true
       ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[3];
+        defaultGrid[j].style.backgroundColor = colourArrayShuffleTwo[3];
+        defaultGrid[j].classList.add("boxes");
       } else if (
         //LEVEL TWO - colour 5
         levelTwoGridBox5(j) == true
       ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[4];
+        defaultGrid[j].style.backgroundColor = colourArrayShuffleTwo[4];
+        defaultGrid[j].classList.add("boxes");
       } else if (
         //LEVEL TWO - colour 6
         levelTwoGridBox6(j) == true
       ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[5];
+        defaultGrid[j].style.backgroundColor = colourArrayShuffleTwo[5];
+        defaultGrid[j].classList.add("boxes");
       } else if (
         //LEVEL TWO - colour 7
         levelTwoGridBox7(j) == true
       ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[6];
+        defaultGrid[j].style.backgroundColor = colourArrayShuffleTwo[6];
+        defaultGrid[j].classList.add("boxes");
       } else if (
         //LEVEL TWO - colour 8
         levelTwoGridBox8(j) == true
       ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[7];
+        defaultGrid[j].style.backgroundColor = colourArrayShuffleTwo[7];
+        defaultGrid[j].classList.add("boxes");
       }
     }
+    playCounter++;
+    $("#play").fadeOut();
+    console.log(playCounter);
+    console.log(clickCounter);
+    console.log(flippedCards);
+    }
   });
+  
+
+$(".levelTwoBox1").click(function () {
+  let levelTwoBox1 = $(".levelTwoBox1");
+  let levelTwoBox2 = $(".levelTwoBox2");
+  let levelTwoBox3 = $(".levelTwoBox3");
+  let levelTwoBox4 = $(".levelTwoBox4");
+  let levelTwoBox5 = $(".levelTwoBox5");
+  let levelTwoBox6 = $(".levelTwoBox6");
+  let levelTwoBox7 = $(".levelTwoBox7");
+  let levelTwoBox8 = $(".levelTwoBox8");
+
+  function checkColour() {
+    for (let j = 0; j < levelTwoBox1.length; j++) {
+      if (levelTwoBox1[j].style.backgroundColor == gridBackColour) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
+  if ((playCounter > 0 || flippedCards % 2 == 1) && checkColour() == true) {
+    for (let i = 0; i < levelTwoBox1.length; i++) {
+      levelTwoBox1[i].style.backgroundColor = colourArrayShuffleTwo[0];
+      if (clickCounter > 0 && flippedCards % 2 == 0) {
+        if (
+          levelTwoBox1[i].style.backgroundColor ==
+            levelTwoBox2[i].style.backgroundColor ||
+          levelTwoBox1[i].style.backgroundColor ==
+            levelTwoBox3[i].style.backgroundColor ||
+          levelTwoBox1[i].style.backgroundColor ==
+            levelTwoBox4[i].style.backgroundColor ||
+          levelTwoBox1[i].style.backgroundColor ==
+            levelTwoBox5[i].style.backgroundColor ||
+          levelTwoBox1[i].style.backgroundColor ==
+            levelTwoBox6[i].style.backgroundColor ||
+          levelTwoBox1[i].style.backgroundColor ==
+            levelTwoBox7[i].style.backgroundColor ||
+          levelTwoBox1[i].style.backgroundColor ==
+            levelTwoBox8[i].style.backgroundColor
+        ) {
+          levelTwoBox1[i].style.backgroundColor = colourArrayShuffleTwo[0];
+          flippedCards++;
+        } else {
+          setTimeout(function () {
+            levelTwoBox1[i].style.backgroundColor = gridBackColour;
+          }, 500);
+        }
+      }
+    }
+  }
+  clickCounter++;
+});
+
+$(".levelTwoBox2").click(function () {
+  let levelTwoBox1 = $(".levelTwoBox1");
+  let levelTwoBox2 = $(".levelTwoBox2");
+  let levelTwoBox3 = $(".levelTwoBox3");
+  let levelTwoBox4 = $(".levelTwoBox4");
+  let levelTwoBox5 = $(".levelTwoBox5");
+  let levelTwoBox6 = $(".levelTwoBox6");
+  let levelTwoBox7 = $(".levelTwoBox7");
+  let levelTwoBox8 = $(".levelTwoBox8");
+
+  function checkColour() {
+    for (let j = 0; j < levelTwoBox2.length; j++) {
+      if (levelTwoBox2[j].style.backgroundColor == gridBackColour) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
+  if ((playCounter > 0 || flippedCards % 2 == 1) && checkColour() == true) {
+    for (let i = 0; i < levelTwoBox2.length; i++) {
+      levelTwoBox2[i].style.backgroundColor = colourArrayShuffleTwo[1];
+      if (clickCounter > 0 && flippedCards % 2 == 0) {
+        if (
+          levelTwoBox2[i].style.backgroundColor ==
+            levelTwoBox1[i].style.backgroundColor ||
+          levelTwoBox2[i].style.backgroundColor ==
+            levelTwoBox3[i].style.backgroundColor ||
+          levelTwoBox2[i].style.backgroundColor ==
+            levelTwoBox4[i].style.backgroundColor ||
+          levelTwoBox2[i].style.backgroundColor ==
+            levelTwoBox5[i].style.backgroundColor ||
+          levelTwoBox2[i].style.backgroundColor ==
+            levelTwoBox6[i].style.backgroundColor ||
+          levelTwoBox2[i].style.backgroundColor ==
+            levelTwoBox7[i].style.backgroundColor ||
+          levelTwoBox2[i].style.backgroundColor ==
+            levelTwoBox8[i].style.backgroundColor
+        ) {
+          levelTwoBox2[i].style.backgroundColor = colourArrayShuffleTwo[1];
+          flippedCards++;
+        } else if (
+          levelTwoBox2[i].style.backgroundColor == colourArrayShuffleTwo[1]
+        ) {
+          levelTwoBox2[i].style.backgroundColor = colourArrayShuffleTwo[1];
+        } else {
+          setTimeout(function () {
+            levelTwoBox2[i].style.backgroundColor = gridBackColour;
+          }, 500);
+        }
+      }
+    }
+  }
+  clickCounter++;
+});
+
+$(".levelTwoBox3").click(function () {
+  let levelTwoBox1 = $(".levelTwoBox1");
+  let levelTwoBox2 = $(".levelTwoBox2");
+  let levelTwoBox3 = $(".levelTwoBox3");
+  let levelTwoBox4 = $(".levelTwoBox4");
+  let levelTwoBox5 = $(".levelTwoBox5");
+  let levelTwoBox6 = $(".levelTwoBox6");
+  let levelTwoBox7 = $(".levelTwoBox7");
+  let levelTwoBox8 = $(".levelTwoBox8");
+
+  function checkColour() {
+    for (let j = 0; j < levelTwoBox3.length; j++) {
+      if (levelTwoBox3[j].style.backgroundColor == gridBackColour) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
+  if ((playCounter > 0 || flippedCards % 2 == 1) && checkColour() == true) {
+    for (let i = 0; i < levelTwoBox3.length; i++) {
+      levelTwoBox3[i].style.backgroundColor = colourArrayShuffleTwo[2];
+      if (clickCounter > 0 && flippedCards % 2 == 0) {
+        if (
+          levelTwoBox3[i].style.backgroundColor ==
+            levelTwoBox2[i].style.backgroundColor ||
+          levelTwoBox3[i].style.backgroundColor ==
+            levelTwoBox1[i].style.backgroundColor ||
+          levelTwoBox3[i].style.backgroundColor ==
+            levelTwoBox4[i].style.backgroundColor ||
+          levelTwoBox3[i].style.backgroundColor ==
+            levelTwoBox5[i].style.backgroundColor ||
+          levelTwoBox3[i].style.backgroundColor ==
+            levelTwoBox6[i].style.backgroundColor ||
+          levelTwoBox3[i].style.backgroundColor ==
+            levelTwoBox7[i].style.backgroundColor ||
+          levelTwoBox3[i].style.backgroundColor ==
+            levelTwoBox8[i].style.backgroundColor
+        ) {
+          levelTwoBox3[i].style.backgroundColor = colourArrayShuffleTwo[2];
+          flippedCards++;
+        } else if (
+          levelTwoBox3[i].style.backgroundColor == colourArrayShuffleTwo[2]
+        ) {
+          levelTwoBox3[i].style.backgroundColor = colourArrayShuffleTwo[2];
+        } else {
+          setTimeout(function () {
+            levelTwoBox3[i].style.backgroundColor = gridBackColour;
+          }, 500);
+        }
+      }
+    }
+  }
+  clickCounter++;
+});
+
+$(".levelTwoBox4").click(function () {
+  let levelTwoBox1 = $(".levelTwoBox1");
+  let levelTwoBox2 = $(".levelTwoBox2");
+  let levelTwoBox3 = $(".levelTwoBox3");
+  let levelTwoBox4 = $(".levelTwoBox4");
+  let levelTwoBox5 = $(".levelTwoBox5");
+  let levelTwoBox6 = $(".levelTwoBox6");
+  let levelTwoBox7 = $(".levelTwoBox7");
+  let levelTwoBox8 = $(".levelTwoBox8");
+
+  function checkColour() {
+    for (let j = 0; j < levelTwoBox4.length; j++) {
+      if (levelTwoBox4[j].style.backgroundColor == gridBackColour) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
+  if ((playCounter > 0 || flippedCards % 2 == 1) && checkColour() == true) {
+    for (let i = 0; i < levelTwoBox4.length; i++) {
+      levelTwoBox4[i].style.backgroundColor = colourArrayShuffleTwo[3];
+      if (clickCounter > 0 && flippedCards % 2 == 0) {
+        if (
+          levelTwoBox4[i].style.backgroundColor ==
+            levelTwoBox2[i].style.backgroundColor ||
+          levelTwoBox4[i].style.backgroundColor ==
+            levelTwoBox3[i].style.backgroundColor ||
+          levelTwoBox4[i].style.backgroundColor ==
+            levelTwoBox1[i].style.backgroundColor ||
+          levelTwoBox4[i].style.backgroundColor ==
+            levelTwoBox5[i].style.backgroundColor ||
+          levelTwoBox4[i].style.backgroundColor ==
+            levelTwoBox6[i].style.backgroundColor ||
+          levelTwoBox4[i].style.backgroundColor ==
+            levelTwoBox7[i].style.backgroundColor ||
+          levelTwoBox4[i].style.backgroundColor ==
+            levelTwoBox8[i].style.backgroundColor
+        ) {
+          levelTwoBox4[i].style.backgroundColor = colourArrayShuffleTwo[3];
+          flippedCards++;
+        } else if (
+          levelTwoBox4[i].style.backgroundColor == colourArrayShuffleTwo[3]
+        ) {
+          levelTwoBox4[i].style.backgroundColor = colourArrayShuffleTwo[3];
+        } else {
+          setTimeout(function () {
+            levelTwoBox4[i].style.backgroundColor = gridBackColour;
+          }, 500);
+        }
+      }
+    }
+  }
+  clickCounter++;
+});
+
+$(".levelTwoBox5").click(function () {
+  let levelTwoBox1 = $(".levelTwoBox1");
+  let levelTwoBox2 = $(".levelTwoBox2");
+  let levelTwoBox3 = $(".levelTwoBox3");
+  let levelTwoBox4 = $(".levelTwoBox4");
+  let levelTwoBox5 = $(".levelTwoBox5");
+  let levelTwoBox6 = $(".levelTwoBox6");
+  let levelTwoBox7 = $(".levelTwoBox7");
+  let levelTwoBox8 = $(".levelTwoBox8");
+
+  function checkColour() {
+    for (let j = 0; j < levelTwoBox5.length; j++) {
+      if (levelTwoBox5[j].style.backgroundColor == gridBackColour) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
+  if ((playCounter > 0 || flippedCards % 2 == 1) && checkColour() == true) {
+    for (let i = 0; i < levelTwoBox5.length; i++) {
+      levelTwoBox5[i].style.backgroundColor = colourArrayShuffleTwo[4];
+      if (clickCounter > 0 && flippedCards % 2 == 0) {
+        if (
+          levelTwoBox5[i].style.backgroundColor ==
+            levelTwoBox2[i].style.backgroundColor ||
+          levelTwoBox5[i].style.backgroundColor ==
+            levelTwoBox3[i].style.backgroundColor ||
+          levelTwoBox5[i].style.backgroundColor ==
+            levelTwoBox1[i].style.backgroundColor ||
+          levelTwoBox5[i].style.backgroundColor ==
+            levelTwoBox4[i].style.backgroundColor ||
+          levelTwoBox5[i].style.backgroundColor ==
+            levelTwoBox6[i].style.backgroundColor ||
+          levelTwoBox5[i].style.backgroundColor ==
+            levelTwoBox7[i].style.backgroundColor ||
+          levelTwoBox5[i].style.backgroundColor ==
+            levelTwoBox8[i].style.backgroundColor
+        ) {
+          levelTwoBox5[i].style.backgroundColor = colourArrayShuffleTwo[4];
+          flippedCards++;
+        } else if (
+          levelTwoBox5[i].style.backgroundColor == colourArrayShuffleTwo[4]
+        ) {
+          levelTwoBox5[i].style.backgroundColor = colourArrayShuffleTwo[4];
+        } else {
+          setTimeout(function () {
+            levelTwoBox5[i].style.backgroundColor = gridBackColour;
+          }, 500);
+        }
+      }
+    }
+  }
+  clickCounter++;
+});
+
+$(".levelTwoBox6").click(function () {
+  let levelTwoBox1 = $(".levelTwoBox1");
+  let levelTwoBox2 = $(".levelTwoBox2");
+  let levelTwoBox3 = $(".levelTwoBox3");
+  let levelTwoBox4 = $(".levelTwoBox4");
+  let levelTwoBox5 = $(".levelTwoBox5");
+  let levelTwoBox6 = $(".levelTwoBox6");
+  let levelTwoBox7 = $(".levelTwoBox7");
+  let levelTwoBox8 = $(".levelTwoBox8");
+
+  function checkColour() {
+    for (let j = 0; j < levelTwoBox6.length; j++) {
+      if (levelTwoBox6[j].style.backgroundColor == gridBackColour) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
+  if ((playCounter > 0 || flippedCards % 2 == 1) && checkColour() == true) {
+    for (let i = 0; i < levelTwoBox6.length; i++) {
+      levelTwoBox6[i].style.backgroundColor = colourArrayShuffleTwo[5];
+      if (clickCounter > 0 && flippedCards % 2 == 0) {
+        if (
+          levelTwoBox6[i].style.backgroundColor ==
+            levelTwoBox2[i].style.backgroundColor ||
+          levelTwoBox6[i].style.backgroundColor ==
+            levelTwoBox3[i].style.backgroundColor ||
+          levelTwoBox6[i].style.backgroundColor ==
+            levelTwoBox1[i].style.backgroundColor ||
+          levelTwoBox6[i].style.backgroundColor ==
+            levelTwoBox4[i].style.backgroundColor ||
+          levelTwoBox6[i].style.backgroundColor ==
+            levelTwoBox5[i].style.backgroundColor ||
+          levelTwoBox6[i].style.backgroundColor ==
+            levelTwoBox7[i].style.backgroundColor ||
+          levelTwoBox6[i].style.backgroundColor ==
+            levelTwoBox8[i].style.backgroundColor
+        ) {
+          levelTwoBox6[i].style.backgroundColor = colourArrayShuffleTwo[5];
+          flippedCards++;
+        } else if (
+          levelTwoBox6[i].style.backgroundColor == colourArrayShuffleTwo[5]
+        ) {
+          levelTwoBox6[i].style.backgroundColor = colourArrayShuffleTwo[5];
+        } else {
+          setTimeout(function () {
+            levelTwoBox6[i].style.backgroundColor = gridBackColour;
+          }, 500);
+        }
+      }
+    }
+  }
+  clickCounter++;
+});
+
+$(".levelTwoBox7").click(function () {
+  let levelTwoBox1 = $(".levelTwoBox1");
+  let levelTwoBox2 = $(".levelTwoBox2");
+  let levelTwoBox3 = $(".levelTwoBox3");
+  let levelTwoBox4 = $(".levelTwoBox4");
+  let levelTwoBox5 = $(".levelTwoBox5");
+  let levelTwoBox6 = $(".levelTwoBox6");
+  let levelTwoBox7 = $(".levelTwoBox7");
+  let levelTwoBox8 = $(".levelTwoBox8");
+
+  function checkColour() {
+    for (let j = 0; j < levelTwoBox7.length; j++) {
+      if (levelTwoBox7[j].style.backgroundColor == gridBackColour) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
+  if ((playCounter > 0 || flippedCards % 2 == 1) && checkColour() == true) {
+    for (let i = 0; i < levelTwoBox7.length; i++) {
+      levelTwoBox7[i].style.backgroundColor = colourArrayShuffleTwo[6];
+      if (clickCounter > 0 && flippedCards % 2 == 0) {
+        if (
+          levelTwoBox7[i].style.backgroundColor ==
+            levelTwoBox2[i].style.backgroundColor ||
+          levelTwoBox7[i].style.backgroundColor ==
+            levelTwoBox3[i].style.backgroundColor ||
+          levelTwoBox7[i].style.backgroundColor ==
+            levelTwoBox1[i].style.backgroundColor ||
+          levelTwoBox7[i].style.backgroundColor ==
+            levelTwoBox4[i].style.backgroundColor ||
+          levelTwoBox7[i].style.backgroundColor ==
+            levelTwoBox5[i].style.backgroundColor ||
+          levelTwoBox7[i].style.backgroundColor ==
+            levelTwoBox6[i].style.backgroundColor ||
+          levelTwoBox7[i].style.backgroundColor ==
+            levelTwoBox8[i].style.backgroundColor
+        ) {
+          levelTwoBox7[i].style.backgroundColor = colourArrayShuffleTwo[6];
+          flippedCards++;
+        } else if (
+          levelTwoBox7[i].style.backgroundColor == colourArrayShuffleTwo[6]
+        ) {
+          levelTwoBox7[i].style.backgroundColor = colourArrayShuffleTwo[6];
+        } else {
+          setTimeout(function () {
+            levelTwoBox7[i].style.backgroundColor = gridBackColour;
+          }, 500);
+        }
+      }
+    }
+  }
+  clickCounter++;
+});
+
+$(".levelTwoBox8").click(function () {
+  let levelTwoBox1 = $(".levelTwoBox1");
+  let levelTwoBox2 = $(".levelTwoBox2");
+  let levelTwoBox3 = $(".levelTwoBox3");
+  let levelTwoBox4 = $(".levelTwoBox4");
+  let levelTwoBox5 = $(".levelTwoBox5");
+  let levelTwoBox6 = $(".levelTwoBox6");
+  let levelTwoBox7 = $(".levelTwoBox7");
+  let levelTwoBox8 = $(".levelTwoBox8");
+
+  function checkColour() {
+    for (let j = 0; j < levelTwoBox8.length; j++) {
+      if (levelTwoBox8[j].style.backgroundColor == gridBackColour) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
+  if ((playCounter > 0 || flippedCards % 2 == 1) && checkColour() == true) {
+    for (let i = 0; i < levelTwoBox8.length; i++) {
+      levelTwoBox8[i].style.backgroundColor = colourArrayShuffleTwo[7];
+      if (clickCounter > 0 && flippedCards % 2 == 0) {
+        if (
+          levelTwoBox8[i].style.backgroundColor ==
+            levelTwoBox2[i].style.backgroundColor ||
+          levelTwoBox8[i].style.backgroundColor ==
+            levelTwoBox3[i].style.backgroundColor ||
+          levelTwoBox8[i].style.backgroundColor ==
+            levelTwoBox1[i].style.backgroundColor ||
+          levelTwoBox8[i].style.backgroundColor ==
+            levelTwoBox4[i].style.backgroundColor ||
+          levelTwoBox8[i].style.backgroundColor ==
+            levelTwoBox5[i].style.backgroundColor ||
+          levelTwoBox8[i].style.backgroundColor ==
+            levelTwoBox6[i].style.backgroundColor ||
+          levelTwoBox7[i].style.backgroundColor ==
+            levelTwoBox8[i].style.backgroundColor
+        ) {
+          levelTwoBox8[i].style.backgroundColor = colourArrayShuffleTwo[7];
+          flippedCards++;
+        } else if (
+          levelTwoBox8[i].style.backgroundColor == colourArrayShuffleTwo[7]
+        ) {
+          levelTwoBox8[i].style.backgroundColor = colourArrayShuffleTwo[7];
+        } else {
+          setTimeout(function () {
+            levelTwoBox8[i].style.backgroundColor = gridBackColour;
+          }, 500);
+        }
+      }
+    }
+  }
+  clickCounter++;
 });
