@@ -122,9 +122,10 @@ function levelOneGridColours() {
 
 /*--------------------------------LEVEL ONE---------------------------------*/
 
-//LEVEL ONE GRID STRUCTURE - BEFORE PLAY BUTTON IS CLICKED
+//LEVEL ONE GRID STRUCTURE ON PAGE LOAD
 var gridBackColour = "rgba(128, 128, 128, 0.7)";
 
+// DEFAULT GRID STRUCTURE
 for (let j = 0; j < defaultGrid.length; j++) {
   let box1 = 13;
   let box2 = 17;
@@ -195,7 +196,7 @@ for (let j = 0; j < defaultGrid.length; j++) {
   ) {
     defaultGrid[j].style.borderTop = "1px solid black";
   } else if (
-    //LEVEL ONE - back colour A A
+    //LEVEL ONE - back colour A
     levelOneGridBox1(j) == true
   ) {
     defaultGrid[j].style.backgroundColor = gridBackColour;
@@ -219,7 +220,6 @@ for (let j = 0; j < defaultGrid.length; j++) {
   }
 }
 
-//LEVEL ONE GRID STRUCTURE - AFTER PLAY BUTTON IS CLICKED
 var levelOneGridColourArray = levelOneGridColours();
 shuffle(levelOneGridColourArray);
 var colour1 = levelOneGridColourArray[0];
@@ -256,7 +256,13 @@ for (let j = 0; j < defaultGrid.length; j++) {
   }
 }
 
+var playCounter = 0;
+var clickCounter = 0;
+var flippedCards = 0;
+
 $("#play").click(function () {
+  clickCounter = 0;
+  flippedCards = 0;
   for (let j = 0; j < defaultGrid.length; j++) {
     //SELECTION OF COLOURS
 
@@ -288,272 +294,202 @@ $("#play").click(function () {
     }
 
     //flip to backside after interval
-    setTimeout(flipToBack, 2000);
+    setTimeout(flipToBack, 100);
   }
+  playCounter++;
+  $("#play").fadeOut();
 });
 
-//on-click functions to reapply box colours - start here
-
-var clickedBoxColourArrayLevelOne = [];
 $(".levelOneBox1").click(function () {
   let levelOneBox1 = $(".levelOneBox1");
+  let levelOneBox2 = $(".levelOneBox2");
+  let levelOneBox3 = $(".levelOneBox3");
+  let levelOneBox4 = $(".levelOneBox4");
 
-  for (let i = 0; i < levelOneBox1.length; i++) {
-    levelOneBox1[i].style.backgroundColor = colourArrayShuffleOne[0];
-
-    if (clickedBoxColourArrayLevelOne.length == 0) {
-      clickedBoxColourArrayLevelOne.push(colourArrayShuffleOne[0]);
-    } else {
-      if (clickedBoxColourArrayLevelOne[0] == colourArrayShuffleOne[0]) {
-        $("col-1").each(function () {
-          if ($(this).css("background-color") == colourArrayShuffleOne[0]) {
-            this.style.display = "none";
-          }
-        });
+  function checkColour() {
+    for (let j = 0; j < levelOneBox1.length; j++) {
+      if (levelOneBox1[j].style.backgroundColor == gridBackColour) {
+        return true;
+      } else {
+        return false;
       }
     }
   }
-  clickedBoxColourArrayLevelOne = [];
-  clickedBoxColourArrayLevelOne = colourArrayShuffleOne[0];
+
+  if ((playCounter > 0 || flippedCards % 2 == 1) && checkColour() == true) {
+    for (let i = 0; i < levelOneBox1.length; i++) {
+      levelOneBox1[i].style.backgroundColor = colourArrayShuffleOne[0];
+      if (clickCounter > 0 && flippedCards % 2 == 0) {
+        if (
+          levelOneBox1[i].style.backgroundColor ==
+            levelOneBox2[i].style.backgroundColor ||
+          levelOneBox1[i].style.backgroundColor ==
+            levelOneBox3[i].style.backgroundColor ||
+          levelOneBox1[i].style.backgroundColor ==
+            levelOneBox4[i].style.backgroundColor
+        ) {
+          levelOneBox1[i].style.backgroundColor = colourArrayShuffleOne[0];
+          flippedCards++;
+        } else {
+          setTimeout(function () {
+            levelOneBox1[i].style.backgroundColor = gridBackColour;
+          }, 500);
+        }
+      }
+    }
+  }
+  clickCounter++;
 });
 
 $(".levelOneBox2").click(function () {
+  let levelOneBox1 = $(".levelOneBox1");
   let levelOneBox2 = $(".levelOneBox2");
+  let levelOneBox3 = $(".levelOneBox3");
+  let levelOneBox4 = $(".levelOneBox4");
 
-  for (let i = 0; i < levelOneBox2.length; i++) {
-    levelOneBox2[i].style.backgroundColor = colourArrayShuffleOne[1];
-
-    if (clickedBoxColourArrayLevelOne.length == 0) {
-      clickedBoxColourArrayLevelOne.push(colourArrayShuffleOne[1]);
-    } else {
-      if (clickedBoxColourArrayLevelOne[0] == colourArrayShuffleOne[1]) {
-        $("col-1").each(function () {
-          if ($(this).css("background-color") == colourArrayShuffleOne[1]) {
-            this.style.display = "none";
-          }
-        });
+  function checkColour() {
+    for (let j = 0; j < levelOneBox2.length; j++) {
+      if (levelOneBox2[j].style.backgroundColor == gridBackColour) {
+        return true;
+      } else {
+        return false;
       }
     }
   }
-  clickedBoxColourArrayLevelOne = [];
-  clickedBoxColourArrayLevelOne = colourArrayShuffleOne[1];
+
+  if ((playCounter > 0 || flippedCards % 2 == 1) && checkColour() == true) {
+    for (let i = 0; i < levelOneBox2.length; i++) {
+      levelOneBox2[i].style.backgroundColor = colourArrayShuffleOne[1];
+      if (clickCounter > 0 && flippedCards % 2 == 0) {
+        if (
+          levelOneBox2[i].style.backgroundColor ==
+            levelOneBox1[i].style.backgroundColor ||
+          levelOneBox2[i].style.backgroundColor ==
+            levelOneBox3[i].style.backgroundColor ||
+          levelOneBox2[i].style.backgroundColor ==
+            levelOneBox4[i].style.backgroundColor
+        ) {
+          levelOneBox2[i].style.backgroundColor = colourArrayShuffleOne[1];
+          flippedCards++;
+        } else if (
+          levelOneBox2[i].style.backgroundColor == colourArrayShuffleOne[1]
+        ) {
+          levelOneBox2[i].style.backgroundColor = colourArrayShuffleOne[1];
+        } else {
+          setTimeout(function () {
+            levelOneBox2[i].style.backgroundColor = gridBackColour;
+          }, 500);
+        }
+      }
+    }
+  }
+  clickCounter++;
 });
 
 $(".levelOneBox3").click(function () {
+  let levelOneBox1 = $(".levelOneBox1");
+  let levelOneBox2 = $(".levelOneBox2");
   let levelOneBox3 = $(".levelOneBox3");
+  let levelOneBox4 = $(".levelOneBox4");
 
-  for (let i = 0; i < levelOneBox3.length; i++) {
-    levelOneBox3[i].style.backgroundColor = colourArrayShuffleOne[2];
-
-    if (clickedBoxColourArrayLevelOne.length == 0) {
-      clickedBoxColourArrayLevelOne.push(colourArrayShuffleOne[2]);
-    } else {
-      if (clickedBoxColourArrayLevelOne[0] == colourArrayShuffleOne[2]) {
-        $("col-1").each(function () {
-          if ($(this).css("background-color") == colourArrayShuffleOne[2]) {
-            this.style.display = "none";
-          }
-        });
+  function checkColour() {
+    for (let j = 0; j < levelOneBox3.length; j++) {
+      if (levelOneBox3[j].style.backgroundColor == gridBackColour) {
+        return true;
+      } else {
+        return false;
       }
     }
   }
-  clickedBoxColourArrayLevelOne = [];
-  clickedBoxColourArrayLevelOne = colourArrayShuffleOne[2];
+
+  if ((playCounter > 0 || flippedCards % 2 == 1) && checkColour() == true) {
+    for (let i = 0; i < levelOneBox3.length; i++) {
+      levelOneBox3[i].style.backgroundColor = colourArrayShuffleOne[2];
+      if (clickCounter > 0 && flippedCards % 2 == 0) {
+        if (
+          levelOneBox3[i].style.backgroundColor ==
+            levelOneBox2[i].style.backgroundColor ||
+          levelOneBox3[i].style.backgroundColor ==
+            levelOneBox1[i].style.backgroundColor ||
+          levelOneBox3[i].style.backgroundColor ==
+            levelOneBox4[i].style.backgroundColor
+        ) {
+          levelOneBox3[i].style.backgroundColor = colourArrayShuffleOne[2];
+          flippedCards++;
+        } else if (
+          levelOneBox3[i].style.backgroundColor == colourArrayShuffleOne[2]
+        ) {
+          levelOneBox3[i].style.backgroundColor = colourArrayShuffleOne[2];
+        } else {
+          setTimeout(function () {
+            levelOneBox3[i].style.backgroundColor = gridBackColour;
+          }, 500);
+        }
+      }
+    }
+  }
+  clickCounter++;
 });
 
 $(".levelOneBox4").click(function () {
+  let levelOneBox1 = $(".levelOneBox1");
+  let levelOneBox2 = $(".levelOneBox2");
+  let levelOneBox3 = $(".levelOneBox3");
   let levelOneBox4 = $(".levelOneBox4");
-  for (let i = 0; i < levelOneBox4.length; i++) {
-    levelOneBox4[i].style.backgroundColor = colourArrayShuffleOne[3];
 
-    if (clickedBoxColourArrayLevelOne.length == 0) {
-      clickedBoxColourArrayLevelOne.push(colourArrayShuffleOne[3]);
-    } else {
-      if (clickedBoxColourArrayLevelOne[0] == colourArrayShuffleOne[3]) {
-        $("col-1").each(function () {
-          if ($(this).css("background-color") == colourArrayShuffleOne[3]) {
-            this.style.display = "none";
-          }
-        });
+  function checkColour() {
+    for (let j = 0; j < levelOneBox4.length; j++) {
+      if (levelOneBox4[j].style.backgroundColor == gridBackColour) {
+        return true;
+      } else {
+        return false;
       }
     }
   }
-  clickedBoxColourArrayLevelOne = [];
-  clickedBoxColourArrayLevelOne = colourArrayShuffleOne[3];
-  alert(clickedBoxColourArrayLevelOne);
+
+  if ((playCounter > 0 || flippedCards % 2 == 1) && checkColour() == true) {
+    for (let i = 0; i < levelOneBox4.length; i++) {
+      levelOneBox4[i].style.backgroundColor = colourArrayShuffleOne[3];
+      if (clickCounter > 0 && flippedCards % 2 == 0) {
+        if (
+          levelOneBox4[i].style.backgroundColor ==
+            levelOneBox2[i].style.backgroundColor ||
+          levelOneBox4[i].style.backgroundColor ==
+            levelOneBox3[i].style.backgroundColor ||
+          levelOneBox4[i].style.backgroundColor ==
+            levelOneBox1[i].style.backgroundColor
+        ) {
+          levelOneBox4[i].style.backgroundColor = colourArrayShuffleOne[3];
+          flippedCards++;
+        } else if (
+          levelOneBox4[i].style.backgroundColor == colourArrayShuffleOne[3]
+        ) {
+          levelOneBox4[i].style.backgroundColor = colourArrayShuffleOne[3];
+        } else {
+          setTimeout(function () {
+            levelOneBox4[i].style.backgroundColor = gridBackColour;
+          }, 500);
+        }
+      }
+    }
+  }
+  clickCounter++;
 });
 
-//on-click functions to reapply box colours - end here
-
+//ON-CLICK FOR DIFFICULTY SELECTOR STARTS HERE
 $(".difficultySetting01").click(function () {
   reset();
+  levelOneGridColourArray = [];
+  levelOneGridColourArray = levelOneGridColours();
+  shuffle(levelOneGridColourArray);
+  $("#play").fadeIn();
 
-  //LEVEL ONE GRID STRUCTURE - BEFORE PLAY BUTTON IS CLICKED
-  var gridBackColour = "#808080";
+  colour1 = levelOneGridColourArray[0];
+  colour2 = levelOneGridColourArray[1];
+  colourArrayShuffleOne = shuffle([colour1, colour2, colour1, colour2]);
 
-  for (let j = 0; j < defaultGrid.length; j++) {
-    let box1 = 13;
-    let box2 = 17;
-    let box3 = 61;
-    let box4 = 65;
-    let across = 5;
-    let nextLine = 12;
+  playCounter = 0;
+  clickCounter = 0;
+  flippedCards = 0;
 
-    //LEVEL ONE - Borders
-    if (
-      // LEVEL ONE - Top border
-      j > box1 - nextLine &&
-      j < box2 + across - nextLine
-    ) {
-      defaultGrid[j].style.borderBottom = "1px solid black";
-    } else if (
-      //LEVEL ONE - left border
-      j == box1 ||
-      j == box1 + nextLine ||
-      j == box1 + 2 * nextLine ||
-      j == box1 + 3 * nextLine ||
-      j == box1 + 4 * nextLine ||
-      j == box1 + 5 * nextLine ||
-      j == box1 + 6 * nextLine ||
-      j == box1 + 7 * nextLine
-    ) {
-      defaultGrid[j].style.borderRight = "1px solid black";
-    } else if (
-      //LEVEL ONE - middle vertical border
-      j == box2 ||
-      j == box2 + nextLine ||
-      j == box2 + 2 * nextLine ||
-      j == box2 + 3 * nextLine ||
-      j == box2 + 4 * nextLine ||
-      j == box2 + 5 * nextLine ||
-      j == box2 + 6 * nextLine ||
-      j == box2 + 7 * nextLine
-    ) {
-      if (j == box2 + 3 * nextLine) {
-        defaultGrid[j].style.borderRight = "1px solid black";
-        defaultGrid[j].style.borderBottom = "1px solid black";
-        defaultGrid[j].style.backgroundColor = gridBackColour;
-      } else defaultGrid[j].style.borderRight = "1px solid black";
-      defaultGrid[j].style.backgroundColor = gridBackColour;
-    } else if (
-      //LEVEL ONE - middle horizontal border
-      j > box1 + 3 * nextLine &&
-      j < box2 + across + 3 * nextLine
-    ) {
-      defaultGrid[j].style.borderBottom = "1px solid black";
-      defaultGrid[j].style.backgroundColor = gridBackColour;
-    } else if (
-      //LEVEL ONE - right border
-      j == box2 + across ||
-      j == box2 + across + nextLine ||
-      j == box2 + across + 2 * nextLine ||
-      j == box2 + across + 3 * nextLine ||
-      j == box2 + across + 4 * nextLine ||
-      j == box2 + across + 5 * nextLine ||
-      j == box2 + across + 6 * nextLine ||
-      j == box2 + across + 7 * nextLine
-    ) {
-      defaultGrid[j].style.borderLeft = "1px solid black";
-    } else if (
-      //LEVEL ONE - bottom border
-      j > box3 + 4 * nextLine &&
-      j < box4 + across + 4 * nextLine
-    ) {
-      defaultGrid[j].style.borderTop = "1px solid black";
-    } else if (
-      //LEVEL ONE - back colour A A
-      levelOneGridBox1(j) == true
-    ) {
-      defaultGrid[j].style.backgroundColor = gridBackColour;
-    } else if (
-      //LEVEL ONE - back colour B
-      levelOneGridBox2(j) == true
-    ) {
-      defaultGrid[j].style.backgroundColor = gridBackColour;
-    } else if (
-      //LEVEL ONE - back colour C
-      levelOneGridBox3(j) == true
-    ) {
-      defaultGrid[j].style.backgroundColor = gridBackColour;
-    } else if (
-      //LEVEL ONE - back colour D
-      levelOneGridBox4(j) == true
-    ) {
-      defaultGrid[j].style.backgroundColor = gridBackColour;
-    } else {
-      document
-        .getElementById("darkMode")
-        .addEventListener("click", switchToDark);
-    }
-  }
-
-  //LEVEL ONE GRID STRUCTURE - AFTER PLAY BUTTON IS CLICKED
-  var levelOneGridColourArray = levelOneGridColours();
-
-  $("#play").click(function () {
-    shuffle(levelOneGridColourArray);
-    let colour1 = levelOneGridColourArray[0];
-
-    let colour2 = levelOneGridColourArray[1];
-
-    var colourArrayShuffleOneOne = shuffle([
-      colour1,
-      colour2,
-      colour1,
-      colour2,
-    ]);
-    for (let j = 0; j < defaultGrid.length; j++) {
-      //SELECTION OF COLOURS
-
-      //LEVEL ONE GRID - colours
-      if (
-        //LEVEL ONE GRID - colour A
-        levelOneGridBox1(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffleOne[0];
-      } else if (
-        //LEVEL ONE - colour B
-        levelOneGridBox2(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffleOne[1];
-      } else if (
-        //LEVEL ONE - colour C
-        levelOneGridBox3(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffleOne[2];
-      } else if (
-        //LEVEL ONE - colour D
-        levelOneGridBox4(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffleOne[3];
-      }
-    }
-
-    //flip to backside after interval
-    setTimeout(flipToBack, 2000);
-
-    //re-assign colour to boxes on click
-
-    //LEVEL ONE GRID - colours
-
-    //LEVEL ONE GRID - colour A
-    if (levelOneGridBox1(j).clicked == true && levelOneGridBox1(j) == true) {
-      defaultGrid[j].style.backgroundColor = colourArrayShuffleOne[0];
-    } else if (
-      //LEVEL ONE - colour B
-      levelOneGridBox2(j) == true
-    ) {
-      defaultGrid[j].style.backgroundColor = colourArrayShuffleOne[1];
-    } else if (
-      //LEVEL ONE - colour C
-      levelOneGridBox3(j) == true
-    ) {
-      defaultGrid[j].style.backgroundColor = colourArrayShuffleOne[2];
-    } else if (
-      //LEVEL ONE - colour D
-      levelOneGridBox4(j) == true
-    ) {
-      defaultGrid[j].style.backgroundColor = colourArrayShuffleOne[3];
-    }
-  });
 });
