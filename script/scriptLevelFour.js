@@ -481,24 +481,189 @@ function levelFourGridBox32(j) {
   }
 }
 
-function levelFourGridColours() {
-  let saturation = randomVal(80, 90);
-  let lightness = randomVal(50, 60);
-  let alpha = 1.0;
-  let amount = 32;
-
-  return generateHslaColours(saturation, lightness, alpha, amount);
-}
-
 /*---------LEVEL FOUR FUNCTIONS END HERE------------*/
 
 /*--------------------------------LEVEL FOUR---------------------------------*/
 
 $(".difficultySetting04").click(function () {
-    reset();
-  //LEVEL FOUR GRID STRUCTURE - BEFORE PLAY BUTTON IS CLICKED
-  var gridBackColour = "rgba(128, 128, 128, 0.7)";
+  choiceOne = false;
+  choiceTwo = false;
+  activeState = false;
+  resetClasses(defaultGrid, "levelOne");
+  resetClasses(defaultGrid, "levelTwo");
+  resetClasses(defaultGrid, "levelFour");
 
+  reset();
+
+  //assign classes to each box
+  for (let j = 0; j < defaultGrid.length; j++) {
+    //SELECTION OF COLOURS
+
+    //LEVEL FOUR GRID - colours
+    if (
+      //LEVEL FOUR GRID - colour 1
+      levelFourGridBox1(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox1");
+    } else if (
+      //LEVEL FOUR GRID - colour 2
+      levelFourGridBox2(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox2");
+    } else if (
+      //LEVEL FOUR - colour 3
+      levelFourGridBox3(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox3");
+    } else if (
+      //LEVEL FOUR - colour 4
+      levelFourGridBox4(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox4");
+    } else if (
+      //LEVEL FOUR - colour 5
+      levelFourGridBox5(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox5");
+    } else if (
+      //LEVEL FOUR - colour 6
+      levelFourGridBox6(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox6");
+    } else if (
+      //LEVEL FOUR - colour 7
+      levelFourGridBox7(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox7");
+    } else if (
+      //LEVEL FOUR - colour 8
+      levelFourGridBox8(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox8");
+    } else if (
+      //LEVEL FOUR - colour 9
+      levelFourGridBox9(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox9");
+    } else if (
+      //LEVEL FOUR - colour 10
+      levelFourGridBox10(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox10");
+    } else if (
+      //LEVEL FOUR - colour 11
+      levelFourGridBox11(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox11");
+    } else if (
+      //LEVEL FOUR - colour 12
+      levelFourGridBox12(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox12");
+    } else if (
+      //LEVEL FOUR - colour 13
+      levelFourGridBox13(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox13");
+    } else if (
+      //LEVEL FOUR - colour 14
+      levelFourGridBox14(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox14");
+    } else if (
+      //LEVEL FOUR - colour 15
+      levelFourGridBox15(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox15");
+    } else if (
+      //LEVEL FOUR - colour 16
+      levelFourGridBox16(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox16");
+    } else if (
+      //LEVEL FOUR GRID - colour 17
+      levelFourGridBox17(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox17");
+    } else if (
+      //LEVEL FOUR - colour 18
+      levelFourGridBox18(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox18");
+    } else if (
+      //LEVEL FOUR - colour 19
+      levelFourGridBox19(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox19");
+    } else if (
+      //LEVEL FOUR - colour 20
+      levelFourGridBox20(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox20");
+    } else if (
+      //LEVEL FOUR - colour 21
+      levelFourGridBox21(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox21");
+    } else if (
+      //LEVEL FOUR - colour 22
+      levelFourGridBox22(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox22");
+    } else if (
+      //LEVEL FOUR - colour 23
+      levelFourGridBox23(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox23");
+    } else if (
+      //LEVEL FOUR - colour 24
+      levelFourGridBox24(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox24");
+    } else if (
+      //LEVEL FOUR - colour 25
+      levelFourGridBox25(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox25");
+    } else if (
+      //LEVEL FOUR - colour 26
+      levelFourGridBox26(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox26");
+    } else if (
+      //LEVEL FOUR - colour 27
+      levelFourGridBox27(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox27");
+    } else if (
+      //LEVEL FOUR - colour 28
+      levelFourGridBox28(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox28");
+    } else if (
+      //LEVEL FOUR - colour 29
+      levelFourGridBox29(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox29");
+    } else if (
+      //LEVEL FOUR - colour 30
+      levelFourGridBox30(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox30");
+    } else if (
+      //LEVEL FOUR - colour 31
+      levelFourGridBox31(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox31");
+    } else if (
+      //LEVEL FOUR - colour 32
+      levelFourGridBox32(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelFourBox32");
+    }
+  }
+
+  //ADDITIONAL STYLING FOR LEVEL FOUR
   for (let j = 0; j < defaultGrid.length; j++) {
     let box1 = 13;
     let box2 = 14;
@@ -510,7 +675,6 @@ $(".difficultySetting04").click(function () {
     let box8 = 67;
     let across = 2;
     let nextLine = 12;
-
 
     //LEVEL FOUR - Borders
     if (
@@ -665,241 +829,408 @@ $(".difficultySetting04").click(function () {
   }
 
   //LEVEL FOUR GRID STRUCTURE - AFTER PLAY BUTTON IS CLICKED
-  var levelFourGridColourArray = levelFourGridColours();
+  $("#play").fadeIn();
 
+  // on click for play button - level four
+  level = 4;
   $("#play").click(function () {
-    shuffle(levelFourGridColourArray);
-    let colour1 = levelFourGridColourArray[0];
+    if (level == 4) {
+      for (let j = 0; j < defaultGrid.length; j++) {
+        //SELECTION OF COLOURS
 
-    let colour2 = levelFourGridColourArray[1];
-
-    let colour3 = levelFourGridColourArray[2];
-
-    let colour4 = levelFourGridColourArray[3];
-
-    let colour5 = levelFourGridColourArray[4];
-
-    let colour6 = levelFourGridColourArray[5];
-
-    let colour7 = levelFourGridColourArray[6];
-
-    let colour8 = levelFourGridColourArray[7];
-
-    let colour9 = levelFourGridColourArray[8];
-
-    let colour10 = levelFourGridColourArray[9];
-
-    let colour11 = levelFourGridColourArray[10];
-
-    let colour12 = levelFourGridColourArray[11];
-
-    let colour13 = levelFourGridColourArray[12];
-
-    let colour14 = levelFourGridColourArray[13];
-
-    let colour15 = levelFourGridColourArray[14];
-
-    let colour16 = levelFourGridColourArray[15];
-
-    var colourArrayShuffle = shuffle([
-      colour1,
-      colour2,
-      colour3,
-      colour4,
-      colour5,
-      colour6,
-      colour7,
-      colour8,
-      colour9,
-      colour10,
-      colour11,
-      colour12,
-      colour13,
-      colour14,
-      colour15,
-      colour16,
-      colour1,
-      colour2,
-      colour3,
-      colour4,
-      colour5,
-      colour6,
-      colour7,
-      colour8,
-      colour9,
-      colour10,
-      colour11,
-      colour12,
-      colour13,
-      colour14,
-      colour15,
-      colour16,
-    ]);
-    for (let j = 0; j < defaultGrid.length; j++) {
-      //SELECTION OF COLOURS
-
-      //LEVEL FOUR GRID - colours
-      if (
-        //LEVEL FOUR GRID - colour 1
-        levelFourGridBox1(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[0];
-      } else if (
-        //LEVEL FOUR - colour 2
-        levelFourGridBox2(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[1];
-      } else if (
-        //LEVEL FOUR - colour 3
-        levelFourGridBox3(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[2];
-      } else if (
-        //LEVEL FOUR - colour 4
-        levelFourGridBox4(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[3];
-      } else if (
-        //LEVEL FOUR - colour 5
-        levelFourGridBox5(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[4];
-      } else if (
-        //LEVEL FOUR - colour 6
-        levelFourGridBox6(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[5];
-      } else if (
-        //LEVEL FOUR - colour 7
-        levelFourGridBox7(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[6];
-      } else if (
-        //LEVEL FOUR - colour 8
-        levelFourGridBox8(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[7];
-      } else if (
-        //LEVEL FOUR - colour 9
-        levelFourGridBox9(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[8];
-      } else if (
-        //LEVEL FOUR - colour 10
-        levelFourGridBox10(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[9];
-      } else if (
-        //LEVEL FOUR - colour 11
-        levelFourGridBox11(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[10];
-      } else if (
-        //LEVEL FOUR - colour 12
-        levelFourGridBox12(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[11];
-      } else if (
-        //LEVEL FOUR - colour 13
-        levelFourGridBox13(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[12];
-      } else if (
-        //LEVEL FOUR - colour 14
-        levelFourGridBox14(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[13];
-      } else if (
-        //LEVEL FOUR - colour 15
-        levelFourGridBox15(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[14];
-      } else if (
-        //LEVEL FOUR - colour 16
-        levelFourGridBox16(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[15];
-      } else if (
-        //LEVEL FOUR GRID - colour 17
-        levelFourGridBox17(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[16];
-      } else if (
-        //LEVEL FOUR - colour 18
-        levelFourGridBox18(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[17];
-      } else if (
-        //LEVEL FOUR - colour 19
-        levelFourGridBox19(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[18];
-      } else if (
-        //LEVEL FOUR - colour 20
-        levelFourGridBox20(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[19];
-      } else if (
-        //LEVEL FOUR - colour 21
-        levelFourGridBox21(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[20];
-      } else if (
-        //LEVEL FOUR - colour 22
-        levelFourGridBox22(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[21];
-      } else if (
-        //LEVEL FOUR - colour 23
-        levelFourGridBox23(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[22];
-      } else if (
-        //LEVEL FOUR - colour 24
-        levelFourGridBox24(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[23];
-      } else if (
-        //LEVEL FOUR - colour 25
-        levelFourGridBox25(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[24];
-      } else if (
-        //LEVEL FOUR - colour 26
-        levelFourGridBox26(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[25];
-      } else if (
-        //LEVEL FOUR - colour 27
-        levelFourGridBox27(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[26];
-      } else if (
-        //LEVEL FOUR - colour 28
-        levelFourGridBox28(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[27];
-      } else if (
-        //LEVEL FOUR - colour 29
-        levelFourGridBox29(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[28];
-      } else if (
-        //LEVEL FOUR - colour 30
-        levelFourGridBox30(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[29];
-      } else if (
-        //LEVEL FOUR - colour 31
-        levelFourGridBox31(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[30];
-      } else if (
-        //LEVEL FOUR - colour 32
-        levelFourGridBox32(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[31];
+        //LEVEL FOUR GRID - colours
+        if (
+          //LEVEL FOUR GRID - colour 1
+          levelFourGridBox1(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[0];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 2
+          levelFourGridBox2(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[1];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 3
+          levelFourGridBox3(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[2];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 4
+          levelFourGridBox4(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[3];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 5
+          levelFourGridBox5(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[4];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 6
+          levelFourGridBox6(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[5];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 7
+          levelFourGridBox7(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[6];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 8
+          levelFourGridBox8(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[7];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 9
+          levelFourGridBox9(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[8];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 10
+          levelFourGridBox10(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[9];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 11
+          levelFourGridBox11(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[10];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 12
+          levelFourGridBox12(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[11];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 13
+          levelFourGridBox13(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[12];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 14
+          levelFourGridBox14(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[13];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 15
+          levelFourGridBox15(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[14];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 16
+          levelFourGridBox16(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[15];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR GRID - colour 17
+          levelFourGridBox17(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[16];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 18
+          levelFourGridBox18(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[17];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 19
+          levelFourGridBox19(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[18];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 20
+          levelFourGridBox20(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[19];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 21
+          levelFourGridBox21(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[20];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 22
+          levelFourGridBox22(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[21];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 23
+          levelFourGridBox23(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[22];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 24
+          levelFourGridBox24(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[23];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 25
+          levelFourGridBox25(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[24];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 26
+          levelFourGridBox26(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[25];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 27
+          levelFourGridBox27(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[26];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 28
+          levelFourGridBox28(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[27];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 29
+          levelFourGridBox29(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[28];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 30
+          levelFourGridBox30(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[29];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 31
+          levelFourGridBox31(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[30];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL FOUR - colour 32
+          levelFourGridBox32(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleFour[31];
+          defaultGrid[j].classList.add("boxes");
+        }
+        //flip to backside after interval
+        setTimeout(flipToBack, 5000);
       }
+      if (!activeState) {
+        activeState = true;
+      }
+      $("#play").fadeOut();
+    }
+  });
+
+  $(".levelFourBox1").click(function () {
+    if (activeState) {
+      checkColour("box1", "levelFourBox1", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox2").click(function () {
+    if (activeState) {
+      checkColour("box2", "levelFourBox2", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox3").click(function () {
+    if (activeState) {
+      checkColour("box3", "levelFourBox3", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox4").click(function () {
+    if (activeState) {
+      checkColour("box4", "levelFourBox4", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox5").click(function () {
+    if (activeState) {
+      checkColour("box5", "levelFourBox5", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox6").click(function () {
+    if (activeState) {
+      checkColour("box6", "levelFourBox6", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox7").click(function () {
+    if (activeState) {
+      checkColour("box7", "levelFourBox7", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox8").click(function () {
+    if (activeState) {
+      checkColour("box8", "levelFourBox8", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox9").click(function () {
+    if (activeState) {
+      checkColour("box9", "levelFourBox9", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox10").click(function () {
+    if (activeState) {
+      checkColour("box10", "levelFourBox10", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox11").click(function () {
+    if (activeState) {
+      checkColour("box11", "levelFourBox11", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox12").click(function () {
+    if (activeState) {
+      checkColour("box12", "levelFourBox12", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox13").click(function () {
+    if (activeState) {
+      checkColour("box13", "levelFourBox13", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox14").click(function () {
+    if (activeState) {
+      checkColour("box14", "levelFourBox14", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox15").click(function () {
+    if (activeState) {
+      checkColour("box15", "levelFourBox15", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox16").click(function () {
+    if (activeState) {
+      checkColour("box16", "levelFourBox16", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox17").click(function () {
+    if (activeState) {
+      checkColour("box17", "levelFourBox17", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox18").click(function () {
+    if (activeState) {
+      checkColour("box18", "levelFourBox18", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox19").click(function () {
+    if (activeState) {
+      checkColour("box19", "levelFourBox19", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox20").click(function () {
+    if (activeState) {
+      checkColour("box20", "levelFourBox20", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox21").click(function () {
+    if (activeState) {
+      checkColour("box21", "levelFourBox21", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox22").click(function () {
+    if (activeState) {
+      checkColour("box22", "levelFourBox22", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox23").click(function () {
+    if (activeState) {
+      checkColour("box23", "levelFourBox23", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox24").click(function () {
+    if (activeState) {
+      checkColour("box24", "levelFourBox24", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox25").click(function () {
+    if (activeState) {
+      checkColour("box25", "levelFourBox25", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox26").click(function () {
+    if (activeState) {
+      checkColour("box26", "levelFourBox26", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox27").click(function () {
+    if (activeState) {
+      checkColour("box27", "levelFourBox27", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox28").click(function () {
+    if (activeState) {
+      checkColour("box28", "levelFourBox28", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox29").click(function () {
+    if (activeState) {
+      checkColour("box29", "levelFourBox29", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox30").click(function () {
+    if (activeState) {
+      checkColour("box30", "levelFourBox30", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox31").click(function () {
+    if (activeState) {
+      checkColour("box31", "levelFourBox31", levelFourObj);
+    }
+  });
+
+  $(".levelFourBox32").click(function () {
+    if (activeState) {
+      checkColour("box32", "levelFourBox32", levelFourObj);
     }
   });
 });

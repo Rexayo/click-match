@@ -273,25 +273,111 @@ function levelThreeGridBox16(j) {
   }
 }
 
-function levelThreeGridColours() {
-  let saturation = randomVal(80, 100);
-  let lightness = randomVal(50, 60);
-  let alpha = 1.0;
-  let amount = 20;
-
-  return generateHslaColours(saturation, lightness, alpha, amount);
-}
 
 /*---------LEVEL THREE FUNCTIONS END HERE------------*/
 
 /*--------------------------------LEVEL THREE---------------------------------*/
 
 $(".difficultySetting03").click(function () {
+  choiceOne = false;
+  choiceTwo = false;
+  activeState = false;
+  resetClasses(defaultGrid, "levelOne");
+  resetClasses(defaultGrid, "levelTwo");
+   resetClasses(defaultGrid, "levelThree");
+  resetClasses(defaultGrid, "levelFour");
 
-    reset();
-    
-  //LEVEL THREE GRID STRUCTURE - BEFORE PLAY BUTTON IS CLICKED
-  var gridBackColour = "rgba(128, 128, 128, 0.7)";
+  reset();
+
+  //assign classes to each box
+  for (let j = 0; j < defaultGrid.length; j++) {
+    //SELECTION OF COLOURS
+
+    //LEVEL THREE GRID - colours
+    if (
+      //LEVEL THREE GRID - colour 1
+      levelThreeGridBox1(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelThreeBox1");
+    } else if (
+      //LEVEL THREE GRID - colour 2
+      levelThreeGridBox2(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelThreeBox2");
+    } else if (
+      //LEVEL THREE - colour 3
+      levelThreeGridBox3(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelThreeBox3");
+    } else if (
+      //LEVEL THREE - colour 4
+      levelThreeGridBox4(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelThreeBox4");
+    } else if (
+      //LEVEL THREE - colour 5
+      levelThreeGridBox5(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelThreeBox5");
+    } else if (
+      //LEVEL THREE - colour 6
+      levelThreeGridBox6(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelThreeBox6");
+    } else if (
+      //LEVEL THREE - colour 7
+      levelThreeGridBox7(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelThreeBox7");
+    } else if (
+      //LEVEL THREE - colour 8
+      levelThreeGridBox8(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelThreeBox8");
+    } else if (
+      //LEVEL THREE - colour 9
+      levelThreeGridBox9(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelThreeBox9");
+    } else if (
+      //LEVEL THREE - colour 10
+      levelThreeGridBox10(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelThreeBox10");
+    } else if (
+      //LEVEL THREE - colour 11
+      levelThreeGridBox11(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelThreeBox11");
+    } else if (
+      //LEVEL THREE - colour 12
+      levelThreeGridBox12(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelThreeBox12");
+    } else if (
+      //LEVEL THREE - colour 13
+      levelThreeGridBox13(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelThreeBox13");
+    } else if (
+      //LEVEL THREE - colour 14
+      levelThreeGridBox14(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelThreeBox14");
+    } else if (
+      //LEVEL THREE - colour 15
+      levelThreeGridBox15(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelThreeBox15");
+    } else if (
+      //LEVEL THREE - colour 16
+      levelThreeGridBox16(j) == true
+    ) {
+      defaultGrid[j].classList.add("levelThreeBox16");
+    }
+  }
+
+  //ADDITIONAL STYLING FOR LEVEL THREE
 
   for (let j = 0; j < defaultGrid.length; j++) {
     let box1 = 13;
@@ -442,129 +528,218 @@ $(".difficultySetting03").click(function () {
   }
 
   //LEVEL THREE GRID STRUCTURE - AFTER PLAY BUTTON IS CLICKED
-  var levelThreeGridColourArray = levelThreeGridColours();
 
+  $("#play").fadeIn();
+
+  // on click for play button - level three
+  level = 3;
   $("#play").click(function () {
-    shuffle(levelThreeGridColourArray);
-    let colour1 = levelThreeGridColourArray[0];
+    if (level == 3) {
+      for (let j = 0; j < defaultGrid.length; j++) {
+        //SELECTION OF COLOURS
 
-    let colour2 = levelThreeGridColourArray[1];
-
-    let colour3 = levelThreeGridColourArray[2];
-
-    let colour4 = levelThreeGridColourArray[3];
-
-    let colour5 = levelThreeGridColourArray[4];
-
-    let colour6 = levelThreeGridColourArray[5];
-
-    let colour7 = levelThreeGridColourArray[6];
-
-    let colour8 = levelThreeGridColourArray[7];
-
-    var colourArrayShuffle = shuffle([
-      colour1,
-      colour2,
-      colour3,
-      colour4,
-      colour5,
-      colour6,
-      colour7,
-      colour8,
-      colour1,
-      colour2,
-      colour3,
-      colour4,
-      colour5,
-      colour6,
-      colour7,
-      colour8,
-    ]);
-    for (let j = 0; j < defaultGrid.length; j++) {
-      //SELECTION OF COLOURS
-
-      //LEVEL THREE GRID - colours
-      if (
-        //LEVEL THREE GRID - colour 1
-        levelThreeGridBox1(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[0];
-      } else if (
-        //LEVEL THREE - colour 2
-        levelThreeGridBox2(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[1];
-      } else if (
-        //LEVEL THREE - colour 3
-        levelThreeGridBox3(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[2];
-      } else if (
-        //LEVEL THREE - colour 4
-        levelThreeGridBox4(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[3];
-      } else if (
-        //LEVEL THREE - colour 5
-        levelThreeGridBox5(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[4];
-      } else if (
-        //LEVEL THREE - colour 6
-        levelThreeGridBox6(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[5];
-      } else if (
-        //LEVEL THREE - colour 7
-        levelThreeGridBox7(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[6];
-      } else if (
-        //LEVEL THREE - colour 8
-        levelThreeGridBox8(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[7];
-      } else if (
-        //LEVEL THREE - colour 9
-        levelThreeGridBox9(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[8];
-      } else if (
-        //LEVEL THREE - colour 10
-        levelThreeGridBox10(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[9];
-      } else if (
-        //LEVEL THREE - colour 11
-        levelThreeGridBox11(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[10];
-      } else if (
-        //LEVEL THREE - colour 12
-        levelThreeGridBox12(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[11];
-      } else if (
-        //LEVEL THREE - colour 13
-        levelThreeGridBox13(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[12];
-      } else if (
-        //LEVEL THREE - colour 14
-        levelThreeGridBox14(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[13];
-      } else if (
-        //LEVEL THREE - colour 15
-        levelThreeGridBox15(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[14];
-      } else if (
-        //LEVEL THREE - colour 16
-        levelThreeGridBox16(j) == true
-      ) {
-        defaultGrid[j].style.backgroundColor = colourArrayShuffle[15];
+        //LEVEL THREE GRID - colours
+        if (
+          //LEVEL THREE GRID - colour 1
+          levelThreeGridBox1(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleThree[0];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL THREE - colour 2
+          levelThreeGridBox2(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleThree[1];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL THREE - colour 3
+          levelThreeGridBox3(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleThree[2];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL THREE - colour 4
+          levelThreeGridBox4(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleThree[3];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL THREE - colour 5
+          levelThreeGridBox5(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleThree[4];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL THREE - colour 6
+          levelThreeGridBox6(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleThree[5];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL THREE - colour 7
+          levelThreeGridBox7(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleThree[6];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL THREE - colour 8
+          levelThreeGridBox8(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleThree[7];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL THREE - colour 9
+          levelThreeGridBox9(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleThree[8];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL THREE - colour 10
+          levelThreeGridBox10(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleThree[9];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL THREE - colour 11
+          levelThreeGridBox11(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleThree[10];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL THREE - colour 12
+          levelThreeGridBox12(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleThree[11];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL THREE - colour 13
+          levelThreeGridBox13(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleThree[12];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL THREE - colour 14
+          levelThreeGridBox14(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleThree[13];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL THREE - colour 15
+          levelThreeGridBox15(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleThree[14];
+          defaultGrid[j].classList.add("boxes");
+        } else if (
+          //LEVEL THREE - colour 16
+          levelThreeGridBox16(j) == true
+        ) {
+          defaultGrid[j].style.backgroundColor = colourArrayShuffleThree[15];
+          defaultGrid[j].classList.add("boxes");
+        }
+        //flip to backside after interval
+        setTimeout(flipToBack, 1000);
       }
+
+      if (!activeState) {
+        activeState = true;
+      }
+      $("#play").fadeOut();
+    }
+  });
+
+  $(".levelThreeBox1").click(function () {
+    if (activeState) {
+      checkColour("box1", "levelThreeBox1", levelThreeObj);
+    }
+  });
+
+  $(".levelThreeBox2").click(function () {
+    if (activeState) {
+      checkColour("box2", "levelThreeBox2", levelThreeObj);
+    }
+  });
+
+  $(".levelThreeBox3").click(function () {
+    if (activeState) {
+      checkColour("box3", "levelThreeBox3", levelThreeObj);
+    }
+  });
+
+  $(".levelThreeBox4").click(function () {
+    if (activeState) {
+      checkColour("box4", "levelThreeBox4", levelThreeObj);
+    }
+  });
+
+  $(".levelThreeBox5").click(function () {
+    if (activeState) {
+      checkColour("box5", "levelThreeBox5", levelThreeObj);
+    }
+  });
+
+  $(".levelThreeBox6").click(function () {
+    if (activeState) {
+      checkColour("box6", "levelThreeBox6", levelThreeObj);
+    }
+  });
+
+  $(".levelThreeBox7").click(function () {
+    if (activeState) {
+      checkColour("box7", "levelThreeBox7", levelThreeObj);
+    }
+  });
+
+  $(".levelThreeBox8").click(function () {
+    if (activeState) {
+      checkColour("box8", "levelThreeBox8", levelThreeObj);
+    }
+  });
+
+  $(".levelThreeBox9").click(function () {
+    if (activeState) {
+      checkColour("box9", "levelThreeBox9", levelThreeObj);
+    }
+  });
+
+  $(".levelThreeBox10").click(function () {
+    if (activeState) {
+      checkColour("box10", "levelThreeBox10", levelThreeObj);
+    }
+  });
+
+  $(".levelThreeBox11").click(function () {
+    if (activeState) {
+      checkColour("box11", "levelThreeBox11", levelThreeObj);
+    }
+  });
+
+  $(".levelThreeBox12").click(function () {
+    if (activeState) {
+      checkColour("box12", "levelThreeBox12", levelThreeObj);
+    }
+  });
+
+  $(".levelThreeBox13").click(function () {
+    if (activeState) {
+      checkColour("box13", "levelThreeBox13", levelThreeObj);
+    }
+  });
+
+  $(".levelThreeBox14").click(function () {
+    if (activeState) {
+      checkColour("box14", "levelThreeBox14", levelThreeObj);
+    }
+  });
+
+  $(".levelThreeBox15").click(function () {
+    if (activeState) {
+      checkColour("box15", "levelThreeBox15", levelThreeObj);
+    }
+  });
+
+  $(".levelThreeBox16").click(function () {
+    if (activeState) {
+      checkColour("box16", "levelThreeBox16", levelThreeObj);
     }
   });
 });
