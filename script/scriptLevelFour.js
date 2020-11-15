@@ -491,7 +491,7 @@ $(".difficultySetting04").click(function () {
   activeState = false;
   resetClasses(defaultGrid, "levelOne");
   resetClasses(defaultGrid, "levelTwo");
-  resetClasses(defaultGrid, "levelFour");
+  resetClasses(defaultGrid, "levelThree");
 
   reset();
 
@@ -829,7 +829,7 @@ $(".difficultySetting04").click(function () {
   }
 
   //LEVEL FOUR GRID STRUCTURE - AFTER PLAY BUTTON IS CLICKED
-  $("#play").fadeIn();
+  document.getElementById("play").disabled = false;
 
   // on click for play button - level four
   level = 4;
@@ -1038,199 +1038,681 @@ $(".difficultySetting04").click(function () {
       if (!activeState) {
         activeState = true;
       }
-      $("#play").fadeOut();
+      document.getElementById("play").disabled = true;
+      updateNumOfClicks("4");
+      document.getElementById("numOfClicksLeft").innerHTML = numOfClicksLeft;
     }
   });
 
   $(".levelFourBox1").click(function () {
     if (activeState) {
       checkColour("box1", "levelFourBox1", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox2").click(function () {
     if (activeState) {
       checkColour("box2", "levelFourBox2", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox3").click(function () {
     if (activeState) {
       checkColour("box3", "levelFourBox3", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox4").click(function () {
     if (activeState) {
       checkColour("box4", "levelFourBox4", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox5").click(function () {
     if (activeState) {
       checkColour("box5", "levelFourBox5", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox6").click(function () {
     if (activeState) {
       checkColour("box6", "levelFourBox6", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox7").click(function () {
     if (activeState) {
       checkColour("box7", "levelFourBox7", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox8").click(function () {
     if (activeState) {
       checkColour("box8", "levelFourBox8", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox9").click(function () {
     if (activeState) {
       checkColour("box9", "levelFourBox9", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox10").click(function () {
     if (activeState) {
       checkColour("box10", "levelFourBox10", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox11").click(function () {
     if (activeState) {
       checkColour("box11", "levelFourBox11", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox12").click(function () {
     if (activeState) {
       checkColour("box12", "levelFourBox12", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox13").click(function () {
     if (activeState) {
       checkColour("box13", "levelFourBox13", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox14").click(function () {
     if (activeState) {
       checkColour("box14", "levelFourBox14", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox15").click(function () {
     if (activeState) {
       checkColour("box15", "levelFourBox15", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox16").click(function () {
     if (activeState) {
       checkColour("box16", "levelFourBox16", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox17").click(function () {
     if (activeState) {
       checkColour("box17", "levelFourBox17", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox18").click(function () {
     if (activeState) {
       checkColour("box18", "levelFourBox18", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox19").click(function () {
     if (activeState) {
       checkColour("box19", "levelFourBox19", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox20").click(function () {
     if (activeState) {
       checkColour("box20", "levelFourBox20", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox21").click(function () {
     if (activeState) {
       checkColour("box21", "levelFourBox21", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox22").click(function () {
     if (activeState) {
       checkColour("box22", "levelFourBox22", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox23").click(function () {
     if (activeState) {
       checkColour("box23", "levelFourBox23", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox24").click(function () {
     if (activeState) {
       checkColour("box24", "levelFourBox24", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox25").click(function () {
     if (activeState) {
       checkColour("box25", "levelFourBox25", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox26").click(function () {
     if (activeState) {
       checkColour("box26", "levelFourBox26", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox27").click(function () {
     if (activeState) {
       checkColour("box27", "levelFourBox27", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox28").click(function () {
     if (activeState) {
       checkColour("box28", "levelFourBox28", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox29").click(function () {
     if (activeState) {
       checkColour("box29", "levelFourBox29", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox30").click(function () {
     if (activeState) {
       checkColour("box30", "levelFourBox30", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox31").click(function () {
     if (activeState) {
       checkColour("box31", "levelFourBox31", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 
   $(".levelFourBox32").click(function () {
     if (activeState) {
       checkColour("box32", "levelFourBox32", levelFourObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          $("#signUpModal").modal();
+        }, 1000);
+      }
     }
   });
 });

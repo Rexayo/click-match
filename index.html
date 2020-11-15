@@ -1,82 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta name="description" content="Memory exercies in colour" />
+    <meta
+      name="keywords"
+      content="Colour Game, Memory Game, Visual Exercises, Perception Game"
+    />
+    <meta name="author" content="Rex Abba-Abba" />
+    <meta charset=" UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--font awesome-->
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <!--bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
 
-<head>
-	<meta name="description" content="A collection of questions and anecdotes on life and it's purpose" />
-	<meta name="keywords" content="Colour Game, Memory Game, Visual Exercises, Perception Game" />
-	<meta name="author" content="Rex Abba-Abba" />
-	<meta charset=" UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<!--font awesome-->
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
-	<!--bootstrap-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-	<link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Click Match!</title>
+  </head>
 
-	<title>Flyp</title>
-</head>
-
-<body class="grey-bg">
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<button
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" id="logo" href="index.html">Click Match!</a>
+      <button
         class="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="menu-icon text-dark"
-          ><i class="fa fa-hand-o-down" aria-hidden="true"></i
-        ></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
-		<a class="navbar-brand text-dark" href="index.html">Flyp</a>
-		<a class="navlink light" id="darkMode"><i class="fa fa-toggle-on text-dark" aria-hidden="true"></i></a>
 
-		<div class="collapse navbar-collapse" id="navbarNavDropdown">
-			<ul class="navbar-nav navbar-left">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">How to Play <span class="sr-only">(current)</span></a>
-				</li>
-			
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Difficulty
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item difficultySetting01" href="#">Level O1</a>
+              <a class="dropdown-item difficultySetting02" href="#">Level 02</a>
+              <a class="dropdown-item difficultySetting03" href="#">Level 03</a>
+              <a class="dropdown-item difficultySetting04" href="#">Level 04</a>
+            </div>
+          </li>
+        </ul>
+        <div class="text-dark my-2 my-lg-0 mr-sm-2" id="level-text"></div>
+        <div class="text-dark my-2 my-lg-0 mr-sm-2">
+          <a class="navlink light text-dark" id="darkMode"
+            ><i class="fa fa-toggle-off text-dark" aria-hidden="true"></i
+            ><span id="darkModeLabel" class="text-dark"> light mode</span></a
+          >
+        </div>
+      </div>
+    </nav>
 
+    <section class="grid-bg">
+      <div class="hint">
+        <kbd id="hint" class="text-success"></kbd>
+      </div>
+      <div class="row no-gutters level-one"></div>
+      <div class="container-fluid grey-bg" id="game-info">
+        <div class="row">
+          <div class="col-4 game-stats text-dark grey-bg dark-outline">
+            Click Count: <span id="clickCounter">0</span>
+          </div>
+          <div class="col-4 game-stats text-dark grey-bg dark-outline">
+            Number of Clicks Left: <span id="numOfClicksLeft">0</span>
+          </div>
 
+          <div class="col-4 game-stats text-dark grey-bg dark-outline">
+            Best Game Click Count: <span id="bestGameClickCounter">0</span>
+          </div>
+          <button id="play">
+            <i class="fa fa-gamepad hvr-bob text-dark" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
 
-				<li>
-					<div class="dropdown show">
-						<a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Difficulty
-						</a>
+      <div class="container gameOverModal">
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="gameOverModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="gameOverModalTitle"
+          aria-hidden="true"
+          data-backdrop="static"
+          data-keyboard="false"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header justify-content-center">
+                <h5 class="modal-title" id="gameOverModalLongTitle">
+                  GAME OVER! <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </h5>
+              </div>
+              <div class="modal-body">
+                Sorry, you are out of clicks! Ready to try again?
+              </div>
+              <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-light">
+                  <a
+                    class="text-dark"
+                    data-backdrop="static"
+                    data-keyboard="false"
+                    href="index.html"
+                    >Restart Game</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-						<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-							<a class="dropdown-item difficultySetting01" href="#">Level One</a>
-							<a class="dropdown-item difficultySetting02 " href="#">Level Two</a>
-							<a class="dropdown-item difficultySetting03 " href="#">Level Three</a>
-                            <a class="dropdown-item difficultySetting04" href="#">Level Four</a>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</nav>
-	<section class="grid-bg">
-		<div class="row no-gutters level-one"></div>
-		<div class="text-dark" id="level-text"></div>
-		<button id="play">Play</button>
-	</section>
-</body>
-<script src="script/script.js"></script>
-<script src="script/scriptLevelOne.js"></script>
-<script src="script/scriptLevelTwo.js"></script>
-<script src="script/scriptLevelThree.js"></script>
-<script src="script/scriptLevelFour.js"></script>
+       <div class="container signUpModal">
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="signUpModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="signUpModalTitle"
+          aria-hidden="true"
+          data-backdrop="static"
+          data-keyboard="false"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header justify-content-center">
+                <h5 class="modal-title" id="signUpModalLongTitle">
+                  More levels available soon. <br>Be the first to know <i class="fa fa-smile-o" aria-hidden="true"></i>
+                </h5>
+              </div>
+             <form
+            action=""
+            method="get"
+            class="form-inline justify-content-center"
+          >
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+            />
+            <input type="submit" value="Sign up" id="join" />
+          </form>
+              <div class="modal-footer justify-content-center justify-content-center">
+                <button type="button" class="btn btn-light">
+                  <a
+                    class="text-dark"
+                    data-backdrop="static"
+                    data-keyboard="false"
+                    href="index.html"
+                    >Restart Game</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 rules">
+            <div class="rules-header">HOW TO PLAY</div>
+            <div class="rules-content">
+              <p>
+                Each level has a collection of colour pairs. For every click a
+                box flips over to reveal colour. Match all the pairs with as few
+                clicks as possible. You can have a few seconds to memorise the
+                cards after the play button is clicked. Keep you focus, a few
+                seconds could be milliseconds.
+              </p>
+
+              <div class="rules-gameStats">Game stats</div>
+              <div class="rules-subHeader">Click Count</div>
+              <p>
+                This indicates the number of clicks you have made, be careful
+                not to be trigger-happy.
+              </p>
+              <div class="rules-subHeader">Number of Clicks Left</div>
+              <p>This is your best count for each level.</p>
+              <div class="rules-subHeader">Best Game Click Count</div>
+              <p>
+                This beta version of the game has four levels. The game count
+                indicates your cumulative lowest click count as you progress
+                from level 1 through to 4.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <footer>
+    <div class="container">
+      <div class="row justify-content-center">
+        <h1 class="tagline">
+          More levels available soon. Be the first to know
+        </h1>
+        <div class="col-12 newsletter">
+          <form
+            action=""
+            method="get"
+            class="form-inline justify-content-center"
+          >
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+            />
+            <input type="submit" value="Sign up" id="join" />
+          </form>
+        </div>
+
+        <div class="col-sm-12">
+          <div id="copyright">
+            <h6>©2020 Click Match! | All Rights Reserved.</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script/script.js"></script>
+  <script src="script/scriptLevelOne.js"></script>
+  <script src="script/scriptLevelTwo.js"></script>
+  <script src="script/scriptLevelThree.js"></script>
+  <script src="script/scriptLevelFour.js"></script>
 </html>

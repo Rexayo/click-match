@@ -343,7 +343,7 @@ $(".difficultySetting02").click(function () {
 
   //LEVEL TWO GRID STRUCTURE - AFTER PLAY BUTTON IS CLICKED
 
-  $("#play").fadeIn();
+ document.getElementById("play").disabled = false;
 
   // on click for play button - level two
   level = 2;
@@ -409,55 +409,177 @@ $(".difficultySetting02").click(function () {
       if (!activeState) {
         activeState = true;
       }
-      $("#play").fadeOut();
+     document.getElementById("play").disabled = true;
+      updateNumOfClicks("2");
+    document.getElementById("numOfClicksLeft").innerHTML = numOfClicksLeft;
     }
   });
 
   $(".levelTwoBox1").click(function () {
     if (activeState) {
       checkColour("box1", "levelTwoBox1", levelTwoObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          levelThree();
+        }, 1000);
+      }
     }
   });
 
   $(".levelTwoBox2").click(function () {
     if (activeState) {
       checkColour("box2", "levelTwoBox2", levelTwoObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          levelThree();
+        }, 1000);
+      }
     }
   });
 
   $(".levelTwoBox3").click(function () {
     if (activeState) {
       checkColour("box3", "levelTwoBox3", levelTwoObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          levelThree();
+        }, 1000);
+      }
     }
   });
 
   $(".levelTwoBox4").click(function () {
     if (activeState) {
       checkColour("box4", "levelTwoBox4", levelTwoObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          levelThree();
+        }, 1000);
+      }
     }
   });
 
   $(".levelTwoBox5").click(function () {
     if (activeState) {
       checkColour("box5", "levelTwoBox5", levelTwoObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          levelThree();
+        }, 1000);
+      }
     }
   });
 
   $(".levelTwoBox6").click(function () {
     if (activeState) {
       checkColour("box6", "levelTwoBox6", levelTwoObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          levelThree();
+        }, 1000);
+      }
     }
   });
 
   $(".levelTwoBox7").click(function () {
     if (activeState) {
       checkColour("box7", "levelTwoBox7", levelTwoObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          levelThree();
+        }, 1000);
+      }
     }
   });
 
   $(".levelTwoBox8").click(function () {
     if (activeState) {
       checkColour("box8", "levelTwoBox8", levelTwoObj);
+
+      let boxes = $(".boxes");
+      let counter = 0;
+
+      for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].style.backgroundColor != gridBackColour) {
+          counter++;
+        }
+      }
+
+      if (counter == boxes.length) {
+        setTimeout(function () {
+          levelThree();
+        }, 1000);
+      }
     }
   });
 });

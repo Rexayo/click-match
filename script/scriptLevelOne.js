@@ -76,6 +76,8 @@ function levelOneGridBox4(j) {
 //LEVEL ONE GRID STRUCTURE ON PAGE LOAD
 var gridBackColour = "rgba(128, 128, 128, 0.7)";
 
+
+
 // DEFAULT GRID STRUCTURE
 for (let j = 0; j < defaultGrid.length; j++) {
   let box1 = 13;
@@ -202,6 +204,7 @@ for (let j = 0; j < defaultGrid.length; j++) {
 //on click for play button - level 1
 var activeState = false;
 var level = 1;
+
 $("#play").click(function () {
   if (level == 1) {
     GridColourArray = GridColours();
@@ -241,31 +244,93 @@ $("#play").click(function () {
     if (!activeState) {
       activeState = true;
     }
-    $("#play").fadeOut();
+  document.getElementById("play").disabled = true;
+    updateNumOfClicks("1");
+    document.getElementById("numOfClicksLeft").innerHTML = numOfClicksLeft;
   }
 });
 
 $(".levelOneBox1").click(function () {
   if (activeState) {
     checkColour("box1", "levelOneBox1", levelOneObj);
+
+    let boxes = $(".boxes");
+    let counter = 0;
+
+    for (let i = 0; i < boxes.length; i++) {
+      if (boxes[i].style.backgroundColor != gridBackColour) {
+        counter++;
+      }
+    }
+
+    if (counter == boxes.length) {
+      setTimeout(function () {
+        levelTwo();
+      }, 1000);
+    }
   }
 });
 
 $(".levelOneBox2").click(function () {
   if (activeState) {
     checkColour("box2", "levelOneBox2", levelOneObj);
+
+    let boxes = $(".boxes");
+    let counter = 0;
+
+    for (let i = 0; i < boxes.length; i++) {
+      if (boxes[i].style.backgroundColor != gridBackColour) {
+        counter++;
+      }
+    }
+
+    if (counter == boxes.length) {
+      setTimeout(function () {
+        levelTwo();
+      }, 1000);
+    }
   }
 });
 
 $(".levelOneBox3").click(function () {
   if (activeState) {
     checkColour("box3", "levelOneBox3", levelOneObj);
+
+    let boxes = $(".boxes");
+    let counter = 0;
+
+    for (let i = 0; i < boxes.length; i++) {
+      if (boxes[i].style.backgroundColor != gridBackColour) {
+        counter++;
+      }
+    }
+
+    if (counter == boxes.length) {
+      setTimeout(function () {
+        levelTwo();
+      }, 1000);
+    }
   }
 });
 
 $(".levelOneBox4").click(function () {
   if (activeState) {
     checkColour("box4", "levelOneBox4", levelOneObj);
+
+    let boxes = $(".boxes");
+    let counter = 0;
+
+    for (let i = 0; i < boxes.length; i++) {
+      if (boxes[i].style.backgroundColor != gridBackColour) {
+        counter++;
+      }
+    }
+
+    if (counter == boxes.length) {
+      setTimeout(function () {
+        levelTwo();
+      }, 1000);
+    }
   }
 });
 
@@ -276,5 +341,5 @@ $(".difficultySetting01").click(function () {
   choiceTwo = false;
   activeState = false;
   reset();
-  $("#play").fadeIn();
+ document.getElementById("play").disabled = false;
 });
