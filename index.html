@@ -80,7 +80,7 @@
 
     <section class="grid-bg">
       <div class="hint">
-        <kbd id="hint" class="text-success"></kbd>
+        <div id="hint" class="text-success"></div>
       </div>
       <div class="row no-gutters level-one"></div>
       <div class="container-fluid grey-bg" id="game-info">
@@ -139,7 +139,7 @@
         </div>
       </div>
 
-       <div class="container signUpModal">
+      <div class="container signUpModal">
         <!-- Modal -->
         <div
           class="modal fade"
@@ -155,23 +155,26 @@
             <div class="modal-content">
               <div class="modal-header justify-content-center">
                 <h5 class="modal-title" id="signUpModalLongTitle">
-                  More levels available soon. <br>Be the first to know <i class="fa fa-smile-o" aria-hidden="true"></i>
+                  More levels available soon. <br />Be the first to know
+                  <i class="fa fa-smile-o" aria-hidden="true"></i>
                 </h5>
               </div>
-             <form
-            action=""
-            method="get"
-            class="form-inline justify-content-center"
-          >
-            <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="Your Email"
-            />
-            <input type="submit" value="Sign up" id="join" />
-          </form>
-              <div class="modal-footer justify-content-center justify-content-center">
+              <form
+                action=""
+                method="get"
+                class="form-inline justify-content-center"
+              >
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                />
+                <input type="submit" value="Sign up" id="join" />
+              </form>
+              <div
+                class="modal-footer justify-content-center justify-content-center"
+              >
                 <button type="button" class="btn btn-light">
                   <a
                     class="text-dark"
@@ -197,9 +200,15 @@
               <p>
                 Each level has a collection of colour pairs. For every click a
                 box flips over to reveal colour. Match all the pairs with as few
-                clicks as possible. You can have a few seconds to memorise the
-                cards after the play button is clicked. Keep you focus, a few
-                seconds could be milliseconds.
+                clicks as possible.You will have a moment to memorise the
+                cards after the play button is clicked. Keep your focus, a
+                moment could be milliseconds. Once a box is flipped open, that
+                pair will need to be colour matched before a new colour can be
+                flipped open. There is a maximum number of clicks allowed per
+                level. Unused clicks on each level are automatically added to
+                the allocated number of clicks for the next level. The fewer
+                clicks used, the more clicks can be saved up for higher levels.
+                Enjoy your game!
               </p>
 
               <div class="rules-gameStats">Game stats</div>
@@ -236,11 +245,11 @@
           >
             <input
               type="text"
-              id="email"
+              id="email-footer"
               name="email"
               placeholder="Your Email"
             />
-            <input type="submit" value="Sign up" id="join" />
+            <input type="submit" value="Sign up" id="join-footer" />
           </form>
         </div>
 

@@ -635,7 +635,7 @@ document.getElementById("play").disabled = false;
           defaultGrid[j].classList.add("boxes");
         }
         //flip to backside after interval
-        setTimeout(flipToBack, 1000);
+        setTimeout(flipToBack, 2000);
       }
 
       if (!activeState) {

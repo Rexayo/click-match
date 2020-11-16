@@ -22,7 +22,7 @@ $("#darkMode").click(function () {
 // DIFFICULTY SELECTOR & HINT
 document.getElementById("level-text").innerHTML = "Level O1";
 document.getElementById("hint").innerHTML =
-  " HINT: Click on game icon to start";
+  " HINT: Click on gamepad icon to start";
 
 $(".difficultySetting01").click(function () {
   document.getElementById("level-text").innerHTML = "Level O1";
@@ -163,10 +163,10 @@ var numOfClicksLeft = 0;
 var bestGameClickCounter = 0;
 
 function updateNumOfClicks(level) {
-  let levelClickCount1 = 6;
-  let levelClickCount2 = 12;
-  let levelClickCount3 = 22;
-  let levelClickCount4 = 40;
+  let levelClickCount1 = 8;
+  let levelClickCount2 = 14;
+  let levelClickCount3 = 24;
+  let levelClickCount4 = 50;
 
   if (level == 1) {
     numOfClicksLeft += levelClickCount1;
@@ -581,7 +581,7 @@ function levelTwo() {
   resetClasses(defaultGrid, "levelFour");
    document.getElementById("level-text").innerHTML = "Level 02";
   document.getElementById("hint").innerHTML =
-  " HINT: Click on game icon to start";
+  " HINT: Click on gamepad icon to start";
 
   reset();
 
@@ -1028,7 +1028,7 @@ function levelThree() {
   resetClasses(defaultGrid, "levelFour");
    document.getElementById("level-text").innerHTML = "Level 03";
   document.getElementById("hint").innerHTML =
-  " HINT: Click on game icon to start";
+  " HINT: Click on gamepad icon to start";
 
   reset();
 
@@ -1380,7 +1380,7 @@ function levelThree() {
           defaultGrid[j].classList.add("boxes");
         }
         //flip to backside after interval
-        setTimeout(flipToBack, 1000);
+        setTimeout(flipToBack, 2000);
       }
 
       if (!activeState) {
@@ -1738,7 +1738,7 @@ function levelFour() {
   resetClasses(defaultGrid, "levelThree");
    document.getElementById("level-text").innerHTML = "Level 04";
   document.getElementById("hint").innerHTML =
-  " HINT: Click on game icon to start";
+  " HINT: Click on gamepad icon to start";
 
   reset();
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 
 .navbar-brand {
@@ -33,10 +33,6 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-kbd {
-  font-family: 'IBM Plex Mono', monospace !important;
-}
-
 #logo-line-two {
   font-size: 20px;
 }
@@ -46,9 +42,9 @@ kbd {
 }
 
 .rules {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   margin-top: 2.08vh;
-   padding-top: 2.08vh;
+  padding-top: 2.08vh;
   padding-bottom: 2.08vh;
   background-color: rgba(99, 99, 99, 0.274);
   border-radius: 15px;
@@ -69,13 +65,15 @@ kbd {
 
 #hint,
 .hint {
-  font-family: 'IBM Plex Mono', monospace !important;
+  font-family: "IBM Plex Mono", monospace !important;
   text-align: center;
-  font-weight: 900;
+  font-weight: 700;
   width: 100%;
   background-color: rgba(59, 59, 59, 0.795);
   padding: 1px 5px;
   box-shadow: 5px -10px 115px rgb(34, 34, 34) inset;
+  font-size: 0.9em;
+  text-transform: uppercase;
 }
 
 .rules-gameStats {
@@ -87,7 +85,7 @@ kbd {
 }
 
 .rules-subHeader {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   text-align: center;
   width: 100%;
   font-weight: 900;
@@ -154,24 +152,26 @@ nav {
   padding: 0px 30px;
   border-radius: 55px;
   background-color: rgb(43, 255, 0);
-  box-shadow: 10px -5px 10px rgb(231, 228, 199) inset,  -5px -5px 10px rgb(255, 255, 255) inset ;
+  box-shadow: 10px -5px 10px rgb(231, 228, 199) inset,
+    -5px -5px 10px rgb(255, 255, 255) inset;
   transition: 0.3s;
   border: 0.3px solid white;
-
 }
 
 .fa-gamepad {
   margin: 0 auto;
   padding: 0;
 }
-button:disabled, #play:disabled{
+button:disabled,
+#play:disabled {
   background-color: rgb(90, 89, 89) !important;
-  box-shadow: none ;
+  box-shadow: none;
 }
 
-button:disabled:hover, #play:disabled:hover{
+button:disabled:hover,
+#play:disabled:hover {
   background-color: rgb(90, 89, 89) !important;
-   box-shadow: none ;
+  box-shadow: none;
 }
 
 #play:hover {
@@ -184,7 +184,6 @@ button:disabled:hover, #play:disabled:hover{
   outline: none;
   box-shadow: none;
 }
-
 
 #level-text {
   font-weight: 600;
@@ -228,8 +227,10 @@ button:disabled:hover, #play:disabled:hover{
   box-shadow: 3px 2px #3d3d3d;
   line-height: 1em;
   padding: 5px 5px;
-  border-right: none;
+
+  
 }
+
 footer {
   text-align: center;
   font-family: "Bungee", cursive;
@@ -249,7 +250,7 @@ footer {
 }
 
 .modal-body {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 1em;
 }
 
@@ -263,9 +264,13 @@ footer {
   font-weight: 900;
 }
 
+footer form {
+  font-size: 0.8em;
+}
+
 footer .newsletter form #email,
 .modal form #email {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 0.8em;
   box-shadow: 3px 2px rgb(34, 34, 34) inset;
   background-color: rgba(128, 128, 128, 0.562);
@@ -274,12 +279,18 @@ footer .newsletter form #email,
   margin: 1.04vh 0;
 }
 
+footer #join-footer {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .modal-header,
 .modal-footer {
   border: none;
 }
 footer .tagline {
-  font-size: 1.5em;
+  font-size: 1.2em;
   padding-top: 1.08vh;
   padding-bottom: 1.04vh;
   font-weight: 500;
@@ -293,7 +304,7 @@ footer .tagline {
 
 footer #copyright h6 {
   font-size: 0.8em;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   padding-top: 1.04vh;
   padding-bottom: 1.04vh;
   border-top: 1px solid black;

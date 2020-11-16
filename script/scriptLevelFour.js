@@ -1033,7 +1033,7 @@ $(".difficultySetting04").click(function () {
           defaultGrid[j].classList.add("boxes");
         }
         //flip to backside after interval
-        setTimeout(flipToBack, 5000);
+        setTimeout(flipToBack, 7000);
       }
       if (!activeState) {
         activeState = true;
