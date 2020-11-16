@@ -338,7 +338,7 @@ var numOfClicksLeft = 0;
 var currentScore = 0;
 var bestGameScore = localStorage.getItem("score") || 0;
 
-document.getElementById("bestGameScore").innerHTML = localStorage.getItem("score");
+document.getElementById("bestGameScore").innerHTML = localStorage.getItem("score") || 0;
 
 
 function updateNumOfClicks(level) {
@@ -416,7 +416,7 @@ function checkColour(id, boxClass, boxObj) {
     }
     numOfClicksLeft--;
     document.getElementById("currentScore").innerHTML = currentScore;
-    document.getElementById("bestGameScore").innerHTML = localStorage.getItem("score");
+    document.getElementById("bestGameScore").innerHTML = localStorage.getItem("score")||0;
     if (numOfClicksLeft < 0) {
       $("#gameOverModal").modal();
       if(currentScore > bestGameScore){
