@@ -1,4 +1,3 @@
-// $("#signUpModal").modal();
 
 /*------------------NAV------------------*/
 
@@ -148,15 +147,6 @@ var GridColourArray = GridColours();
 var clickCounter = 0;
 var numOfClicksLeft = 0;
 
-function updateGameClicks(clickCounter) {
-  let bestGameClickCounter = localStorage.getItem("clickCounter") || 0;
-
-  localStorage.setItem(
-    "clickCounter",
-    Math.min(clickCounter, bestGameClickCounter)
-  );
-  return bestGameClickCounter;
-}
 
 function updateNumOfClicks(level) {
   let levelClickCount1 = 8;
@@ -391,7 +381,6 @@ function checkColour(id, boxClass, boxObj) {
       clickCounter++;
       document.getElementById("clickCounter").innerHTML = clickCounter;
      
-      document.getElementById("bestGameClickCounter").innerHTML = updateGameClicks(clickCounter);
 
       for (let i = 0; i < box.length; i++) {
         box[i].style.backgroundColor = boxObj[id];
@@ -399,7 +388,7 @@ function checkColour(id, boxClass, boxObj) {
     } else {
       clickCounter++;
       document.getElementById("clickCounter").innerHTML = clickCounter;
-      document.getElementById("bestGameClickCounter").innerHTML = updateGameClicks(clickCounter);
+      
 
       if (boxObj[id] == choiceOne) {
         for (let i = 0; i < box.length; i++) {
