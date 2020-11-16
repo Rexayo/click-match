@@ -247,6 +247,7 @@ $("#play").click(function () {
   document.getElementById("play").disabled = true;
     updateNumOfClicks("1");
     document.getElementById("numOfClicksLeft").innerHTML = numOfClicksLeft;
+    updatebestGameScore("1")
   }
 });
 

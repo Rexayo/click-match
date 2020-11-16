@@ -412,7 +412,8 @@ $(".difficultySetting02").click(function () {
      document.getElementById("play").disabled = true;
       updateNumOfClicks("2");
     document.getElementById("numOfClicksLeft").innerHTML = numOfClicksLeft;
-    }
+    };
+     updatebestGameScore("1");
   });
 
   $(".levelTwoBox1").click(function () {

@@ -143,29 +143,7 @@ for (let i = 0; i < letters.length; i++) {
 // universal colour array
 var GridColourArray = GridColours();
 
-//game stats
-var clickCounter = 0;
-var numOfClicksLeft = 0;
 
-
-function updateNumOfClicks(level) {
-  let levelClickCount1 = 8;
-  let levelClickCount2 = 14;
-  let levelClickCount3 = 24;
-  let levelClickCount4 = 50;
-
-  if (level == 1) {
-    numOfClicksLeft += levelClickCount1;
-  } else if (level == 2) {
-    numOfClicksLeft += levelClickCount2;
-  } else if (level == 3) {
-    numOfClicksLeft += levelClickCount3;
-  } else if (level == 4) {
-    numOfClicksLeft += levelClickCount4;
-  }
-
-  return numOfClicksLeft;
-}
 
 // level one colours
 
@@ -354,9 +332,36 @@ var levelFourObj = {
   box32: colourArrayShuffleFour[31],
 };
 
+//game stats 
+var clickCounter = 0;
+var numOfClicksLeft = 0;
+var currentScore = 0;
+var bestGameScore = localStorage.getItem("score") || 0;
+
+document.getElementById("bestGameScore").innerHTML = localStorage.getItem("score");
+
+
+function updateNumOfClicks(level) {
+  let levelClickCount1 = 6;
+  let levelClickCount2 = 12;
+  let levelClickCount3 = 24;
+  let levelClickCount4 = 48;
+
+  if (level == 1) {
+    numOfClicksLeft += levelClickCount1;
+  } else if (level == 2) {
+    numOfClicksLeft += levelClickCount2;
+  } else if (level == 3) {
+    numOfClicksLeft += levelClickCount3;
+  } else if (level == 4) {
+    numOfClicksLeft += levelClickCount4;
+  }
+
+  return numOfClicksLeft;
+}
 var choiceOne = false;
 var choiceTwo = false;
-var colouredBoxes = 0;
+
 
 function checkColour(id, boxClass, boxObj) {
   let box = document.getElementsByClassName(boxClass);
@@ -379,37 +384,50 @@ function checkColour(id, boxClass, boxObj) {
     if (!choiceOne) {
       choiceOne = boxObj[id];
       clickCounter++;
+      currentScore+=5;
       document.getElementById("clickCounter").innerHTML = clickCounter;
-     
 
       for (let i = 0; i < box.length; i++) {
         box[i].style.backgroundColor = boxObj[id];
       }
     } else {
       clickCounter++;
+      
       document.getElementById("clickCounter").innerHTML = clickCounter;
       
 
       if (boxObj[id] == choiceOne) {
         for (let i = 0; i < box.length; i++) {
           box[i].style.backgroundColor = boxObj[id];
-
           choiceOne = false;
+          
         }
+        currentScore+=5;
       } else {
+          currentScore--;
         setTimeout(function () {
           for (let i = 0; i < box.length; i++) {
             box[i].style.backgroundColor = gridBackColour;
+            
           }
+          
         }, 100);
       }
     }
     numOfClicksLeft--;
+    document.getElementById("currentScore").innerHTML = currentScore;
+    document.getElementById("bestGameScore").innerHTML = localStorage.getItem("score");
     if (numOfClicksLeft < 0) {
       $("#gameOverModal").modal();
+      if(currentScore > bestGameScore){
+          localStorage.setItem("score", currentScore);
+          document.getElementById("bestGameScore").innerHTML = localStorage.getItem("score")
+      }
+
     } else {
       document.getElementById("numOfClicksLeft").innerHTML = numOfClicksLeft;
     }
+    
   }
 }
 
