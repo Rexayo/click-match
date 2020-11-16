@@ -1,11 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 
+/*-----------------UTILITIES---------------*/
+
+.bg-light {
+  box-shadow: 5px -10px 805px rgba(255, 255, 255, 0.205) inset !important;
+  background-color: rgb(255, 255, 255);
+}
+
+.grey-bg {
+  background-color: rgba(252, 252, 252, 0);
+}
+
+.dark-bg {
+  background-color: rgb(68, 68, 68);
+}
+
+.dark-outline {
+  border: 1px solid black;
+}
+
+.white-outline {
+  border: 1px solid white;
+}
+
+/*-----------------NAV---------------*/
+
+nav {
+  font-family: "Bungee", cursive;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 700;
+  border-bottom: 2px solid rgb(172, 172, 172);
+}
+
 .navbar-brand {
   font-family: "Bungee", cursive;
   text-transform: uppercase;
   font-size: 2.35em;
   font-weight: 900;
+}
+
+.nav-link {
+  margin-right: 10px;
+  font-size: 1.4em;
+}
+
+.navbar-toggler-icon,
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding-left: 0px;
 }
 
 #logo {
@@ -23,44 +71,37 @@
   box-shadow: 3px 2px rgb(34, 34, 34) inset;
 }
 
-body {
-  box-shadow: 5px -10px 805px rgba(148, 148, 255, 0.767) inset inset;
-  background-color: rgb(255, 255, 255);
+#level-text {
+  font-weight: 600;
+  font-family: "Bungee", cursive;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.navbar-dark {
+  background-color: black !important;
+}
+.dropdown-toggle {
+  padding: 2px 8px;
+  margin: 5px 0px;
 }
 
-.bg-light {
-  box-shadow: 5px -10px 805px rgba(255, 255, 255, 0.205) inset !important;
-  background-color: rgb(255, 255, 255);
+.dropdown-item {
+  font-size: 1em;
 }
 
-#logo-line-two {
-  font-size: 20px;
+.dropdown-item:focus {
+  background-color: rgb(90, 90, 90);
+}
+
+.navbar-collapse {
+  border-top: 1px solid #8a8989;
+  border-bottom: 1px solid #8a8989;
+  margin-top: 10px;
 }
 
 #darkMode {
   text-decoration: none;
-}
-
-.rules {
-  font-family: "IBM Plex Mono", monospace;
-  margin-top: 2.08vh;
-  padding-top: 2.08vh;
-  padding-bottom: 2.08vh;
-  background-color: rgba(99, 99, 99, 0.274);
-  border-radius: 15px;
-  font-size: 1em;
-}
-
-.rules-header {
-  font-family: "Bungee", cursive;
-  text-align: center;
-  font-weight: 900;
-  font-size: 1.2em;
-  width: 100%;
-  background-color: rgba(59, 59, 59, 0.795);
-  padding: 1px 5px;
-  box-shadow: 5px -10px 115px rgb(34, 34, 34) inset;
-  color: white;
 }
 
 #hint,
@@ -74,6 +115,42 @@ body {
   box-shadow: 5px -10px 115px rgb(34, 34, 34) inset;
   font-size: 0.9em;
   text-transform: uppercase;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+/*-----------------BODY---------------*/
+
+body {
+  box-shadow: 5px -10px 805px rgba(148, 148, 255, 0.767) inset inset;
+  background-color: rgb(201, 201, 201);
+  /* background-color: #DFDBE5; */
+  /*http://www.heropatterns.com/*/
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.rules {
+  font-family: "IBM Plex Mono", monospace;
+  margin-top: 2.08vh;
+  padding-top: 2.08vh;
+  padding-bottom: 2.08vh;
+
+  border-radius: 15px;
+  font-size: 1em;
+  background-color: rgb(226, 226, 226);
+  box-shadow: 3px 2px rgb(34, 34, 34) inset;
+}
+
+.rules-header {
+  font-family: "Bungee", cursive;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.2em;
+  width: 100%;
+  background-color: rgba(59, 59, 59, 0.795);
+  box-shadow: 5px -10px 115px rgb(34, 34, 34) inset;
+  border-radius: 30px;
+  color: white;
 }
 
 .rules-gameStats {
@@ -82,6 +159,12 @@ body {
   width: 100%;
   font-size: 1.2em;
   margin-bottom: 1.04vh;
+  
+  background-color: rgba(59, 59, 59, 0.795);
+  box-shadow: 5px -10px 115px rgb(34, 34, 34) inset;
+  border-radius: 30px;
+  color: white;
+  padding: 0px 50px;
 }
 
 .rules-subHeader {
@@ -99,46 +182,8 @@ body {
   width: 100%;
 }
 
-.navbar-toggler-icon,
-.navbar-toggler,
-.navbar-toggler:focus,
-.navbar-toggler:active {
-  border: none;
-  outline: none;
-  box-shadow: none;
-  padding-left: 0px;
-}
-
-.menu-icon {
-  font-size: 1.5em;
-}
-
-nav {
-  font-family: "Bungee", cursive;
-  text-transform: uppercase;
-  font-size: 0.8em;
-  font-weight: 700;
-  border-bottom: 2px solid rgb(172, 172, 172);
-}
-
 #game-info {
   border-bottom: 1px solid black;
-}
-
-.grey-bg {
-  background-color: rgba(252, 252, 252, 0);
-}
-
-.dark-bg {
-  background-color: rgb(68, 68, 68);
-}
-
-.dark-outline {
-  border: 1px solid black;
-}
-
-.white-outline {
-  border: 1px solid white;
 }
 
 #play {
@@ -185,39 +230,6 @@ button:disabled:hover,
   box-shadow: none;
 }
 
-#level-text {
-  font-weight: 600;
-  font-family: "Bungee", cursive;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  text-decoration: underline;
-}
-.navbar-dark {
-  background-color: black !important;
-}
-.dropdown-toggle {
-  padding: 2px 8px;
-  margin: 5px 0px;
-}
-
-.dropdown-item {
-  font-size: 1em;
-}
-
-.navbar-collapse {
-  border-top: 1px solid #8a8989;
-  border-bottom: 1px solid #8a8989;
-  margin-top: 10px;
-}
-
-.fa-cube:hover {
-  transform: rotate(10deg);
-}
-
-.menu-icon {
-  font-size: 1.1em;
-}
-
 .game-stats {
   font-size: 0.8em;
   margin-bottom: 2.08vh;
@@ -227,18 +239,9 @@ button:disabled:hover,
   box-shadow: 3px 2px #3d3d3d;
   line-height: 1em;
   padding: 5px 5px;
-
-  
 }
 
-footer {
-  text-align: center;
-  font-family: "Bungee", cursive;
-  margin-top: 4.15vh;
-  padding-top: 2.08vh;
-  border-top: 1px solid black;
-  background-color: white;
-}
+/*-----------------MODAL---------------*/
 
 .modal {
   text-align: center;
@@ -254,6 +257,11 @@ footer {
   font-size: 1em;
 }
 
+.modal-header,
+.modal-footer {
+  border: none;
+}
+
 #modal-close {
   color: rgba(255, 255, 255, 0);
   background-color: rgba(255, 255, 255, 0);
@@ -262,6 +270,17 @@ footer {
 .fa-frown-o,
 .fa-smile-o {
   font-weight: 900;
+}
+
+/*-----------------FOOTER---------------*/
+
+footer {
+  text-align: center;
+  font-family: "Bungee", cursive;
+  margin-top: 4.15vh;
+  padding-top: 2.08vh;
+  border-top: 1px solid black;
+  background-color: white;
 }
 
 footer form {
@@ -285,10 +304,6 @@ footer #join-footer {
   appearance: none;
 }
 
-.modal-header,
-.modal-footer {
-  border: none;
-}
 footer .tagline {
   font-size: 1.2em;
   padding-top: 1.08vh;
@@ -308,26 +323,6 @@ footer #copyright h6 {
   padding-top: 1.04vh;
   padding-bottom: 1.04vh;
   border-top: 1px solid black;
-}
-
-.dropdown-item:focus {
-  background-color: rgb(90, 90, 90);
-}
-
-.levels {
-  display: block;
-  z-index: 5000;
-  width: 100%;
-  position: absolute;
-  text-align: center;
-  margin: -38vh auto;
-  padding: 8vh 2vw;
-  background-color: white;
-}
-
-.nav-link {
-  margin-right: 10px;
-  font-size: 1.4em;
 }
 
 /* Bob - Hover.css - available here https://ianlunn.github.io/Hover/# free for non-commercial use under The MIT License */
@@ -398,6 +393,8 @@ footer #copyright h6 {
   -webkit-animation-direction: normal, alternate;
   animation-direction: normal, alternate;
 }
+
+/*--------------NEDIA QUERIES------------*/
 
 @media screen and (min-width: 992px) {
   .navbar-collapse {

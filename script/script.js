@@ -53,10 +53,6 @@ $("#play").click(function () {
     " HINT: Click on a box to reveal it's colour, then try to match it's pair";
 });
 
-
-
-
-
 /*----------------------DEFAULT GRID--------------------------*/
 for (let i = 0; i < 120; i++) {
   $(".level-one").append('<div class="col-1 grey-bg"><img></div>');
@@ -143,24 +139,24 @@ for (let i = 0; i < letters.length; i++) {
     LogoColourArray[i]
   );
   logo.append(span);
- 
 }
-
-
 
 // universal colour array
 var GridColourArray = GridColours();
 
-
-
-
-
-
-
 //game stats
 var clickCounter = 0;
 var numOfClicksLeft = 0;
-var bestGameClickCounter = 0;
+
+function updateGameClicks(clickCounter) {
+  let bestGameClickCounter = localStorage.getItem("clickCounter") || 0;
+
+  localStorage.setItem(
+    "clickCounter",
+    Math.min(clickCounter, bestGameClickCounter)
+  );
+  return bestGameClickCounter;
+}
 
 function updateNumOfClicks(level) {
   let levelClickCount1 = 8;
@@ -394,12 +390,17 @@ function checkColour(id, boxClass, boxObj) {
       choiceOne = boxObj[id];
       clickCounter++;
       document.getElementById("clickCounter").innerHTML = clickCounter;
+     
+      document.getElementById("bestGameClickCounter").innerHTML = updateGameClicks(clickCounter);
+
       for (let i = 0; i < box.length; i++) {
         box[i].style.backgroundColor = boxObj[id];
       }
     } else {
       clickCounter++;
       document.getElementById("clickCounter").innerHTML = clickCounter;
+      document.getElementById("bestGameClickCounter").innerHTML = updateGameClicks(clickCounter);
+
       if (boxObj[id] == choiceOne) {
         for (let i = 0; i < box.length; i++) {
           box[i].style.backgroundColor = boxObj[id];
@@ -410,7 +411,6 @@ function checkColour(id, boxClass, boxObj) {
         setTimeout(function () {
           for (let i = 0; i < box.length; i++) {
             box[i].style.backgroundColor = gridBackColour;
-            
           }
         }, 100);
       }
@@ -579,9 +579,9 @@ function levelTwo() {
   resetClasses(defaultGrid, "levelOne");
   resetClasses(defaultGrid, "levelThree");
   resetClasses(defaultGrid, "levelFour");
-   document.getElementById("level-text").innerHTML = "Level 02";
+  document.getElementById("level-text").innerHTML = "Level 02";
   document.getElementById("hint").innerHTML =
-  " HINT: Click on gamepad icon to start";
+    " HINT: Click on gamepad icon to start";
 
   reset();
 
@@ -777,7 +777,7 @@ function levelTwo() {
 
   //LEVEL TWO GRID STRUCTURE - AFTER PLAY BUTTON IS CLICKED
 
- document.getElementById("play").disabled = false;
+  document.getElementById("play").disabled = false;
 
   // on click for play button - level two
   level = 2;
@@ -844,7 +844,7 @@ function levelTwo() {
         activeState = true;
       }
 
-     document.getElementById("play").disabled = true;
+      document.getElementById("play").disabled = true;
       updateNumOfClicks("2");
       document.getElementById("numOfClicksLeft").innerHTML = numOfClicksLeft;
     }
@@ -1026,9 +1026,9 @@ function levelThree() {
   resetClasses(defaultGrid, "levelOne");
   resetClasses(defaultGrid, "levelTwo");
   resetClasses(defaultGrid, "levelFour");
-   document.getElementById("level-text").innerHTML = "Level 03";
+  document.getElementById("level-text").innerHTML = "Level 03";
   document.getElementById("hint").innerHTML =
-  " HINT: Click on gamepad icon to start";
+    " HINT: Click on gamepad icon to start";
 
   reset();
 
@@ -1272,7 +1272,7 @@ function levelThree() {
 
   //LEVEL THREE GRID STRUCTURE - AFTER PLAY BUTTON IS CLICKED
 
- document.getElementById("play").disabled = false;
+  document.getElementById("play").disabled = false;
 
   // on click for play button - level three
   level = 3;
@@ -1386,7 +1386,7 @@ function levelThree() {
       if (!activeState) {
         activeState = true;
       }
-     document.getElementById("play").disabled = true;
+      document.getElementById("play").disabled = true;
       updateNumOfClicks("3");
       document.getElementById("numOfClicksLeft").innerHTML = numOfClicksLeft;
     }
@@ -1736,9 +1736,9 @@ function levelFour() {
   resetClasses(defaultGrid, "levelOne");
   resetClasses(defaultGrid, "levelTwo");
   resetClasses(defaultGrid, "levelThree");
-   document.getElementById("level-text").innerHTML = "Level 04";
+  document.getElementById("level-text").innerHTML = "Level 04";
   document.getElementById("hint").innerHTML =
-  " HINT: Click on gamepad icon to start";
+    " HINT: Click on gamepad icon to start";
 
   reset();
 
@@ -2076,7 +2076,7 @@ function levelFour() {
   }
 
   //LEVEL FOUR GRID STRUCTURE - AFTER PLAY BUTTON IS CLICKED
- document.getElementById("play").disabled = false;
+  document.getElementById("play").disabled = false;
 
   // on click for play button - level four
   level = 4;
@@ -2285,7 +2285,7 @@ function levelFour() {
       if (!activeState) {
         activeState = true;
       }
-     document.getElementById("play").disabled = true;
+      document.getElementById("play").disabled = true;
       updateNumOfClicks("4");
       document.getElementById("numOfClicksLeft").innerHTML = numOfClicksLeft;
     }
