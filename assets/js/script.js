@@ -1,6 +1,4 @@
 
-
-
 /*------------------NAV------------------*/
 
 //LIGHT AND DARK MODE TOGGLE FOR NAV

@@ -5,7 +5,7 @@
 	<meta name="description" content="Memory exercies in colour" />
 	<meta name="keywords" content="Colour Game, Memory Game, Visual Exercises, Perception Game" />
 	<meta name="author" content="Rex Abba-Abba" />
-	<meta charset=" UTF-8" />
+	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<!--font awesome-->
@@ -20,9 +20,9 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 	<title>Click Match!</title>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+	<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
 	</script>
-	<script type="text/javascript">
+	<script>
 		(function(){
 			emailjs.init("user_WVSWGDdWgIuRCZRz615Ek");
 			})();
@@ -95,8 +95,8 @@
 
 		<div class="container gameOverModal">
 			<!-- Modal -->
-			<div class="modal fade" id="gameOverModal" tabindex="-1" role="dialog" aria-labelledby="gameOverModalTitle"
-				aria-hidden="true" data-backdrop="static" data-keyboard="false">
+			<div class="modal fade" id="gameOverModal" tabindex="-1" role="dialog" aria-hidden="true"
+				data-backdrop="static" data-keyboard="false">
 				<div class="modal-dialog modal-dialog-centered" role="document">
 					<div class="modal-content">
 						<div class="modal-header justify-content-center">
@@ -108,15 +108,9 @@
 							Sorry, you are out of clicks! Ready to try again?
 						</div>
 						<div class="modal-footer justify-content-center">
-							<button type="button" class="btn btn-light">
-                  <a
-                    class="text-dark"
-                    data-backdrop="static"
-                    data-keyboard="false"
-                    href="index.html"
-                    >Restart Game</a
-                  >
-                </button>
+							<a class="text-light btn btn-dark" data-backdrop="static" data-keyboard="false"
+								href="index.html" id="restartGameOver">Restart Game</a>
+
 						</div>
 					</div>
 				</div>
@@ -125,12 +119,12 @@
 
 		<div class="container signUpModal">
 			<!-- Modal -->
-			<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalTitle"
-				aria-hidden="true" data-backdrop="static" data-keyboard="false">
+			<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-hidden="true"
+				data-backdrop="static" data-keyboard="false">
 				<div class="modal-dialog modal-dialog-centered" role="document">
 					<div class="modal-content">
 						<div class="modal-header justify-content-center">
-							<h5 class="modal-title" id="signUpModalLongTitle">
+							<h5 class="modal-title">
 								More levels available soon. <br />Be the first to know.
 								<i class="fa fa-smile-o" aria-hidden="true"></i>
 							</h5>
@@ -146,15 +140,9 @@
 							<input type="submit" value="Sign up" id="join" />
               </form>
 							<div class="modal-footer justify-content-center justify-content-center">
-								<button type="button" class="btn btn-light">
-                  <a
-                    class="text-dark"
-                    data-backdrop="static"
-                    data-keyboard="false"
-                    href="index.html"
-                    >Restart Game</a
-                  >
-                </button>
+								<a class="text-light btn btn-dark" data-backdrop="static" data-keyboard="false"
+									href="index.html" id="restartSignUp">Restart Game</a>
+
 							</div>
 					</div>
 				</div>
@@ -209,39 +197,40 @@
 		</div>
 
 	</section>
-</body>
-<footer>
-	<div class="container">
-		<div class="row justify-content-center">
-			<h1 class="tagline">
-				More levels available soon. Be the first to know.
-			</h1>
-			<div class="col-12 signUpForm">
-				<form onsubmit="return sendMail(this);" class="form-inline justify-content-center">
-					<input
+	<footer>
+		<div class="container">
+			<div class="row justify-content-center">
+				<h1 class="tagline">
+					More levels available soon. Be the first to know.
+				</h1>
+				<div class="col-12 signUpForm">
+					<form onsubmit="return sendMail(this);" class="form-inline justify-content-center">
+						<input
               type="text"
               id="email-footer"
               name="emailaddress"
               placeholder="Your Email"
               required
             />
-					<input type="submit" value="Sign up" id="join-footer" />
+						<input type="submit" value="Sign up" id="join-footer" />
           </form>
-			</div>
+				</div>
 
-			<div class="col-sm-12">
-				<div id="copyright">
-					<h6>©2020 Click Match! | All Rights Reserved.</h6>
+				<div class="col-sm-12">
+					<div id="copyright">
+						<h6>©2020 Click Match! | All Rights Reserved.</h6>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</footer>
-<script src="assets/js/script.js"></script>
-<script src="assets/js/scriptLevelOne.js"></script>
-<script src="assets/js/scriptLevelTwo.js"></script>
-<script src="assets/js/scriptLevelThree.js"></script>
-<script src="assets/js/scriptLevelFour.js"></script>
-<script src="assets/js/sendEmail.js"></script>
+	</footer>
+	<script src="assets/js/script.js"></script>
+	<script src="assets/js/scriptLevelOne.js"></script>
+	<script src="assets/js/scriptLevelTwo.js"></script>
+	<script src="assets/js/scriptLevelThree.js"></script>
+	<script src="assets/js/scriptLevelFour.js"></script>
+	<script src="assets/js/sendEmail.js"></script>
+</body>
+
 
 </html>

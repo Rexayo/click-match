@@ -170,7 +170,6 @@ margin-right: 30px;
   width: 100%;
   font-size: 1.2em;
   margin-bottom: 1.04vh;
-  
   background-color: rgba(59, 59, 59, 0.795);
   box-shadow: 5px -10px 115px rgb(34, 34, 34) inset;
   border-radius: 30px;
@@ -218,6 +217,13 @@ margin-right: 30px;
   margin: 0 auto;
   padding: 0;
 }
+
+ #restartGameOver, #restartSignUp{
+border-radius: 30px !important;
+padding-top: 0px;
+padding-bottom: 0px;
+}
+
 button:disabled,
 #play:disabled {
   background-color: rgb(90, 89, 89) !important;
@@ -299,7 +305,7 @@ footer form {
 }
 
 #email-footer,
-#email {
+#email-modal {
   font-family: "IBM Plex Mono", monospace !important;
   font-size: 1.1em;
   box-shadow: 3px 2px rgb(34, 34, 34) inset;
@@ -320,7 +326,7 @@ footer form {
 
 footer .tagline {
   font-size: 1.1em;
-  padding-top: 1.08vh;
+  padding-top: 1.04vh;
   padding-bottom: 1.04vh;
   font-weight: 500;
   margin-left: 10px;
