@@ -267,4 +267,4 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Acknowledgements
 
-- I received inspiration for this project from a colour recognition game on iOS called [Specimen](https://apps.apple.com/us/app/specimen-a-game-about-color/id999930535) created by Pep Rally. Also, the idea of clicking the boxes to reveal what's behind them comes from [concentration card games](<"https://en.wikipedia.org/wiki/Concentration_(card_game)#:~:text=Concentration%2C%20also%20known%20as%20Match,over%20pairs%20of%20matching%20cards.">) that rely on flipping cards to reveal what's underneath.
+- I received inspiration for this project from a colour recognition game on iOS called [Specimen](https://apps.apple.com/us/app/specimen-a-game-about-color/id999930535) created by Pep Rally. Also, the idea of clicking the boxes to reveal what's behind them comes from [concentration card games](https://en.wikipedia.org/wiki/Concentration_(card_game)#:~:text=Concentration%2C%20also%20known%20as%20Match,over%20pairs%20of%20matching%20cards.) that rely on flipping cards to reveal what's underneath.
