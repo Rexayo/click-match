@@ -298,18 +298,20 @@ footer form {
   font-size: 0.8em;
 }
 
-footer .newsletter form #email,
-.modal form #email {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.8em;
+#email-footer,
+#email {
+  font-family: "IBM Plex Mono", monospace !important;
+  font-size: 1.1em;
   box-shadow: 3px 2px rgb(34, 34, 34) inset;
   background-color: rgba(128, 128, 128, 0.562);
   border: none;
-  padding: 5px 5px;
+  padding: 0 5px;
   margin: 1.04vh 0;
+  font-weight: 500;
 }
 
-footer #join-footer {
+#join-footer,
+#join {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -337,6 +339,7 @@ footer #copyright h6 {
   padding-top: 1.04vh;
   padding-bottom: 1.04vh;
   border-top: 1px solid black;
+  margin-top: 1.04vh;
 }
 
 /* Bob - Hover.css - available here https://ianlunn.github.io/Hover/# free for non-commercial use under The MIT License */

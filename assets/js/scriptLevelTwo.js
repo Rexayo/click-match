@@ -343,7 +343,7 @@ $(".difficultySetting02").click(function () {
 
   //LEVEL TWO GRID STRUCTURE - AFTER PLAY BUTTON IS CLICKED
 
- document.getElementById("play").disabled = false;
+  document.getElementById("play").disabled = false;
 
   // on click for play button - level two
   level = 2;
@@ -409,11 +409,11 @@ $(".difficultySetting02").click(function () {
       if (!activeState) {
         activeState = true;
       }
-     document.getElementById("play").disabled = true;
+      document.getElementById("play").disabled = true;
       updateNumOfClicks("2");
-    document.getElementById("numOfClicksLeft").innerHTML = numOfClicksLeft;
-    };
-     updatebestGameScore("1");
+      document.getElementById("numOfClicksLeft").innerHTML = numOfClicksLeft;
+    }
+    updatebestGameScore("1");
   });
 
   $(".levelTwoBox1").click(function () {

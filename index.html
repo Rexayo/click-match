@@ -14,12 +14,19 @@
 	<!--bootstrap-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
-	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 	<title>Click Match!</title>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+		(function(){
+			emailjs.init("user_WVSWGDdWgIuRCZRz615Ek");
+			})();
+	</script>
 </head>
 
 <body>
@@ -128,12 +135,13 @@
 								<i class="fa fa-smile-o" aria-hidden="true"></i>
 							</h5>
 						</div>
-						<form action="" method="get" class="form-inline justify-content-center">
+						<form onsubmit="return sendMail(this);" class="form-inline justify-content-center">
 							<input
                   type="text"
-                  id="email"
-                  name="email"
+                  id="email-modal"
+                  name="emailaddress"
                   placeholder="Your Email"
+                  required
                 />
 							<input type="submit" value="Sign up" id="join" />
               </form>
@@ -182,20 +190,24 @@
 							not to be trigger-happy.
 						</p>
 						<div class="rules-subHeader">Clicks Left</div>
-						<p>You are given bonus clicks for each level. At the start of the game you get 6 clicks, an additional 12 clicks in level 2, an additional 24 clicks in level 3 and an additional 48 clicks in level 4.</p>
+						<p>You are given bonus clicks for each level. At the start of the game you get 6 clicks, an
+							additional 12 clicks in level 2, an additional 24 clicks in level 3 and an additional 48
+							clicks in level 4.</p>
 						<div class="rules-subHeader">Current Score</div>
 						<p>
-							This score represents your progress in the ongoing game session, you get 5 points for every coloured box open. A wrong click deducts 1 point.
+							This score represents your progress in the ongoing game session, you get 5 points for every
+							coloured box open. A wrong click deducts 1 point.
 						</p>
 						<div class="rules-subHeader">Best Score</div>
-						<p>This score represents the highest score you have ever achieved in the game. Aim to increase this number.
+						<p>This score represents the highest score you have ever achieved in the game. Aim to increase
+							this number.
 						</p>
 					</div>
 
 				</div>
 			</div>
 		</div>
-		</div>
+
 	</section>
 </body>
 <footer>
@@ -204,13 +216,14 @@
 			<h1 class="tagline">
 				More levels available soon. Be the first to know.
 			</h1>
-			<div class="col-12 newsletter">
-				<form action="" method="get" class="form-inline justify-content-center">
+			<div class="col-12 signUpForm">
+				<form onsubmit="return sendMail(this);" class="form-inline justify-content-center">
 					<input
               type="text"
               id="email-footer"
-              name="email"
+              name="emailaddress"
               placeholder="Your Email"
+              required
             />
 					<input type="submit" value="Sign up" id="join-footer" />
           </form>
@@ -224,10 +237,11 @@
 		</div>
 	</div>
 </footer>
-<script src="script/script.js"></script>
-<script src="script/scriptLevelOne.js"></script>
-<script src="script/scriptLevelTwo.js"></script>
-<script src="script/scriptLevelThree.js"></script>
-<script src="script/scriptLevelFour.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/scriptLevelOne.js"></script>
+<script src="assets/js/scriptLevelTwo.js"></script>
+<script src="assets/js/scriptLevelThree.js"></script>
+<script src="assets/js/scriptLevelFour.js"></script>
+<script src="assets/js/sendEmail.js"></script>
 
 </html>

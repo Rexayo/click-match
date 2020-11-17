@@ -1,4 +1,6 @@
 
+
+
 /*------------------NAV------------------*/
 
 //LIGHT AND DARK MODE TOGGLE FOR NAV
@@ -116,7 +118,7 @@ function GridColours() {
 //create colours for logo
 function logoColours() {
   let saturation = randomVal(80, 100);
-  let lightness = randomVal(50, 65);
+  let lightness = randomVal(45, 65);
   let alpha = 1.0;
   let amount = 20;
 

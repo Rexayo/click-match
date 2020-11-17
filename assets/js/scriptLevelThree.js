@@ -527,7 +527,7 @@ $(".difficultySetting03").click(function () {
 
   //LEVEL THREE GRID STRUCTURE - AFTER PLAY BUTTON IS CLICKED
 
-document.getElementById("play").disabled = false;
+  document.getElementById("play").disabled = false;
 
   // on click for play button - level three
   level = 3;
@@ -643,7 +643,7 @@ document.getElementById("play").disabled = false;
       }
       document.getElementById("play").disabled = true;
       updateNumOfClicks("3");
-    document.getElementById("numOfClicksLeft").innerHTML = numOfClicksLeft;
+      document.getElementById("numOfClicksLeft").innerHTML = numOfClicksLeft;
     }
   });
 
@@ -693,7 +693,7 @@ document.getElementById("play").disabled = false;
     if (activeState) {
       checkColour("box3", "levelThreeBox3", levelThreeObj);
 
-       let boxes = $(".boxes");
+      let boxes = $(".boxes");
       let counter = 0;
 
       for (let i = 0; i < boxes.length; i++) {
