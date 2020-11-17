@@ -10,6 +10,7 @@ $("#darkMode").click(function () {
   } else {
     document.getElementById("darkModeLabel").innerHTML = " dark mode";
   }
+  $("#hint").toggleClass("hint-light hint-dark");
 
   $(".game-stats").toggleClass("text-dark text-white");
   $(".game-stats").toggleClass("grey-bg dark-bg");
