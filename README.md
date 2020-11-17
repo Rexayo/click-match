@@ -1,8 +1,8 @@
-<a href="https://rexayo.github.io/click-match/"><img src="assets/images/ClickMatch!.png"  width="50%" height="20%" ></a>
+<a href="https://rexayo.github.io/click-match/"><img src="assets/images/ClickMatch!.png"  width="30%" height="30%" ></a>
 
 ##### Click logo above to view live project
 
-<h2 align="center"><img src="assets/images/Responsive-screenshot.png"></h2>
+<h2 align="center"><img src="assets/images/Responsive Screenshot.jpg"></h2>
 
 Click Match! is a memory game based on colour recogniton and perception. The human eye has the capacity to recognise a broad range of colours,but subtle differences in how we perceive the colours aren't often highlighted. This aims to make the exercise of colour recognition both fun and engaging.
 
@@ -46,7 +46,9 @@ We see colours all the time but rarely pay attention differences in the hues, sa
 
 - ### Wireframes
 
-  Initial Wireframes developed at the start of the project are <a href="assets/images/RexAbba-AbbaMilestoneProjectWireframe.pdf" download>here.</a>.
+  Initial Wireframes developed at the start of the project are below:
+ - <h2><img src="assets/images/assets/images/Wireframe_level1_showing_colour_pairs.jpg">Level 1</h2>
+ - <h2><img src="assets/images/assets/images/Wireframe_level3_showing_colour_pairs.jpg">Level 3</h2>
 
 ## Features
 
@@ -192,7 +194,9 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 
 - The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
 - The website was viewed on a variety of devices such as Desktop, Laptop, Samsung Galaxy Note 10, Samsung S9 & iPhone8 and iphone 12.
-- A large amount of testing was done to ensure that all pages were linking correctly.
+- A large amount of testing was done to ensure that all pages were linking correctly. Details below
+
+
 - Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 - Additional automated testing was done using [Browser Stack](https://live.browserstack.com/)
 
@@ -257,3 +261,6 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ### Acknowledgements
 
 - I received inspiration for this project from a colour recognition game on iOS called [Specimen](https://apps.apple.com/us/app/specimen-a-game-about-color/id999930535) created by Pep Rally. Also the idea of clicking the boxes to reveal what's behind them comes from traditional card games that rely on flipping cards to reveal what's underneath.
+
+
+https://www.tablesgenerator.com/markdown_tables

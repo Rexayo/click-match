@@ -1,19 +1,16 @@
 function sendMail(contact) {
   emailjs
-    .send("gmail", "Colour Match", {
+    .send("gmail", "Click Match!", {
       from_email: contact.emailaddress.value,
     })
     .then(
       function (response) {
-        console.log("SUCCESS", response);
+        $("#thankYouModal").modal();
       },
       function (error) {
-        console.log("FAILED", error);
+        $("#oopsModal").modal();
       }
     );
-
-  document.getElementById("email-modal").value = "Thank you!";
-  document.getElementById("email-footer").value = "Thank you!";
 
   setTimeout(function () {
     document.getElementById("email-modal").value = "";

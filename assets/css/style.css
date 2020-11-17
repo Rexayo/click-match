@@ -80,12 +80,12 @@ nav {
 }
 .navbar-dark {
   background-color: black !important;
-
 }
 
-.dropdownMenuLink:focus, .dropdownMenuLink:active{
-border:none !important;
-background-color: transparent !important;
+.dropdownMenuLink:focus,
+.dropdownMenuLink:active {
+  border: none !important;
+  background-color: transparent !important;
 }
 
 .dropdown-toggle {
@@ -122,22 +122,19 @@ background-color: transparent !important;
   box-shadow: 5px -10px 115px rgb(34, 34, 34) inset;
   font-size: 0.9em;
   text-transform: uppercase;
-  
 }
-.hint-dark{
-    border-radius: 0;
+.hint-dark {
+  border-radius: 0;
 }
 
 .hint-light {
-    border-bottom-left-radius: 30px;
+  border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
 /*-----------------BODY---------------*/
 
 body {
-  box-shadow: 5px -10px 805px rgba(148, 148, 255, 0.767) inset inset;
   background-color: rgb(201, 201, 201);
-  /* background-color: #DFDBE5; */
   /*http://www.heropatterns.com/*/
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
@@ -153,9 +150,9 @@ body {
   box-shadow: 3px 2px rgb(34, 34, 34) inset;
 }
 
-.rules p{
-    margin-left: 30px;
-margin-right: 30px;
+.rules p {
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .rules-header {
@@ -224,11 +221,6 @@ margin-right: 30px;
   padding: 0;
 }
 
- #restartGameOver, #restartSignUp{
-border-radius: 30px !important;
-padding-top: 0px;
-padding-bottom: 0px;
-}
 
 button:disabled,
 #play:disabled {
@@ -261,7 +253,7 @@ button:disabled:hover,
   text-transform: uppercase;
   box-shadow: 3px 2px #3d3d3d;
   line-height: 1em;
-  padding: 5px 5px; 
+  padding: 5px 5px;
 }
 
 /*-----------------MODAL---------------*/
@@ -270,8 +262,7 @@ button:disabled:hover,
   text-align: center;
   font-family: "Bungee", cursive;
   border-top: 1px solid black;
-
-  box-shadow: 5px -10px 805px rgba(148, 148, 255, 0.767) inset;
+  box-shadow: 5px -10px 805px rgba(80, 80, 80, 0.767) inset;
   background-color: rgba(255, 255, 255, 0.726);
 }
 
@@ -284,6 +275,24 @@ button:disabled:hover,
 .modal-footer {
   border: none;
 }
+
+#thankYouModal .modal-body,
+#oopsModal .modal-body
+{
+   font-family: "Bungee", cursive !important; 
+}
+
+#restartGameOver,
+#restartSignUp,
+#thankYouModalClose,
+#oopsModalClose {
+  border-radius: 30px !important;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+
+
 
 #modal-close {
   color: rgba(255, 255, 255, 0);
@@ -354,10 +363,9 @@ footer #copyright h6 {
   margin-top: 1.04vh;
 }
 
-#contact{
-    font-weight: 900;
+#contact {
+  font-weight: 900;
 }
-
 
 /* Animation*/
 /* Bob - Hover.css - available here https://ianlunn.github.io/Hover/# free for non-commercial use under The MIT License */
