@@ -38,6 +38,7 @@
   </head>
 
   <body>
+    <!-- Navbar starts here -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" id="logo" href="index.html">Click Match!</a>
       <button
@@ -83,12 +84,18 @@
         </div>
       </div>
     </nav>
+    <!-- Navbar ends here -->
 
     <section class="grid-bg">
       <div>
         <div id="hint" class="text-success hint-light"></div>
+        <!-- Game play hint below navbar -->
       </div>
+
       <div class="row no-gutters level-one"></div>
+      <!-- Default Bootstrap Row which is reference in scritp.js line 57  -->
+
+      <!-- Game Statistics and Game-pad Icon start here -->
       <div class="container-fluid grey-bg" id="game-info">
         <div class="row">
           <div class="col-3 game-stats text-dark grey-bg dark-outline">
@@ -109,9 +116,10 @@
           </button>
         </div>
       </div>
+      <!-- Game Statistics and Game-pad Icon end here -->
 
+      <!-- Game over Modal starts here -->
       <div class="container gameOverModal">
-        <!-- Modal -->
         <div
           class="modal fade"
           id="gameOverModal"
@@ -145,9 +153,10 @@
           </div>
         </div>
       </div>
+      <!-- Game over Modal ends here -->
 
+      <!-- Sign Up Modal for end of Level 4 starts here -->
       <div class="container signUpModal">
-        <!-- Modal -->
         <div
           class="modal fade"
           id="signUpModal"
@@ -194,8 +203,9 @@
           </div>
         </div>
       </div>
+      <!-- Sign Up Modal for end of Level 4 ends here -->
     </section>
-
+    <!-- Game Play Rules and Explanation of Statistics start here -->
     <section>
       <div class="container">
         <div class="row">
@@ -250,12 +260,15 @@
         </div>
       </div>
     </section>
+    <!-- Game Play Rules and Explanation of Statistics end here -->
+
     <footer>
       <div class="container">
         <div class="row justify-content-center">
           <h1 class="tagline">
             More levels available soon. Be the first to know.
           </h1>
+          <!-- Sign up form for Footer Starts Here -->
           <div class="col-12 signUpForm">
             <form
               onsubmit="return sendMail(this);"
@@ -271,7 +284,9 @@
               <input type="submit" value="Sign up" id="join-footer" />
             </form>
           </div>
+          <!-- Sign up form for Footer Ends Here -->
 
+          <!-- Copyright Starts Here -->
           <div class="col-sm-12">
             <div id="copyright">
               <h6>
@@ -285,6 +300,7 @@
                 ></a>
               </h6>
             </div>
+            <!-- Copyright Ends Here -->
           </div>
         </div>
       </div>

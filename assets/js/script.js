@@ -2018,7 +2018,6 @@ function levelFour() {
         defaultGrid[j].style.borderBottom = "1px solid black";
       } else if (j == box4 + across + 5 * nextLine - 1) {
         defaultGrid[j].style.borderLeft = "1px solid black";
-        // defaultGrid[j].style.borderRight = "1px solid black";
         defaultGrid[j].style.borderBottom = "1px solid black";
       } else {
         defaultGrid[j].style.borderBottom = "1px solid black";

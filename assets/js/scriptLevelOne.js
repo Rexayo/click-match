@@ -76,8 +76,6 @@ function levelOneGridBox4(j) {
 //LEVEL ONE GRID STRUCTURE ON PAGE LOAD
 var gridBackColour = "rgba(128, 128, 128, 0.7)";
 
-
-
 // DEFAULT GRID STRUCTURE
 for (let j = 0; j < defaultGrid.length; j++) {
   let box1 = 13;
@@ -244,10 +242,10 @@ $("#play").click(function () {
     if (!activeState) {
       activeState = true;
     }
-  document.getElementById("play").disabled = true;
+    document.getElementById("play").disabled = true;
     updateNumOfClicks("1");
     document.getElementById("numOfClicksLeft").innerHTML = numOfClicksLeft;
-    updatebestGameScore("1")
+    updatebestGameScore("1");
   }
 });
 
@@ -342,5 +340,5 @@ $(".difficultySetting01").click(function () {
   choiceTwo = false;
   activeState = false;
   reset();
- document.getElementById("play").disabled = false;
+  document.getElementById("play").disabled = false;
 });
