@@ -4,7 +4,7 @@
 
 <h2 align="center"><img src="assets/images/Responsive Screenshot.jpg"></h2>
 
-Click Match! is a memory game based on colour recogniton and perception. The human eye has the capacity to recognise a broad range of colours,but subtle differences in how we perceive the colours aren't often highlighted. This aims to make the exercise of colour recognition both fun and engaging.
+Click Match! is a memory game based on colour recogniton and perception. The human eye has the capacity to recognise a broad range of colours,but subtle differences in how we perceive the colours aren't often highlighted. This game aims to make the exercise of colour recognition both fun and engaging.
 
 We see colours all the time but rarely pay attention differences in the hues, saturation and brightness. It is my hope that in playing this game we grow to observe colours more acutely and consequently the world at large.
 
@@ -36,9 +36,10 @@ We see colours all the time but rarely pay attention differences in the hues, sa
 
   - #### Colour Scheme
 
-    - The colour scheme across the website is a combination of tints of greys and black. As the main focus is colour recognition I chose to keep everything other element except the logo muted to reduce distractions. I chose a randomisation of colours on the logo on each page load to highlight the fact that the colours of the grid are shuffled everytime.
+    - The colour scheme across the website is a combination of tints of greys and black. The website has a retro feel that lends itself to be both nostalgic and minimal. As the main focus is colour recognition I chose to keep most of the layout muted, to reduce distractions as the user tries to pay attention to the colours. The only exceptions are the logo and the game-pad icon. For the logo, I chose a randomisation of colours on each page load to highlight the fact that the colours of the grid are shuffled everytime. On the other hand, the game-pad icon is highlighted in colour when active and grey out when it's disabled after each click and before a level is completed. This in conjunctionn with the hint helps to guide the viewer through the game, for a fluid user experience.
 
-    <!-- <h2><img src="assets/images/Colour-Palette.png"></h2> -->
+    <h4>Logo and Game-pad Icon in colour everything else in greys<img src="assets/images/Design.jpg"></h4>
+    <h4>Game-pad icon greyed out during game play, it gets activated again as the level is completed.</h4>
 
   - #### Typography
     - The Google fonts Bungee and IBM Plex Mono are the two fonts used across the website with Cursive and Monospace as the alternative fonts respectively, for cases when the default options aren't loaded onto the website correctly.
@@ -47,8 +48,9 @@ We see colours all the time but rarely pay attention differences in the hues, sa
 - ### Wireframes
 
   Initial Wireframes developed at the start of the project are below:
- - <h2><img src="assets/images/assets/images/Wireframe_level1_showing_colour_pairs.jpg">Level 1</h2>
- - <h2><img src="assets/images/assets/images/Wireframe_level3_showing_colour_pairs.jpg">Level 3</h2>
+
+- <h4>Level 1</h4><img src="assets/images/Wireframe_level1_showing_colour_pairs.jpg" width="50%" height="50%" >
+- <h4>Level 3</h4><img src="assets/images/Wireframe_level3_showing_colour_pairs.jpg" width="50%" height="50%" >
 
 ## Features
 
@@ -160,21 +162,21 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 
      - The site has been designed to be minimal with little distraction to its main focus which the colour grid. As a user enters the site they are no preambles or unnecessary steps before game play begins.
 
-  3. As a First Time Visitor, I want to easily find details about the rules of the game. 
+  3. As a First Time Visitor, I want to easily find details about the rules of the game.
 
-     - The how to play section is right below the colour grid with a detailed explanation of how the game works. 
+     - The how to play section is right below the colour grid with a detailed explanation of how the game works.
 
-   4. As a First Time Visitor, I want to be able to measure my progress as I play the game.
+  4. As a First Time Visitor, I want to be able to measure my progress as I play the game.
 
-        - Below the how-to-play rules is a breakdown of all the game statistics and how they are calculated.
-    
-    5. As a First Time Visitor, I want to be able to adjust the background colour around the colour grid, if my eyes are more sensitive to light.
+     - Below the how-to-play rules is a breakdown of all the game statistics and how they are calculated.
 
-        - There is light and dark toggle on the naviagtion bar that helps the user switch tne colour grid's background to a dark colout for better contrast with the colours.
+  5. As a First Time Visitor, I want to be able to adjust the background colour around the colour grid, if my eyes are more sensitive to light.
+
+     - There is light and dark toggle on the naviagtion bar that helps the user switch tne colour grid's background to a dark colout for better contrast with the colours.
 
 - #### Returning Visitor Goals
 
-  1. As a Returning Visitor, I want to be able to easily continue the game, whilst keeping track of how well I have done in previous attempts.  
+  1. As a Returning Visitor, I want to be able to easily continue the game, whilst keeping track of how well I have done in previous attempts.
 
      - The navigation bar has a dropdown menu with all the available difficulty levels. So user can play whatever level where previously stuck. Alternatively by default the game expects users to start from level 1 and work their way up in order rack up more points and accumulate more usable clicks for the more difficult levels.
 
@@ -188,14 +190,11 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 
      - There are forms both at the footer of the page and also at the end of leve 4, thst help the user send a contact email address to receive alerts on addition of new levels and general gameplay additions.
 
- 
-
 ### Further Testing
 
 - The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
 - The website was viewed on a variety of devices such as Desktop, Laptop, Samsung Galaxy Note 10, Samsung S9 & iPhone8 and iphone 12.
 - A large amount of testing was done to ensure that all pages were linking correctly. Details below
-
 
 - Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 - Additional automated testing was done using [Browser Stack](https://live.browserstack.com/)
@@ -249,10 +248,9 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 - [HTML & CSS](https://www.w3schools.com/): I researched a lot of code support from W3 Schools. Additional research on CSS was done on [CSS Tricks](https://css-tricks.com/). Animation on game icon was done with [Hover.css](https://ianlunn.github.io/Hover/). Lastly background-image pattern wsa done with [Hero patterns](www.heropatterns.com).
 
-
-- Code Pen - [Random number generator function](https://codepen.io/meowwwls/pen/jbEJRp), 
-- Stack Overflow 
-    - [Fisher Yates Shuffle used to shuffle Arrays for colour selection](https://stackoverflow.com/questions/2450954/)
+- Code Pen - [Random number generator function](https://codepen.io/meowwwls/pen/jbEJRp),
+- Stack Overflow
+  - [Fisher Yates Shuffle used to shuffle Arrays for colour selection](https://stackoverflow.com/questions/2450954/)
   - [Random colour on each letter of the logo](https://stackoverflow.com/questions/20228961/how-to-make-each-letter-in-text-a-different-random-color-in-javascript)
 - Github - [Generating random HSL colours](https://mika-s.github.io/javascript/colors/hsl/2017/12/05/generating-random-colors-in-javascript.html)
 
@@ -261,6 +259,3 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ### Acknowledgements
 
 - I received inspiration for this project from a colour recognition game on iOS called [Specimen](https://apps.apple.com/us/app/specimen-a-game-about-color/id999930535) created by Pep Rally. Also the idea of clicking the boxes to reveal what's behind them comes from traditional card games that rely on flipping cards to reveal what's underneath.
-
-
-https://www.tablesgenerator.com/markdown_tables
