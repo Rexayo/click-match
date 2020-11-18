@@ -254,11 +254,11 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 - [HTML & CSS](https://www.w3schools.com/): I researched a lot of code support from W3 Schools. Additional research on CSS was done on [CSS Tricks](https://css-tricks.com/). Animation on game icon was done with [Hover.css](https://ianlunn.github.io/Hover/). Lastly background-image pattern was done with [Hero patterns](www.heropatterns.com).
 
-- Code Pen - [Random number generator function](https://codepen.io/meowwwls/pen/jbEJRp),
+- Code Pen - [Random number generator function](https://codepen.io/meowwwls/pen/jbEJRp).
 - Stack Overflow
   - [Fisher Yates Shuffle used to shuffle Arrays for colour selection](https://stackoverflow.com/questions/2450954/)
-  - [Random colour on each letter of the logo](https://stackoverflow.com/questions/20228961/how-to-make-each-letter-in-text-a-different-random-color-in-javascript)
-- Github - [Generating random HSL colours](https://mika-s.github.io/javascript/colors/hsl/2017/12/05/generating-random-colors-in-javascript.html)
+  - [Random colour on each letter of the logo](https://stackoverflow.com/questions/20228961/how-to-make-each-letter-in-text-a-different-random-color-in-javascript).
+- Github - [Generating random HSL colours](https://mika-s.github.io/javascript/colors/hsl/2017/12/05/generating-random-colors-in-javascript.html).
 
 ## Credits
 
