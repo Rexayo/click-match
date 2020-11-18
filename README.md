@@ -6,7 +6,7 @@
 
 Click Match! is a memory game based on colour recognition and perception. The human eye has the capacity to recognise a broad range of colours, but subtle differences in how we perceive the colours aren't often highlighted. This game aims to make the exercise of colour recognition both fun and engaging.
 
-We see colours all the time but rarely pay attention differences in the hues, saturation and brightness. It is my hope that in playing this game we grow to observe colours more acutely and consequently the world at large.
+We see colours all the time but rarely pay attention to differences in the hues, saturation and brightness. It is my hope that in playing this game we grow to observe colours more acutely and consequently the world at large.
 
 ## User Experience (UX)
 
@@ -36,14 +36,14 @@ We see colours all the time but rarely pay attention differences in the hues, sa
 
   - #### Colour Scheme
 
-    - The colour scheme across the website is a combination of tints of greys and black. The website has a retro feel that lends itself to be both nostalgic and minimal. As the main focus is colour recognition I chose to keep most of the layout muted, to reduce distractions as the user tries to pay attention to the colours. The only exceptions are the logo and the game-pad icon. For the logo, I chose randomisation of colours on each page load to highlight the fact that the colours of the grid are shuffled every time. On the other hand, the game-pad icon is highlighted in colour when active and grey out when it's disabled after each click and before a level is completed. This in conjunction with the hint helps to guide the viewer through the game, for a fluid user experience.
+    - The colour scheme across the website is a combination of tints of greys and black. The website has a retro feel that lends itself to be both nostalgic and minimal. As the main focus is colour recognition I chose to keep most of the layout muted, to reduce distractions as the user tries to pay attention to the colours. The only exceptions are the logo and the game-pad icon. For the logo, I chose randomisation of colours on each page load to highlight the fact that the colours of the grid are shuffled every time. On the other hand, the game-pad icon is highlighted in colour when active and greyed out when it is disabled after each click and before a level is completed. This in conjunction with the hint helps to guide the viewer through the game, for a fluid user experience.
 
-    <h4>Logo and Game-pad Icon in colour everything else in greys<img src="assets/images/Design.jpg"></h4>
+    <h4>Logo and Game-pad Icon in colour, everything else in greys.<img src="assets/images/Design.jpg"></h4>
     <h4>Game-pad icon greyed out during game play, it gets activated again as the level is completed.<img src="assets/images/DesignGamePadIconDisabled.jpg"></h4>
 
   - #### Typography
     - The Google fonts Bungee and IBM Plex Mono are the two fonts used across the website with Cursive and Monospace as the alternative fonts respectively, for cases when the default options aren't loaded onto the website correctly.
-      Both fonts are very legible and contrast nicely together. With Bungee serving as the primary font giving the website are playful across all major sections and IBM Plex Mono as the body text used to create a contrast to the very bold look of Bungee.
+      Both fonts are very legible and contrast nicely together. Bungee serves as the primary font giving the website a playful feel across all the major sections, and IBM Plex Mono serves as the body text used to create a contrast to the very bold look of Bungee.
 
 - ### Wireframes
 
@@ -58,26 +58,26 @@ This section contains all the features of the website.
 
 ### Game Play Section
 
-This is the main section of the gameplay and is built using a responsive grid of 120 div elements, these divs are progressively divided to create Levels 1 to 4, containing 4, 8, 16 and 32 colour grids respectively. The gameplay is activated in the following sequence.
+This is the main section of the gameplay and is built using a responsive grid of 120 div elements. These divs are progressively divided to create Levels 1 to 4, containing 4, 8, 16 and 32 colour grids respectively. The gameplay is activated in the following sequence:
 
 - On page load, the user is presented with level 1 which contains 4 boxes all coloured grey.
 - A "hint" text above the boxes lets the user know to click on the game-pad icon below the boxes.
-- Upon clicking the boxes momentarily reveal the colours below them. The duration of how long the colours are displayed increases as the game progresses to more difficult levels.
-- Next, the hint suggests to the click on the boxes with a goal to reveal the colour pairs in sequence.
+- Upon clicking, the boxes momentarily reveal the colours below them. The duration of how long the colours are displayed increases as the game progresses to more difficult levels.
+- Next, the "hint" suggests to the click on the boxes with a goal to reveal the colour pairs in sequence.
 - A collection of game statistics help to inform the user of how many times they have clicked, the number of clicks left and scores.
 
 ### Navigation bar
 
 This section provides information on difficulty selections. An indication of what level the game is currently on and a toggle to switch the colour grid talked about above between light and dark mode.
 
-### How to Play
+### How-to-play
 
 This how-to section contains a breakdown of the rules of the game and an explanation of all the statistics that help the user progress through the levels and measures how much they have achieved in the process.
 
 ### Sign Up form and Email Contact Icon
 
 This beta version of the game currently has only four levels. The signup form here serves to help the users sign up for updates to the game as more features/levels added.
-There's also an email message icon that enables users to directly contact the developer of the game, by launching an email application and prefilling the contact email address.
+There is also an email message icon that enables users to directly contact the developer of the game, by launching an email application and prefilling the contact email address.
 
 ### Features Left to Implement
 
@@ -92,15 +92,12 @@ There's also an email message icon that enables users to directly contact the de
 - HTML5
 - CSS3
 - jQuery and Javascript
-- Hover.css
-- EmailJS
-- Hero Patterns
 
 ### Frameworks, Libraries & Programs Used
 
 - [Bootstrap](https://getbootstrap.com/)
 
-  - The games uses Bootstrap's library to aid responsiveness across various screen sizes and devices. The Colour grid is built entirely with bootstrap with column classes that enables dynamic adjustment regardless of screen size.
+  - The game uses Bootstrap's library to aid responsiveness across various screen sizes and devices. The Colour grid is built entirely with bootstrap with column classes that enables dynamic adjustment regardless of screen size.
 
 - [JQuery](https://jquery.com) and Javascript
 
@@ -115,7 +112,7 @@ There's also an email message icon that enables users to directly contact the de
 
 - [Font Awesome](https://fontawesome.com/)
 
-  - Font Awesome was used for the light and dark mode toggle, the game-pad icon and email icon in the footer, these help to improve User Experience and User Interface design.
+  - Font Awesome was used for the light and dark mode toggle icon, the game-pad icon, the how-to-play icon, statistics icon and email icon in the footer. These help to improve User Experience and User Interface design.
 
 - [Git](https://git-scm.com/)
 
@@ -135,7 +132,7 @@ There's also an email message icon that enables users to directly contact the de
 
 - [Hero Patterns](www.heropatterns.com)
 
-  - A background-image CSS styling was used from hero patterns to give a subtle texture to the background of the website.
+  - A background-image CSS styling was used from hero patterns to give a subtle texture to the website.
 
 - [Hover.css](https://ianlunn.github.io/Hover/)
   - Hover.css was used for the looping bob animation on the game-pad icon.
@@ -160,11 +157,11 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 
   2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
 
-     - The site has been designed to be minimal with little distraction to its main focus which the colour grid. As a user enters the site they are no preambles or unnecessary steps before gameplay begins.
+     - The site has been designed to be minimal with little distraction to its main focus which is the colour grid. As a user enters the site, there are no preambles or unnecessary steps before gameplay begins.
 
   3. As a First Time Visitor, I want to easily find details about the rules of the game.
 
-     - The how to play section is right below the colour grid with a detailed explanation of how the game works.
+     - The how-to-play section is right below the colour grid with a detailed explanation of how the game works.
 
   4. As a First Time Visitor, I want to be able to measure my progress as I play the game.
 
@@ -178,11 +175,11 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 
   1. As a Returning Visitor, I want to be able to easily continue the game, whilst keeping track of how well I have done in previous attempts.
 
-     - The navigation bar has a dropdown menu with all the available difficulty levels. So user can play from he/she whatever level was previously stuck in. Alternatively by default the game expects users to start from level 1 and work their way up in order to rack up more points and accumulate more clicks for the more difficult levels.
+     - The navigation bar has a dropdown menu with all the available difficulty levels. So users can play from whatever level was last played. Alternatively, by default, the game expects users to start from level 1 and work their way up in order to rack up more points and accumulate more clicks for the more difficult levels.
 
   2. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
 
-     1. On the footer there is a mail icon with a message beside it, letting the user know to send am email when a problem is encountered or for general inquires, that enquires. This email button on the footer is set up to automatically open up the user's email app and autofill the website's email address in the "To" section.
+     1. On the footer there is a mail icon with a message beside it, letting the user know to send am email when a problem is encountered or for general enquires. This email button on the footer is set up to automatically open up the user's email app and autofill the developer's email address in the "To" section.
 
 * #### Frequent User Goals
 
@@ -200,8 +197,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Responsiveness                           | Multiple devices on different operating systems were used with Safari, Chrome and Firefox                                                | Consistent Layout, behaviour and Icons           | I noticed certain inconsistencies on the iPhone 12, which I fixed in CSS using the appearance attribute                                                                                                                      |
 | Colour appearance on different screens   | Testing colour representation on various device screens LCD, OLED and AMOLED                                                             | Consistent gaming experience                     | Yes, the result was consistent.                                                                                                                                                                                              |
-| EmailJS functionality                    | Testing with varied accounts and inserting console logging and consequently modal triggers. To alert the user to either success or error | Consistent behaviour and ability to catch errors | Yes, it worked perfectly                                                                                                                                                                                                     |
-| Generating Colours and Level Progression | Console logging and alerts to indicate when function where producing desired arrays                                                      | Consistent behaviour with stress testing         | I noticed my initial implementation of the game-pad click allowed for multiple clicks on the button which created undesirable results. I fixed this by disabling the button right after it is clicked until it is needed again. |
+| EmailJS functionality                    | Testing with varied accounts and inserting console-logging and consequently modal-triggers to alert the user to either a successful submission or an error | Consistent behaviour and ability to catch errors | Yes, it worked perfectly                                                                                                                                                                                                     |
+| Generating Colours and Level Progression | Console-logging and alerts to indicate when function were producing desired arrays                                                      | Consistent behaviour with stress testing         | I noticed my initial implementation of the game-pad click allowed for multiple clicks on the button which created undesirable results. I fixed this by disabling the button right after it is clicked until it is needed again. |
 
 - Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 - Additional automated testing was done using [Browser Stack](https://live.browserstack.com/)
@@ -255,7 +252,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 - [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/): Bootstrap Library was used throughout the project mainly to make the website responsive using the Bootstrap Grid System.
 
-- [HTML & CSS](https://www.w3schools.com/): I researched a lot of code support from W3 Schools. Additional research on CSS was done on [CSS Tricks](https://css-tricks.com/). Animation on game icon was done with [Hover.css](https://ianlunn.github.io/Hover/). Lastly background-image pattern wsa done with [Hero patterns](www.heropatterns.com).
+- [HTML & CSS](https://www.w3schools.com/): I researched a lot of code support from W3 Schools. Additional research on CSS was done on [CSS Tricks](https://css-tricks.com/). Animation on game icon was done with [Hover.css](https://ianlunn.github.io/Hover/). Lastly background-image pattern was done with [Hero patterns](www.heropatterns.com).
 
 - Code Pen - [Random number generator function](https://codepen.io/meowwwls/pen/jbEJRp),
 - Stack Overflow
